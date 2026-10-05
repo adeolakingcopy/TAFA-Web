@@ -1112,16 +1112,8 @@
 
     .pgrid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px
-    }
-
-    .pgrid[data-g="i"] {
-      grid-template-columns: repeat(2, 1fr)
-    }
-
-    .pgrid[data-g="a"] {
-      grid-template-columns: 1fr
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
     }
 
     .p {
@@ -1130,88 +1122,188 @@
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--r-card);
-      padding: 24px 22px 22px;
+      padding: 16px 16px 22px;
       transition: transform .2s, box-shadow .2s, border-color .2s
     }
 
     .p:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       border-color: #c6d4f4;
-      box-shadow: 0 18px 36px -24px rgba(10, 36, 82, .45)
+      box-shadow: 0 20px 40px -20px rgba(10, 36, 82, .35)
+    }
+
+    .cover {
+      position: relative;
+      height: 155px;
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      margin-bottom: 16px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, .28), transparent 45%), repeating-linear-gradient(135deg, rgba(255, 255, 255, .07) 0 2px, transparent 2px 16px);
+      pointer-events: none
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, .25);
+      left: -40px;
+      bottom: -60px;
+      pointer-events: none
+    }
+
+    .cover .lvl {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font: 700 11px/1 'Sora', sans-serif;
+      background: rgba(6, 26, 63, .6);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      padding: 6px 11px;
+      border-radius: 99px;
+      letter-spacing: 0.02em;
+      z-index: 2
+    }
+
+    .cv-blue {
+      background-image: url('./Modern%20Blue%20Workspace%20with%20Graduation%20Icon.png')
+    }
+
+    .cv-purple {
+      background-image: url('./Applied%20for%20Sales%20%26%20Marketing%20cover.png')
+    }
+
+    .cv-green {
+      background-image: url('./Data%20%26%20Analytics%20Essentials.png')
+    }
+
+    .cv-gold {
+      background-image: url('./Superintelligence%20for%20Leaders%20cover.png')
+    }
+
+    .cv-enterprise {
+      background-image: url('./Collaborative%20AI%20Learning%20Workspace.png')
+    }
+
+    .cv-transform {
+      background-image: url('./mega-promo-academy.png')
+    }
+
+    .cv-audit {
+      background-image: url('./mega-promo-consulting.png')
+    }
+
+    .cv-scale {
+      background-image: url('./Team_collaborating_around_laptop_20260928082807.gif')
+    }
+
+    .cv-retainer {
+      background-image: url('./core--services.gif')
     }
 
     .p-body {
       display: flex;
       flex-direction: column;
-      flex: 1;
-      margin-top: 18px
+      flex: 1
     }
 
     .p h4 {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.25
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3
     }
 
-    .pgrid[data-g="b"] .p h4 {
-      min-height: 2.5em
-    }
-
-    .price {
-      align-self: flex-start;
+    .p .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
       margin: 8px 0 12px;
-      padding: 5px 10px;
-      border-radius: 8px;
-      background: var(--tint-gold);
-      color: #7a4f00;
-      font-weight: 800;
-      font-size: 14px
+      padding: 0;
+      list-style: none;
+      font-size: 12.5px;
+      color: var(--mute);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif
+    }
+
+    .p .meta li {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .p .meta svg.i {
+      width: 14px;
+      height: 14px;
+      color: var(--blue);
+      flex-shrink: 0
     }
 
     .p p {
       color: var(--mute);
       font-size: 13.5px;
-      margin: 0
+      line-height: 1.5;
+      margin: 0;
+      flex: 1
+    }
+
+    .p .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(227, 232, 242, 0.7)
+    }
+
+    .p .price {
+      margin: 0;
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: var(--tint-gold);
+      color: #7a4f00;
+      font-weight: 800;
+      font-size: 13.5px
     }
 
     .p .more {
-      margin-top: auto;
-      padding-top: 18px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       font-weight: 700;
-      font-size: 13px;
-      color: var(--blue)
+      font-size: 13.5px;
+      color: var(--blue);
+      text-decoration: none;
+      white-space: nowrap
     }
 
     .p .more svg.i {
+      width: 14px;
+      height: 14px;
+      stroke-width: 2.2;
       transition: transform .2s
     }
 
     .p .more:hover svg.i {
       transform: translateX(4px)
-    }
-
-    /* roomier horizontal cards on the shorter tabs */
-    .pgrid[data-g="i"] .p,
-    .pgrid[data-g="a"] .p {
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-      padding: 24px 26px
-    }
-
-    .pgrid[data-g="i"] .p-body,
-    .pgrid[data-g="a"] .p-body {
-      margin-top: 0
-    }
-
-    .pgrid[data-g="i"] .p .more,
-    .pgrid[data-g="a"] .p .more {
-      margin-top: 0;
-      padding-top: 0;
-      white-space: nowrap
     }
 
     /* ============================================================
@@ -1638,16 +1730,13 @@
         grid-column: 1 / -1
       }
 
-      .pgrid[data-g="b"] {
-        grid-template-columns: repeat(6, 1fr)
+      .pgrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px
       }
 
-      .pgrid[data-g="b"] .p {
+      .pgrid .p:last-child {
         grid-column: span 2
-      }
-
-      .pgrid[data-g="b"] .p:nth-child(n+4) {
-        grid-column: span 3
       }
     }
 
@@ -1656,8 +1745,9 @@
       .offers,
       .who-list,
       .why,
-      .pgrid[data-g="i"] {
-        grid-template-columns: 1fr
+      .pgrid {
+        grid-template-columns: 1fr;
+        gap: 16px
       }
 
       .who-list li {
@@ -1665,14 +1755,12 @@
         align-items: center
       }
 
-      .pgrid[data-g="i"] .p,
-      .pgrid[data-g="a"] .p {
-        flex-wrap: wrap
+      .pgrid .p:last-child {
+        grid-column: auto
       }
 
-      .pgrid[data-g="i"] .p-body,
-      .pgrid[data-g="a"] .p-body {
-        flex-basis: calc(100% - 100px)
+      .p h4 {
+        min-height: 0
       }
 
       .tabs {
@@ -1722,18 +1810,6 @@
         padding: 24px 22px
       }
 
-      .pgrid[data-g="b"] {
-        grid-template-columns: 1fr
-      }
-
-      .pgrid[data-g="b"] .p,
-      .pgrid[data-g="b"] .p:nth-child(n+4) {
-        grid-column: auto
-      }
-
-      .pgrid[data-g="b"] .p h4 {
-        min-height: 0
-      }
 
       .offer {
         padding: 24px
@@ -2212,90 +2288,156 @@
             <p class="sub">Strategic solutions for modern businesses and future-ready professionals.</p>
           </div>
           <div class="tabs" role="tablist" aria-label="Program categories">
-            <button role="tab" aria-selected="true" data-t="b">For Businesses</button>
-            <button role="tab" aria-selected="false" data-t="i">For Individuals &amp; Teams</button>
-            <button role="tab" aria-selected="false" data-t="a">TAFA Academy</button>
+            <button role="tab" aria-selected="true" data-t="consulting">Business AI Consulting</button>
+            <button role="tab" aria-selected="false" data-t="academy">TAFA Academy Tracks</button>
+            <button role="tab" aria-selected="false" data-t="enterprise">Executive &amp; Corporate</button>
           </div>
         </div>
 
-        <div class="pgrid" data-g="b">
+        <!-- 1. BUSINESS AI CONSULTING -->
+        <div class="pgrid" data-g="consulting">
           <article class="p">
-            <span class="tile tile--blue" aria-hidden="true"><svg class="i"><use href="#chart" /></svg></span>
+            <div class="cover cv-audit"><span class="lvl">Diagnostic</span></div>
             <div class="p-body">
-              <h4>Superintelligence Growth Audit</h4>
-              <div class="price">$500 – $2,000</div>
-              <p>Find the gaps, unlock new revenue opportunities and get a clear action plan.</p>
-              <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
+              <h4>AI Growth Audit</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>1–2 weeks</li>
+                <li><svg class="i"><use href="#chart" /></svg>Strategic roadmap</li>
+              </ul>
+              <p>Diagnose operational bottlenecks, uncover revenue opportunities, and get a clear 90-day AI implementation roadmap.</p>
+              <div class="row">
+                <div class="price">$500 – $2,000</div>
+                <a class="more" href="tafa-ai-consulting.html#book">Book audit <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
           </article>
           <article class="p">
-            <span class="tile tile--blue" aria-hidden="true"><svg class="i"><use href="#ppl" /></svg></span>
+            <div class="cover cv-scale"><span class="lvl">Implementation</span></div>
             <div class="p-body">
-              <h4>Growth &amp; Scale Engagement</h4>
-              <div class="price">$5,000 – $25,000+</div>
-              <p>Project-based, 6–12 weeks. End-to-end execution for bigger impact.</p>
-              <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
+              <h4>Growth &amp; Scale Implementation</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>6–12 weeks</li>
+                <li><svg class="i"><use href="#bolt" /></svg>Custom deployment</li>
+              </ul>
+              <p>Custom end-to-end execution: automated sales pipelines, AI agents, dynamic workflow systems, and CRM integrations.</p>
+              <div class="row">
+                <div class="price">$5,000 – $25,000+</div>
+                <a class="more" href="tafa-ai-consulting.html#services">Explore <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
           </article>
           <article class="p">
-            <span class="tile tile--blue" aria-hidden="true"><svg class="i"><use href="#bolt" /></svg></span>
+            <div class="cover cv-retainer"><span class="lvl">Advisory</span></div>
             <div class="p-body">
-              <h4>Growth Systems Retainer</h4>
-              <div class="price">$500 – $3,000/month</div>
-              <p>Ongoing support, optimization and performance tracking.</p>
-              <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
+              <h4>AI Systems Retainer</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>Monthly</li>
+                <li><svg class="i"><use href="#gear" /></svg>Continuous optimization</li>
+              </ul>
+              <p>Continuous AI operations support: ongoing prompt architecture, model fine-tuning, workflow audits, and performance tuning.</p>
+              <div class="row">
+                <div class="price">$500 – $3,000/mo</div>
+                <a class="more" href="tafa-ai-consulting.html#book">Get retainer <svg class="i"><use href="#arr" /></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2. TAFA ACADEMY TRACKS -->
+        <div class="pgrid" data-g="academy" hidden>
+          <article class="p">
+            <div class="cover cv-blue"><span class="lvl">Beginner</span></div>
+            <div class="p-body">
+              <h4>Superintelligence Foundations</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>4 weeks</li>
+                <li><svg class="i"><use href="#laptop" /></svg>Live online</li>
+              </ul>
+              <p>Core concepts and everyday tools for confident, responsible AI usage in the workplace.</p>
+              <div class="row">
+                <div class="price">$300</div>
+                <a class="more" href="course-superintelligence-foundations.html">View course <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
           </article>
           <article class="p">
-            <span class="tile tile--purple" aria-hidden="true"><svg class="i"><use href="#cap" /></svg></span>
+            <div class="cover cv-purple"><span class="lvl">Intermediate</span></div>
             <div class="p-body">
-              <h4>TAFA Academy</h4>
-              <div class="price">$300 – $950</div>
-              <p>Practical, hands-on training for individuals and teams.</p>
-              <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
+              <h4>Applied AI for Sales &amp; Marketing</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>6 weeks</li>
+                <li><svg class="i"><use href="#laptop" /></svg>Cohort-based</li>
+              </ul>
+              <p>Hands-on AI prospecting, dynamic copy engines, automated lead enrichment, and growth funnels.</p>
+              <div class="row">
+                <div class="price">$550</div>
+                <a class="more" href="tafa-academy.html#tracks">View course <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
           </article>
           <article class="p">
-            <span class="tile tile--blue" aria-hidden="true"><svg class="i"><use href="#bld" /></svg></span>
+            <div class="cover cv-green"><span class="lvl">Intermediate</span></div>
             <div class="p-body">
-              <h4>Executive &amp; Corporate</h4>
-              <div class="price">Custom quote</div>
-              <p>Bespoke programs for leaders, teams and organizations.</p>
-              <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
+              <h4>Data &amp; Analytics Essentials</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>8 weeks</li>
+                <li><svg class="i"><use href="#laptop" /></svg>Hybrid</li>
+              </ul>
+              <p>Turn raw business data into automated reporting dashboards, real-time metrics, and predictive insights.</p>
+              <div class="row">
+                <div class="price">$750</div>
+                <a class="more" href="tafa-academy.html#tracks">View course <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
           </article>
         </div>
 
-        <div class="pgrid" data-g="i" hidden>
+        <!-- 3. EXECUTIVE & CORPORATE -->
+        <div class="pgrid" data-g="enterprise" hidden>
           <article class="p">
-            <span class="tile tile--purple" aria-hidden="true"><svg class="i"><use href="#cap" /></svg></span>
+            <div class="cover cv-gold"><span class="lvl">Executive</span></div>
             <div class="p-body">
-              <h4>TAFA Academy</h4>
-              <div class="price">$300 – $950</div>
-              <p>Practical, hands-on training for individuals and teams.</p>
+              <h4>Superintelligence for Leaders</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>3 weeks</li>
+                <li><svg class="i"><use href="#laptop" /></svg>Executive cohort</li>
+              </ul>
+              <p>Executive AI strategy, governance, risk management, capital allocation, and decision frameworks.</p>
+              <div class="row">
+                <div class="price">$950</div>
+                <a class="more" href="tafa-academy.html#tracks">View course <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
-            <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
           </article>
           <article class="p">
-            <span class="tile tile--blue" aria-hidden="true"><svg class="i"><use href="#ppl" /></svg></span>
+            <div class="cover cv-enterprise"><span class="lvl">Bespoke</span></div>
             <div class="p-body">
-              <h4>Team Upskilling</h4>
-              <div class="price">Custom quote</div>
-              <p>Bespoke programs for teams and organizations.</p>
+              <h4>Custom Enterprise Training</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>Flexible</li>
+                <li><svg class="i"><use href="#bld" /></svg>Corporate teams</li>
+              </ul>
+              <p>Bespoke cohort curriculum, live workshops, and custom sandbox labs tailored to your company's tech stack.</p>
+              <div class="row">
+                <div class="price">Custom Quote</div>
+                <a class="more" href="tafa-ai-consulting.html#book">Request plan <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
-            <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
           </article>
-        </div>
-
-        <div class="pgrid" data-g="a" hidden>
           <article class="p">
-            <span class="tile tile--purple" aria-hidden="true"><svg class="i"><use href="#cap" /></svg></span>
+            <div class="cover cv-transform"><span class="lvl">Organization-Wide</span></div>
             <div class="p-body">
-              <h4>TAFA Academy</h4>
-              <div class="price">$300 – $950</div>
-              <p>Practical, hands-on training for individuals and teams.</p>
+              <h4>Workforce AI Transformation</h4>
+              <ul class="meta">
+                <li><svg class="i"><use href="#gauge" /></svg>Multi-stage</li>
+                <li><svg class="i"><use href="#ppl" /></svg>All departments</li>
+              </ul>
+              <p>Full-scale organizational enablement to turn cross-functional teams into high-leverage AI-native operators.</p>
+              <div class="row">
+                <div class="price">Custom Quote</div>
+                <a class="more" href="tafa-what-we-do.html">Learn more <svg class="i"><use href="#arr" /></svg></a>
+              </div>
             </div>
-            <a class="more" href="#">Learn more <svg class="i"><use href="#arr" /></svg></a>
           </article>
         </div>
       </div>
