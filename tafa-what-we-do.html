@@ -44,7 +44,8 @@
 
     html {
       scroll-padding-top: env(safe-area-inset-top, 0px);
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -53,10 +54,17 @@
       background: var(--bg);
       color: var(--ink);
       line-height: 1.5;
-      -webkit-font-smoothing: antialiased
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
     }
 
-    img { max-width: 100% }
+    h1, h2, h3, h4, h5, h6, p, .lead, .sub {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    img { max-width: 100%; height: auto; }
 
     p { font-family: 'Plus Jakarta Sans', system-ui, sans-serif }
 

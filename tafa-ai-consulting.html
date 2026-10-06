@@ -66,6 +66,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -73,6 +74,18 @@
       background: var(--background);
       color: var(--foreground);
       font-family: var(--font-body);
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
     a {
@@ -2306,7 +2319,7 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
   <!--$-->
   <main id="top">
     <section class="hero" id="consulting">
-      <img class="hero-image" src="./Woman_looking_at_laptop_screen_20261003180746.gif" alt="African business leader planning an AI strategy" width="1920" height="960" />
+      <img class="hero-image" src="./core--services.gif" alt="African business leader planning an AI strategy" width="1920" height="960" />
       <div class="hero-shade"></div>
       
       <div class="wrap nav-wrap">
