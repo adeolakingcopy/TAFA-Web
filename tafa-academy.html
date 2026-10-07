@@ -58,7 +58,15 @@
       width: 100%;
     }
 
-    h1, h2, h3, h4, h5, h6, p, .lead, .sub {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    .lead,
+    .sub {
       overflow-wrap: break-word;
       word-wrap: break-word;
     }
@@ -387,8 +395,8 @@
     }
 
     .nav-link:hover,
-    .has-mega:hover > .nav-link,
-    .has-mega.expanded > .nav-link {
+    .has-mega:hover>.nav-link,
+    .has-mega.expanded>.nav-link {
       color: var(--blue);
     }
 
@@ -405,9 +413,9 @@
       transition: transform 0.22s ease;
     }
 
-    .has-mega:hover > .nav-link .chevron-icon,
-    .has-mega.is-active > .nav-link .chevron-icon,
-    .has-mega.expanded > .nav-link .chevron-icon {
+    .has-mega:hover>.nav-link .chevron-icon,
+    .has-mega.is-active>.nav-link .chevron-icon,
+    .has-mega.expanded>.nav-link .chevron-icon {
       transform: rotate(180deg);
     }
 
@@ -511,10 +519,22 @@
       box-shadow: 0 4px 10px -3px rgba(6, 26, 63, 0.25);
     }
 
-    .mega-tile.blue { background: linear-gradient(135deg, #1d4ed8, #0A2E8F); }
-    .mega-tile.purple { background: linear-gradient(135deg, #5b3fe6, #3b22b5); }
-    .mega-tile.gold { background: linear-gradient(135deg, #fbbf24, #d97706); color: #061a3f; }
-    .mega-tile.green { background: linear-gradient(135deg, #14a84f, #0e8a3e); }
+    .mega-tile.blue {
+      background: linear-gradient(135deg, #1d4ed8, #0A2E8F);
+    }
+
+    .mega-tile.purple {
+      background: linear-gradient(135deg, #5b3fe6, #3b22b5);
+    }
+
+    .mega-tile.gold {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #061a3f;
+    }
+
+    .mega-tile.green {
+      background: linear-gradient(135deg, #14a84f, #0e8a3e);
+    }
 
     .mega-tile svg.i {
       width: 18px;
@@ -1398,7 +1418,7 @@
       }
 
       nav .nav-link:active,
-      nav .has-mega.expanded > .nav-link {
+      nav .has-mega.expanded>.nav-link {
         background: #edf2f7;
         color: var(--blue);
       }
@@ -1434,11 +1454,18 @@
       }
 
       @keyframes megaFadeIn {
-        from { opacity: 0; transform: translateY(-4px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(-4px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
-      .has-mega.expanded > .nav-link .chevron-icon {
+      .has-mega.expanded>.nav-link .chevron-icon {
         transform: rotate(180deg);
       }
 
@@ -1519,7 +1546,8 @@
       }
 
       .mega-item p {
-        display: none; /* Hide heavy multi-line descriptions on mobile for a clean, fast list */
+        display: none;
+        /* Hide heavy multi-line descriptions on mobile for a clean, fast list */
       }
 
       .mega-promo-card {
@@ -1550,7 +1578,8 @@
       }
 
       .mega-promo-card p {
-        display: none; /* Hide paragraph on mobile */
+        display: none;
+        /* Hide paragraph on mobile */
       }
 
       .mega-promo-btn {
@@ -2408,7 +2437,9 @@
       transition: color 0.15s;
     }
 
-    .course-product-card h4 a:hover { color: var(--blue); }
+    .course-product-card h4 a:hover {
+      color: var(--blue);
+    }
 
     /* ---- Icon meta rows ---- */
     .card-meta-rows {
@@ -2467,10 +2498,29 @@
       letter-spacing: 0.01em;
     }
 
-    .school-pill.literacy  { background: #fef9ec; color: #a16207; border: 1px solid #fde68a; }
-    .school-pill.applications { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
-    .school-pill.engineering { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
-    .school-pill.cloud     { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+    .school-pill.literacy {
+      background: #fef9ec;
+      color: #a16207;
+      border: 1px solid #fde68a;
+    }
+
+    .school-pill.applications {
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    .school-pill.engineering {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
+    .school-pill.cloud {
+      background: #f5f3ff;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
+    }
 
     .card-view-link {
       display: inline-flex;
@@ -2484,8 +2534,15 @@
       transition: gap 0.15s ease;
     }
 
-    .card-view-link:hover { gap: 8px; }
-    .card-view-link svg.i { width: 15px; height: 15px; stroke-width: 2.2; }
+    .card-view-link:hover {
+      gap: 8px;
+    }
+
+    .card-view-link svg.i {
+      width: 15px;
+      height: 15px;
+      stroke-width: 2.2;
+    }
 
     /* ---- Comprehensive Responsive Rules ---- */
     @media (max-width: 1100px) {
@@ -2567,934 +2624,1106 @@
         padding: 16px 16px 14px;
       }
     }
-  
   </style>
 </head>
 
 <body>
-    <!-- Icon sprite -->
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-      <defs>
-        <symbol id="arr" viewBox="0 0 24 24">
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </symbol>
-        <symbol id="menu" viewBox="0 0 24 24">
-          <path d="M4 7h16M4 12h16M4 17h16" />
-        </symbol>
-        <symbol id="ppl" viewBox="0 0 24 24">
-          <circle cx="9" cy="8" r="3" />
-          <circle cx="17" cy="9" r="2.3" />
-          <path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.3c3 .1 5.5 2 5.5 5.2" />
-        </symbol>
-        <symbol id="cap" viewBox="0 0 24 24">
-          <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6" />
-        </symbol>
-        <symbol id="srch" viewBox="0 0 24 24">
-          <circle cx="11" cy="11" r="7" />
-          <path d="M20 20l-4-4" />
-        </symbol>
-        <symbol id="pen" viewBox="0 0 24 24">
-          <path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4" />
-        </symbol>
-        <symbol id="gear" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="3.5" />
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
-        </symbol>
-        <symbol id="chart" viewBox="0 0 24 24">
-          <path d="M4 20V10M10 20V4M16 20v-7M22 20H2M14 8l4-4 3 3" />
-        </symbol>
-        <symbol id="user" viewBox="0 0 24 24">
-          <circle cx="12" cy="8" r="4" />
-          <path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7" />
-        </symbol>
-        <symbol id="bld" viewBox="0 0 24 24">
-          <path d="M4 21V6l8-3v18M12 9h8v12M7 10h2M7 14h2M7 18h2M15 13h2M15 17h2M3 21h18" />
-        </symbol>
-        <symbol id="bolt" viewBox="0 0 24 24">
-          <path d="M13 2L4 14h7l-1 8 9-12h-7z" />
-        </symbol>
-        <symbol id="book" viewBox="0 0 24 24">
-          <path
-            d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13" />
-        </symbol>
-        <symbol id="briefcase" viewBox="0 0 24 24">
-          <rect x="3" y="7" width="18" height="13" rx="2.5" />
-          <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18" />
-        </symbol>
-        <symbol id="trend" viewBox="0 0 24 24">
-          <path d="M3 17l6-6 4 4 8-8M15 7h6v6" />
-        </symbol>
-        <symbol id="pin" viewBox="0 0 24 24">
-          <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" />
-          <circle cx="12" cy="10" r="2.6" />
-        </symbol>
-        <symbol id="globe" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="9" />
-          <path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" />
-        </symbol>
-        <symbol id="award" viewBox="0 0 24 24">
-          <circle cx="12" cy="9" r="5.5" />
-          <path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5" />
-        </symbol>
-        <symbol id="gauge" viewBox="0 0 24 24">
-          <path d="M3.5 17a8.5 8.5 0 1 1 17 0" />
-          <path d="M12 17l4.5-6" />
-          <circle cx="12" cy="17" r="1.2" />
-        </symbol>
-        <symbol id="laptop" viewBox="0 0 24 24">
-          <rect x="4" y="5" width="16" height="11" rx="2" />
-          <path d="M2 19.5h20" />
-        </symbol>
-        <symbol id="in" viewBox="0 0 24 24">
-          <rect x="3" y="3" width="18" height="18" rx="4" />
-          <path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4" />
-        </symbol>
-        <symbol id="x" viewBox="0 0 24 24">
-          <path d="M4 4l16 16M20 4L4 20" />
-        </symbol>
-        <symbol id="ig" viewBox="0 0 24 24">
-          <rect x="3" y="3" width="18" height="18" rx="5" />
-          <circle cx="12" cy="12" r="4" />
-          <path d="M17.5 6.5v.01" />
-        </symbol>
-        <symbol id="yt" viewBox="0 0 24 24">
-          <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
-          <path d="M10 9.5l5 2.5-5 2.5z" />
-        </symbol>
-        <symbol id="check" viewBox="0 0 24 24">
-          <polyline points="20 6 9 17 4 12" />
-        </symbol>
-      </defs>
-    </svg>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="arr" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="ppl" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" />
+        <circle cx="17" cy="9" r="2.3" />
+        <path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.3c3 .1 5.5 2 5.5 5.2" />
+      </symbol>
+      <symbol id="cap" viewBox="0 0 24 24">
+        <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6" />
+      </symbol>
+      <symbol id="srch" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+      <symbol id="pen" viewBox="0 0 24 24">
+        <path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4" />
+      </symbol>
+      <symbol id="gear" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3.5" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+      </symbol>
+      <symbol id="chart" viewBox="0 0 24 24">
+        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2M14 8l4-4 3 3" />
+      </symbol>
+      <symbol id="user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7" />
+      </symbol>
+      <symbol id="bld" viewBox="0 0 24 24">
+        <path d="M4 21V6l8-3v18M12 9h8v12M7 10h2M7 14h2M7 18h2M15 13h2M15 17h2M3 21h18" />
+      </symbol>
+      <symbol id="bolt" viewBox="0 0 24 24">
+        <path d="M13 2L4 14h7l-1 8 9-12h-7z" />
+      </symbol>
+      <symbol id="book" viewBox="0 0 24 24">
+        <path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13" />
+      </symbol>
+      <symbol id="briefcase" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="13" rx="2.5" />
+        <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18" />
+      </symbol>
+      <symbol id="trend" viewBox="0 0 24 24">
+        <path d="M3 17l6-6 4 4 8-8M15 7h6v6" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.6" />
+      </symbol>
+      <symbol id="globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" />
+      </symbol>
+      <symbol id="award" viewBox="0 0 24 24">
+        <circle cx="12" cy="9" r="5.5" />
+        <path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5" />
+      </symbol>
+      <symbol id="gauge" viewBox="0 0 24 24">
+        <path d="M3.5 17a8.5 8.5 0 1 1 17 0" />
+        <path d="M12 17l4.5-6" />
+        <circle cx="12" cy="17" r="1.2" />
+      </symbol>
+      <symbol id="laptop" viewBox="0 0 24 24">
+        <rect x="4" y="5" width="16" height="11" rx="2" />
+        <path d="M2 19.5h20" />
+      </symbol>
+      <symbol id="in" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="4" />
+        <path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4" />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24">
+        <path d="M4 4l16 16M20 4L4 20" />
+      </symbol>
+      <symbol id="ig" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <path d="M17.5 6.5v.01" />
+      </symbol>
+      <symbol id="yt" viewBox="0 0 24 24">
+        <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+        <path d="M10 9.5l5 2.5-5 2.5z" />
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24">
+        <polyline points="20 6 9 17 4 12" />
+      </symbol>
+    </defs>
+  </svg>
 
-    <!-- ================= HERO ================= -->
-    <header class="hero">
-      <div class="wrap">
-        <nav aria-label="Main" id="nav">
-          <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png" alt="TalentFlow Africa Logo" class="mark"></a>
-          <ul id="nav-links">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            
-            <!-- What We Do Mega Menu -->
-            <li class="nav-item has-mega">
-              <a href="tafa-what-we-do.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
-                What We Do
-                <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
-              </a>
-              <div class="mega-menu" role="region" aria-label="What We Do Menu">
-                <div class="mega-grid">
-                  <div>
-                    <span class="mega-col-title">Core Services</span>
-                    <div class="mega-list">
-                      <a href="tafa-ai-consulting.html" class="mega-item">
-                        <span class="mega-tile blue"><svg class="i"><use href="#gear" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>AI Strategy &amp; Consulting</strong>
-                            <span class="mega-badge blue">CORE SERVICE</span>
-                          </div>
-                          <p>Diagnostics, custom AI solutions, workflows and measurable ROI for business.</p>
-                        </div>
-                      </a>
-                      <a href="index.html#what" class="mega-item">
-                        <span class="mega-tile purple"><svg class="i"><use href="#ppl" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>Workforce AI Transformation</strong>
-                          </div>
-                          <p>Empower marketing, sales, ops, and finance teams to adopt AI with ease.</p>
-                        </div>
-                      </a>
-                      <a href="index.html#what" class="mega-item">
-                        <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>Executive AI Advisory</strong>
-                          </div>
-                          <p>Strategic briefings and governance for founders, C-Suite, and boards.</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="wrap">
+      <nav aria-label="Main" id="nav">
+        <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png"
+            alt="TalentFlow Africa Logo" class="mark"></a>
+        <ul id="nav-links">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 
-                  <div>
-                    <span class="mega-col-title">Methodology &amp; Solutions</span>
-                    <div class="mega-list">
-                      <a href="index.html#framework" class="mega-item">
-                        <span class="mega-tile green"><svg class="i"><use href="#trend" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>4D Delivery Framework</strong>
-                          </div>
-                          <p>Diagnose, Design, Deploy, Scale "” structured execution that delivers results.</p>
+          <!-- What We Do Mega Menu -->
+          <li class="nav-item has-mega">
+            <a href="tafa-what-we-do.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
+              What We Do
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="mega-menu" role="region" aria-label="What We Do Menu">
+              <div class="mega-grid">
+                <div>
+                  <span class="mega-col-title">Core Services</span>
+                  <div class="mega-list">
+                    <a href="tafa-ai-consulting.html" class="mega-item">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Strategy &amp; Consulting</strong>
+                          <span class="mega-badge blue">CORE SERVICE</span>
                         </div>
-                      </a>
-                      <a href="index.html#programs" class="mega-item">
-                        <span class="mega-tile blue"><svg class="i"><use href="#chart" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>AI Growth Audit</strong>
-                            <span class="mega-badge gold">POPULAR</span>
-                          </div>
-                          <p>Fast diagnosis to uncover revenue gaps, cost savings, and clear roadmaps.</p>
-                        </div>
-                      </a>
-                      <a href="tafa-what-we-do.html" class="mega-item">
-                        <span class="mega-tile purple"><svg class="i"><use href="#globe" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>Overview &amp; Case Studies</strong>
-                          </div>
-                          <p>Comprehensive guide to all solutions, African realities, and client success.</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="mega-promo-card advisory-promo">
-                    <div class="mega-promo-content">
-                      <div>
-                        <span class="mega-promo-tag">CORE ADVISORY</span>
-                        <h4>Turn AI Potential into Real Business Results</h4>
-                        <p>Schedule a focused 30-minute consultation with our AI transformation specialists.</p>
+                        <p>Diagnostics, custom AI solutions, workflows and measurable ROI for business.</p>
                       </div>
-                      <a class="btn gold sm mega-promo-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+                    </a>
+                    <a href="index.html#what" class="mega-item">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#ppl" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Workforce AI Transformation</strong>
+                        </div>
+                        <p>Empower marketing, sales, ops, and finance teams to adopt AI with ease.</p>
+                      </div>
+                    </a>
+                    <a href="index.html#what" class="mega-item">
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#briefcase" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Executive AI Advisory</strong>
+                        </div>
+                        <p>Strategic briefings and governance for founders, C-Suite, and boards.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="mega-col-title">Methodology &amp; Solutions</span>
+                  <div class="mega-list">
+                    <a href="index.html#framework" class="mega-item">
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#trend" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>4D Delivery Framework</strong>
+                        </div>
+                        <p>Diagnose, Design, Deploy, Scale "” structured execution that delivers results.</p>
+                      </div>
+                    </a>
+                    <a href="index.html#programs" class="mega-item">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#chart" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Growth Audit</strong>
+                          <span class="mega-badge gold">POPULAR</span>
+                        </div>
+                        <p>Fast diagnosis to uncover revenue gaps, cost savings, and clear roadmaps.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-what-we-do.html" class="mega-item">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#globe" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Overview &amp; Case Studies</strong>
+                        </div>
+                        <p>Comprehensive guide to all solutions, African realities, and client success.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mega-promo-card advisory-promo">
+                  <div class="mega-promo-content">
+                    <div>
+                      <span class="mega-promo-tag">CORE ADVISORY</span>
+                      <h4>Turn AI Potential into Real Business Results</h4>
+                      <p>Schedule a focused 30-minute consultation with our AI transformation specialists.</p>
                     </div>
+                    <a class="btn gold sm mega-promo-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                        class="i">
+                        <use href="#arr" />
+                      </svg></a>
                   </div>
                 </div>
               </div>
-            </li>
-
-            <!-- TAFA Academy Mega Menu -->
-            <li class="nav-item has-mega">
-              <a href="tafa-academy.html" class="nav-link mega-trigger on" aria-haspopup="true" aria-expanded="false">
-                TAFA Academy
-                <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
-              </a>
-              <div class="mega-menu" role="region" aria-label="TAFA Academy Menu">
-                <div class="mega-grid">
-                  <div>
-                    <span class="mega-col-title">The 4 Specialized Schools</span>
-                    <div class="mega-list">
-                      <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('literacy')">
-                        <span class="mega-tile gold"><svg class="i"><use href="#book" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>AI Literacy &amp; Productivity</strong>
-                            <span class="mega-badge gold">3 COURSES</span>
-                          </div>
-                          <p>Intro to AI, Workplace Productivity, and Business Strategy.</p>
-                        </div>
-                      </a>
-                      <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('applications')">
-                        <span class="mega-tile blue"><svg class="i"><use href="#bolt" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>School of AI Applications</strong>
-                            <span class="mega-badge blue">2 COURSES</span>
-                          </div>
-                          <p>Marketing, content engines, and no-code automation.</p>
-                        </div>
-                      </a>
-                      <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('engineering')">
-                        <span class="mega-tile purple"><svg class="i"><use href="#laptop" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>School of AI Engineering</strong>
-                            <span class="mega-badge purple">4 COURSES</span>
-                          </div>
-                          <p>Prompting, AI agents, APIs, RAG, MCP, and Claude Code.</p>
-                        </div>
-                      </a>
-                      <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('cloud')">
-                        <span class="mega-tile green"><svg class="i"><use href="#globe" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>Cloud &amp; Emerging Tech</strong>
-                            <span class="mega-badge green">1 COURSE</span>
-                          </div>
-                          <p>Cloud fundamentals, AWS, Azure, GCP &amp; AI infrastructure.</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div>
-                    <span class="mega-col-title">Featured High-Demand Courses</span>
-                    <div class="mega-list">
-                      <a href="tafa-academy.html#tracks" class="mega-item" onclick="filterCatalog('literacy')">
-                        <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>AI Productivity &amp; Workplace</strong>
-                            <span class="mega-badge gold">HIGH DEMAND</span>
-                          </div>
-                          <p>Teach professionals how to 10x output across reports, meetings &amp; workflows.</p>
-                        </div>
-                      </a>
-                      <a href="tafa-academy.html#tracks" class="mega-item" onclick="filterCatalog('engineering')">
-                        <span class="mega-tile purple"><svg class="i"><use href="#gear" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>AI Engineering (APIs, RAG &amp; MCP)</strong>
-                            <span class="mega-badge purple">TECHNICAL</span>
-                          </div>
-                          <p>Enterprise AI engineering with Claude, OpenAI, vector search &amp; MCP.</p>
-                        </div>
-                      </a>
-                      <a href="tafa-academy.html#tracks" class="mega-item active-item" onclick="filterCatalog('all')">
-                        <span class="mega-tile blue"><svg class="i"><use href="#cap" /></svg></span>
-                        <div class="mega-item-body">
-                          <div class="mega-item-head">
-                            <strong>Full Catalog: All 10 Courses</strong>
-                          </div>
-                          <p>Foundation Level, Business Applications, Technical AI &amp; Cloud tracks.</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="mega-promo-card purple-promo academy-promo">
-                    <div class="mega-promo-content">
-                      <div>
-                        <span class="mega-promo-tag">NEXT COHORT OPEN</span>
-                        <h4>Hands-On AI Training That Builds Careers</h4>
-                        <p>Join 3,200+ certified practitioners across 18 African countries with zero fluff.</p>
-                      </div>
-                      <a class="btn gold sm mega-promo-btn" href="#tracks">Explore All Tracks <svg class="i"><use href="#arr" /></svg></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item"><a class="nav-link" href="tafa-insights.html">Insights</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-            <li class="nav-item mobile-cta-item">
-              <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
-            </li>
-          </ul>
-          <div class="nav-end"><a class="btn gold sm" href="#enrol">Enrol Now</a>
-            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"
-              aria-label="Toggle navigation menu"><svg class="i">
-                <use href="#menu" />
-              </svg></button>
-          </div>
-        </nav>
-      </div>
-      <div class="hero-body">
-        <p class="eyebrow">TAFA ACADEMY</p>
-        <h1>Practical AI &amp; Emerging Technology Training that <em>builds careers and businesses.</em></h1>
-        <p class="lead">10 industry-aligned courses structured across 4 specialized schools for individuals, teams, and technical engineers across Africa.</p>
-        <div class="ctas"><a class="btn gold" href="#enrol">Enrol in TAFA Academy <svg class="i">
-              <use href="#arr" />
-            </svg></a><a class="btn line" href="#tracks">Explore Programs <svg class="i">
-              <use href="#arr" />
-            </svg></a></div>
-        <div class="ticks">
-          <span><i class="tile tile--gold tile--xs"><svg class="i">
-                <use href="#book" />
-              </svg></i>Practical learning</span>
-          <span><i class="tile tile--gold tile--xs"><svg class="i">
-                <use href="#briefcase" />
-              </svg></i>Industry-relevant skills</span>
-          <span><i class="tile tile--gold tile--xs"><svg class="i">
-                <use href="#trend" />
-              </svg></i>Measurable impact</span>
-        </div>
-        <div class="script">Better People.<br>Stronger Businesses.<br>A Future-Ready Africa.</div>
-      </div>
-    </header>
-    <main>
-      <section class="sec" id="who">
-        <div class="wrap"><span class="bar"></span>
-          <h2>Who TAFA Academy is for</h2>
-          <p class="sub">Training designed around how people and organizations really work.</p>
-          <div class="g3">
-            <article class="card"><span class="tile tile--purple" aria-hidden="true"><svg class="i">
-                  <use href="#user" />
-                </svg></span>
-              <h3>Individuals</h3>
-              <p>Professionals building in-demand Superintelligence skills to grow their careers.</p>
-            </article>
-            <article class="card"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
-                  <use href="#ppl" />
-                </svg></span>
-              <h3>Teams</h3>
-              <p>Upskill whole departments with shared tools, workflows and language.</p>
-            </article>
-            <article class="card"><span class="tile tile--green" aria-hidden="true"><svg class="i">
-                  <use href="#bld" />
-                </svg></span>
-              <h3>Organizations</h3>
-              <p>Bespoke cohorts aligned to your business goals and workforce plan.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <!-- ================= THE 4 SPECIALIZED SCHOOLS ================= -->
-      <section class="sec schools-overview-section" id="schools">
-        <div class="wrap">
-          <span class="bar"></span>
-          <h2>The 4 Specialized Schools of TAFA Academy</h2>
-          <p class="sub">Recommended TAFA Academy structure: a unified progression from universal literacy to advanced AI engineering and modern cloud deployments.</p>
-
-          <div class="schools-grid">
-            <!-- School 1 -->
-            <article class="school-card">
-              <div class="school-top-row">
-                <span class="tile tile--sm tile--gold"><svg class="i"><use href="#book" /></svg></span>
-                <span class="school-count-badge">3 Courses</span>
-              </div>
-              <h3>School of AI Literacy &amp; Productivity</h3>
-              <p>Build foundational AI understanding, workplace communication, and strategic executive adoption.</p>
-           
-              <button class="school-card-link" onclick="filterCatalog('literacy')">Explore 3 Courses <svg class="i"><use href="#arr" /></svg></button>
-            </article>
-
-            <!-- School 2 -->
-            <article class="school-card">
-              <div class="school-top-row">
-                <span class="tile tile--sm tile--blue"><svg class="i"><use href="#bolt" /></svg></span>
-                <span class="school-count-badge">2 Courses</span>
-              </div>
-              <h3>School of AI Applications</h3>
-              <p>Implement hands-on marketing workflows, content engines, and no-code business process automation.</p>
-            
-              <button class="school-card-link" onclick="filterCatalog('applications')">Explore 2 Courses <svg class="i"><use href="#arr" /></svg></button>
-            </article>
-
-            <!-- School 3 -->
-            <article class="school-card">
-              <div class="school-top-row">
-                <span class="tile tile--sm tile--purple"><svg class="i"><use href="#laptop" /></svg></span>
-                <span class="school-count-badge">4 Courses</span>
-              </div>
-              <h3>School of AI Engineering</h3>
-              <p>Master precision prompt engineering, autonomous AI agents, enterprise RAG, MCP, and Claude Code.</p>
-        
-              <button class="school-card-link" onclick="filterCatalog('engineering')">Explore 4 Courses <svg class="i"><use href="#arr" /></svg></button>
-            </article>
-
-            <!-- School 4 -->
-            <article class="school-card">
-              <div class="school-top-row">
-                <span class="tile tile--sm tile--green"><svg class="i"><use href="#globe" /></svg></span>
-                <span class="school-count-badge">1 Course</span>
-              </div>
-              <h3>School of Cloud &amp; Emerging Tech</h3>
-              <p>Deploy scalable multi-cloud infrastructure and production AI workloads across AWS, Azure, and GCP.</p>
-          
-              <button class="school-card-link" onclick="filterCatalog('cloud')">Explore Course <svg class="i"><use href="#arr" /></svg></button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= COMPREHENSIVE COURSE CATALOG ================= -->
-      <section class="sec" id="tracks" style="padding-top: clamp(48px, 6vw, 76px)">
-        <div class="wrap">
-          <span class="bar"></span>
-          <h2>AI &amp; Emerging Technology School "” Course Catalog</h2>
-          <p class="sub">10 industry-aligned courses designed for real-world execution. Filter by specialized school below.</p>
-
-          <!-- Filter Controls -->
-          <div class="catalog-controls">
-            <div class="school-filter-tabs" role="tablist" aria-label="Filter courses by school">
-              <button class="school-filter-btn active" data-filter="all" onclick="filterCatalog('all')">All Schools (10)</button>
-              <button class="school-filter-btn" data-filter="literacy" onclick="filterCatalog('literacy')">AI Literacy &amp; Productivity (3)</button>
-              <button class="school-filter-btn" data-filter="applications" onclick="filterCatalog('applications')">AI Applications (2)</button>
-              <button class="school-filter-btn" data-filter="engineering" onclick="filterCatalog('engineering')">AI Engineering (4)</button>
-              <button class="school-filter-btn" data-filter="cloud" onclick="filterCatalog('cloud')">Cloud &amp; Emerging Tech (1)</button>
             </div>
-            <div class="catalog-count-info" id="catalog-count">Showing 10 of 10 courses</div>
-          </div>
+          </li>
 
-          <!-- Courses Grid -->
-          <div class="catalog-grid" id="courses-container">
+          <!-- TAFA Academy Mega Menu -->
+          <li class="nav-item has-mega">
+            <a href="tafa-academy.html" class="nav-link mega-trigger on" aria-haspopup="true" aria-expanded="false">
+              TAFA Academy
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="mega-menu" role="region" aria-label="TAFA Academy Menu">
+              <div class="mega-grid">
+                <div>
+                  <span class="mega-col-title">The 4 Specialized Schools</span>
+                  <div class="mega-list">
+                    <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('literacy')">
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#book" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Literacy &amp; Productivity</strong>
+                          <span class="mega-badge gold">3 COURSES</span>
+                        </div>
+                        <p>Intro to AI, Workplace Productivity, and Business Strategy.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('applications')">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#bolt" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>School of AI Applications</strong>
+                          <span class="mega-badge blue">2 COURSES</span>
+                        </div>
+                        <p>Marketing, content engines, and no-code automation.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('engineering')">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#laptop" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>School of AI Engineering</strong>
+                          <span class="mega-badge purple">4 COURSES</span>
+                        </div>
+                        <p>Prompting, AI agents, APIs, RAG, MCP, and Claude Code.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#schools" class="mega-item" onclick="filterCatalog('cloud')">
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#globe" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Cloud &amp; Emerging Tech</strong>
+                          <span class="mega-badge green">1 COURSE</span>
+                        </div>
+                        <p>Cloud fundamentals, AWS, Azure, GCP &amp; AI infrastructure.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
 
-            <!-- COURSE 01 -->
-            <article class="card ccard course-product-card" data-school="literacy">
-              <a href="course-preview.html?id=intro-to-ai" class="cover-link" aria-label="Preview Introduction to Artificial Intelligence">
-                <div class="cover" style="background-image: url('./Superintelligence Foundations cover.png')">
-                  <span class="lvl">Foundation</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=intro-to-ai">Introduction to Artificial Intelligence</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
-                    Foundation Level
+                <div>
+                  <span class="mega-col-title">Featured High-Demand Courses</span>
+                  <div class="mega-list">
+                    <a href="tafa-academy.html#tracks" class="mega-item" onclick="filterCatalog('literacy')">
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#briefcase" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Productivity &amp; Workplace</strong>
+                          <span class="mega-badge gold">HIGH DEMAND</span>
+                        </div>
+                        <p>Teach professionals how to 10x output across reports, meetings &amp; workflows.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#tracks" class="mega-item" onclick="filterCatalog('engineering')">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Engineering (APIs, RAG &amp; MCP)</strong>
+                          <span class="mega-badge purple">TECHNICAL</span>
+                        </div>
+                        <p>Enterprise AI engineering with Claude, OpenAI, vector search &amp; MCP.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#tracks" class="mega-item active-item" onclick="filterCatalog('all')">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#cap" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Full Catalog: All 10 Courses</strong>
+                        </div>
+                        <p>Foundation Level, Business Applications, Technical AI &amp; Cloud tracks.</p>
+                      </div>
+                    </a>
                   </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                    Universal Literacy
-                  </div>
                 </div>
-                <p class="card-desc">Core AI concepts, generative vs traditional AI, LLM mechanics, ethics, limitations, and the future of work.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill literacy">School of AI Literacy</span>
-                  <a class="card-view-link" href="course-preview.html?id=intro-to-ai">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+                <div class="mega-promo-card purple-promo academy-promo">
+                  <div class="mega-promo-content">
+                    <div>
+                      <span class="mega-promo-tag">NEXT COHORT OPEN</span>
+                      <h4>Hands-On AI Training That Builds Careers</h4>
+                      <p>Join 3,200+ certified practitioners across 18 African countries with zero fluff.</p>
+                    </div>
+                    <a class="btn gold sm mega-promo-btn" href="#tracks">Explore All Tracks <svg class="i">
+                        <use href="#arr" />
+                      </svg></a>
+                  </div>
                 </div>
               </div>
-            </article>
+            </div>
+          </li>
 
-            <!-- COURSE 02 -->
-            <article class="card ccard course-product-card" data-school="literacy">
-              <a href="course-preview.html?id=ai-productivity" class="cover-link" aria-label="Preview AI Productivity & Workplace Applications">
-                <div class="cover" style="background-image: url('./Applied for Sales & Marketing cover.png')">
-                  <span class="lvl">High Demand</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=ai-productivity">AI Productivity &amp; Workplace Applications</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                    Workplace Mastery
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Professionals &amp; Execs
-                  </div>
-                </div>
-                <p class="card-desc">Hands-on AI workflows for communication, research, presentations, executive meetings, reports, and decision support.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill literacy">School of AI Literacy</span>
-                  <a class="card-view-link" href="course-preview.html?id=ai-productivity">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 03 -->
-            <article class="card ccard course-product-card" data-school="literacy">
-              <a href="course-preview.html?id=ai-business-strategy" class="cover-link" aria-label="Preview AI for Business Strategy & Growth">
-                <div class="cover" style="background-image: url('./Superintelligence for Leaders cover.png')">
-                  <span class="lvl">Executive</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=ai-business-strategy">AI for Business Strategy &amp; Growth</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
-                    Business &amp; Industry
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM12 12h.01"/><path d="M6 12h.01M18 12h.01"/></svg>
-                    Founders &amp; Executives
-                  </div>
-                </div>
-                <p class="card-desc">AI transformation, process optimization, adoption frameworks, AI governance, and strategic implementation for leaders.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill literacy">School of AI Literacy</span>
-                  <a class="card-view-link" href="course-preview.html?id=ai-business-strategy">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 04 -->
-            <article class="card ccard course-product-card" data-school="applications">
-              <a href="course-preview.html?id=ai-marketing" class="cover-link" aria-label="Preview AI for Marketing & Content Creation">
-                <div class="cover" style="background-image: url('./Collaborative AI Learning Workspace.png')">
-                  <span class="lvl">Intermediate</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=ai-marketing">AI for Marketing &amp; Content Creation</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg>
-                    Business Applications
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Marketers &amp; Entrepreneurs
-                  </div>
-                </div>
-                <p class="card-desc">AI copywriting, content strategy, social media automation, SEO, ad creative generation, and full marketing workflows.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill applications">School of AI Applications</span>
-                  <a class="card-view-link" href="course-preview.html?id=ai-marketing">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 05 -->
-            <article class="card ccard course-product-card" data-school="applications">
-              <a href="course-preview.html?id=ai-automation" class="cover-link" aria-label="Preview AI Automation & Workflow Design">
-                <div class="cover" style="background-image: url('./Data & Analytics Essentials.png')">
-                  <span class="lvl">Intermediate</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=ai-automation">AI Automation &amp; Workflow Design</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
-                    Business Automation
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Operations &amp; Entrepreneurs
-                  </div>
-                </div>
-                <p class="card-desc">No-code automation with AI workflows, Zapier, Make.com, AI assistants, and end-to-end business process automation.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill applications">School of AI Applications</span>
-                  <a class="card-view-link" href="course-preview.html?id=ai-automation">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 06 -->
-            <article class="card ccard course-product-card" data-school="engineering">
-              <a href="course-preview.html?id=prompt-engineering" class="cover-link" aria-label="Preview Prompt Engineering & AI Communication">
-                <div class="cover" style="background-image: url('./Modern Blue Workspace with Graduation Icon.png')">
-                  <span class="lvl">Technical</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=prompt-engineering">Prompt Engineering &amp; AI Communication</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
-                    Technical AI Track
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                    Everyone (Universal)
-                  </div>
-                </div>
-                <p class="card-desc">Prompt design principles, structured prompting, role prompting, chain-of-thought, workflow and business prompting.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill engineering">School of AI Engineering</span>
-                  <a class="card-view-link" href="course-preview.html?id=prompt-engineering">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 07 -->
-            <article class="card ccard course-product-card" data-school="engineering">
-              <a href="course-preview.html?id=ai-agents" class="cover-link" aria-label="Preview Building AI Assistants & AI Agents">
-                <div class="cover" style="background-image: url('./AI-Workspace-in-Focus.png')">
-                  <span class="lvl">Technical</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=ai-agents">Building AI Assistants &amp; AI Agents</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
-                    Technical AI Track
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    Developers &amp; Technical Professionals
-                  </div>
-                </div>
-                <p class="card-desc">AI agents, multi-agent systems, agent workflows, memory systems, tool use, and real-world business applications.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill engineering">School of AI Engineering</span>
-                  <a class="card-view-link" href="course-preview.html?id=ai-agents">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 08 -->
-            <article class="card ccard course-product-card" data-school="engineering">
-              <a href="course-preview.html?id=ai-engineering" class="cover-link" aria-label="Preview AI Engineering with Claude, APIs, RAG & MCP">
-                <div class="cover" style="background-image: url('./AI-API-Engineering-Workspace.png')">
-                  <span class="lvl">Technical</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=ai-engineering">AI Engineering with APIs, RAG &amp; MCP</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    Technical AI Track
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
-                    Developers &amp; Engineers
-                  </div>
-                </div>
-                <p class="card-desc">Enterprise AI engineering with Claude API, OpenAI API, RAG systems, MCP protocols, and vector knowledge bases.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill engineering">School of AI Engineering</span>
-                  <a class="card-view-link" href="course-preview.html?id=ai-engineering">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 09 -->
-            <article class="card ccard course-product-card" data-school="engineering">
-              <a href="course-preview.html?id=claude-code" class="cover-link" aria-label="Preview AI-Powered Software Development with Claude Code">
-                <div class="cover" style="background-image: url('./AI-Coding-in-a-Futuristic-Workspace.png')">
-                  <span class="lvl">Advanced</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=claude-code">AI-Powered Software Development with Claude Code</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    Technical AI Track
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
-                    Developers &amp; Software Engineers
-                  </div>
-                </div>
-                <p class="card-desc">Claude Code CLI, AI coding workflows, full-stack development, AI-assisted debugging, and rapid prototyping at scale.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill engineering">School of AI Engineering</span>
-                  <a class="card-view-link" href="course-preview.html?id=claude-code">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- COURSE 10 -->
-            <article class="card ccard course-product-card" data-school="cloud">
-              <a href="course-preview.html?id=cloud-computing" class="cover-link" aria-label="Preview Cloud Computing for AI & Modern Applications">
-                <div class="cover" style="background-image: url('./Cloud-AI-Workspace-Innovation.png')">
-                  <span class="lvl">Infrastructure</span>
-                </div>
-              </a>
-              <div class="course-product-body">
-                <h4><a href="course-preview.html?id=cloud-computing">Cloud Computing for AI &amp; Modern Applications</a></h4>
-                <div class="card-meta-rows">
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-                    Infrastructure Track
-                  </div>
-                  <div class="card-meta-row">
-                    <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    Developers &amp; IT Professionals
-                  </div>
-                </div>
-                <p class="card-desc">Cloud fundamentals, AWS, Azure, Google Cloud, AI infrastructure pipelines, and deployment basics for modern applications.</p>
-                <div class="card-bottom-bar">
-                  <span class="school-pill cloud">School of Cloud &amp; Emerging Tech</span>
-                  <a class="card-view-link" href="course-preview.html?id=cloud-computing">View course <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-          </div>
+          <li class="nav-item"><a class="nav-link" href="tafa-insights.html">Insights</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item mobile-cta-item">
+            <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                class="i">
+                <use href="#arr" />
+              </svg></a>
+          </li>
+        </ul>
+        <div class="nav-end"><a class="btn gold sm" href="#enrol">Enrol Now</a>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"
+            aria-label="Toggle navigation menu"><svg class="i">
+              <use href="#menu" />
+            </svg></button>
         </div>
-      </section>
-      <section class="d4" id="method">
-        <div class="wrap"><span class="bar"></span>
-          <h2>How you learn</h2>
-          <p class="sub">From first lesson to measurable results.</p>
-          <ol class="steps">
-            <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+      </nav>
+    </div>
+    <div class="hero-body">
+      <p class="eyebrow">TAFA ACADEMY</p>
+      <h1>Practical AI &amp; Emerging Technology Training that <em>builds careers and businesses.</em></h1>
+      <p class="lead">10 industry-aligned courses structured across 4 specialized schools for individuals, teams, and
+        technical engineers across Africa.</p>
+      <div class="ctas"><a class="btn gold" href="#enrol">Enrol in TAFA Academy <svg class="i">
+            <use href="#arr" />
+          </svg></a><a class="btn line" href="#tracks">Explore Programs <svg class="i">
+            <use href="#arr" />
+          </svg></a></div>
+      <div class="ticks">
+        <span><i class="tile tile--gold tile--xs"><svg class="i">
+              <use href="#book" />
+            </svg></i>Practical learning</span>
+        <span><i class="tile tile--gold tile--xs"><svg class="i">
+              <use href="#briefcase" />
+            </svg></i>Industry-relevant skills</span>
+        <span><i class="tile tile--gold tile--xs"><svg class="i">
+              <use href="#trend" />
+            </svg></i>Measurable impact</span>
+      </div>
+      <div class="script">Better People.<br>Stronger Businesses.<br>A Future-Ready Africa.</div>
+    </div>
+  </header>
+  <main>
+    <section class="sec" id="who">
+      <div class="wrap"><span class="bar"></span>
+        <h2>Who TAFA Academy is for</h2>
+        <p class="sub">Training designed around how people and organizations really work.</p>
+        <div class="g3">
+          <article class="card"><span class="tile tile--purple" aria-hidden="true"><svg class="i">
+                <use href="#user" />
+              </svg></span>
+            <h3>Individuals</h3>
+            <p>Professionals building in-demand Superintelligence skills to grow their careers.</p>
+          </article>
+          <article class="card"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+                <use href="#ppl" />
+              </svg></span>
+            <h3>Teams</h3>
+            <p>Upskill whole departments with shared tools, workflows and language.</p>
+          </article>
+          <article class="card"><span class="tile tile--green" aria-hidden="true"><svg class="i">
+                <use href="#bld" />
+              </svg></span>
+            <h3>Organizations</h3>
+            <p>Bespoke cohorts aligned to your business goals and workforce plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= THE 4 SPECIALIZED SCHOOLS ================= -->
+    <section class="sec schools-overview-section" id="schools">
+      <div class="wrap">
+        <span class="bar"></span>
+        <h2>The 4 Specialized Schools of TAFA Academy</h2>
+        <p class="sub">Recommended TAFA Academy structure: a unified progression from universal literacy to advanced AI
+          engineering and modern cloud deployments.</p>
+
+        <div class="schools-grid">
+          <!-- School 1 -->
+          <article class="school-card">
+            <div class="school-top-row">
+              <span class="tile tile--sm tile--gold"><svg class="i">
                   <use href="#book" />
                 </svg></span>
-              <h4><span>01</span>Learn</h4>
-              <p>Short, focused lessons built around real work.</p>
-            </li>
-            <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+              <span class="school-count-badge">3 Courses</span>
+            </div>
+            <h3>School of AI Literacy &amp; Productivity</h3>
+            <p>Build foundational AI understanding, workplace communication, and strategic executive adoption.</p>
+
+            <button class="school-card-link" onclick="filterCatalog('literacy')">Explore 3 Courses <svg class="i">
+                <use href="#arr" />
+              </svg></button>
+          </article>
+
+          <!-- School 2 -->
+          <article class="school-card">
+            <div class="school-top-row">
+              <span class="tile tile--sm tile--blue"><svg class="i">
+                  <use href="#bolt" />
+                </svg></span>
+              <span class="school-count-badge">2 Courses</span>
+            </div>
+            <h3>School of AI Applications</h3>
+            <p>Implement hands-on marketing workflows, content engines, and no-code business process automation.</p>
+
+            <button class="school-card-link" onclick="filterCatalog('applications')">Explore 2 Courses <svg class="i">
+                <use href="#arr" />
+              </svg></button>
+          </article>
+
+          <!-- School 3 -->
+          <article class="school-card">
+            <div class="school-top-row">
+              <span class="tile tile--sm tile--purple"><svg class="i">
                   <use href="#laptop" />
                 </svg></span>
-              <h4><span>02</span>Practice</h4>
-              <p>Hands-on exercises with the tools you will actually use.</p>
-            </li>
-            <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
-                  <use href="#gear" />
-                </svg></span>
-              <h4><span>03</span>Apply</h4>
-              <p>Turn what you learn into a live workflow or project.</p>
-            </li>
-            <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
-                  <use href="#award" />
-                </svg></span>
-              <h4><span>04</span>Certify</h4>
-              <p>Earn recognition for your skills and show measurable impact.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-      <section class="sec" id="enrol">
-        <div class="wrap">
-          <div class="band">
-            <div>
-              <h2>Invest in skills that pay back</h2>
-              <p>Programs are priced for individuals and teams, with custom quotes for larger cohorts.</p>
+              <span class="school-count-badge">4 Courses</span>
             </div>
-            <div>
-              <div class="amt">$300 "“ $950</div>
-              <ul>
-                <li>Hands-on, practical curriculum</li>
-                <li>Individual and team options</li>
-                <li>Custom quote for organizations</li>
-              </ul><a class="btn gold" href="#">Enrol Now <svg class="i">
-                  <use href="#arr" />
-                </svg></a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- ================= CTA + FOOTER ================= -->
-    <footer class="foot">
-      <div class="wrap cta">
-        <div>
-          <span class="bar"></span>
-          <p class="eyebrow">STEP FORWARD</p>
-          <h2>Build skills that turn Superintelligence into <em>real results.</em></h2>
-          <p>Practical, hands-on training for you and your team.</p>
-        </div>
-        <div class="acts">
-          <div class="act">
-            <a class="btn gold" href="#tracks">Enrol in TAFA Academy <svg class="i">
-                <use href="#arr" />
-              </svg></a>
-            <span>For individuals &amp; teams</span>
-          </div>
-          <div class="act">
-            <a class="btn line" href="tafa-ai-consulting.html#book">Talk to us about team training <svg class="i">
-                <use href="#arr" />
-              </svg></a>
-            <span>For organizations</span>
-          </div>
-        </div>
-      </div>
-      <div class="bottom">
-        <div class="wrap">
-          <div class="bottom-top">
-            <a class="logo" href="index.html"><img src="./tafa-log.png" alt="TalentFlow Africa Logo" width="150"></a>
-            <ul class="foot-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="tafa-what-we-do.html">What We Do</a></li>
-              <li><a href="tafa-academy.html">TAFA Academy</a></li>
-              <li><a href="tafa-insights.html">Insights</a></li>
-              <li><a href="index.html#about">About</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <div class="soc">
-              <a href="#" aria-label="LinkedIn"><svg class="i">
-                  <use href="#in" />
-                </svg></a>
-              <a href="#" aria-label="X"><svg class="i">
-                  <use href="#x" />
-                </svg></a>
-              <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="i">
-                  <use href="#ig" />
-                </svg></a>
-              <a href="#" aria-label="YouTube"><svg class="i">
-                  <use href="#yt" />
-                </svg></a>
-            </div>
-          </div>
-          <div class="bottom-base">
-            <span>We build people. We scale businesses. A future-ready Africa.</span>
-            <span>Â© 2026 TalentFlow Africa. All rights reserved.</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="courses-data.js"></script>
-    <script>
-      (function () {
-        var nav = document.getElementById('nav');
-        if (nav) {
-          var mb = nav.querySelector('.menu-btn');
-          var wrap = nav.closest('.wrap, .nav-wrap');
-          var megaItems = nav.querySelectorAll('.has-mega');
+            <h3>School of AI Engineering</h3>
+            <p>Master precision prompt engineering, autonomous AI agents, enterprise RAG, MCP, and Claude Code.</p>
 
-          function setMenu(open) {
-            nav.classList.toggle('open', open);
-            if (wrap) wrap.classList.toggle('nav-open', open);
-            if (mb) mb.setAttribute('aria-expanded', open ? 'true' : 'false');
-            if (!open) {
+            <button class="school-card-link" onclick="filterCatalog('engineering')">Explore 4 Courses <svg class="i">
+                <use href="#arr" />
+              </svg></button>
+          </article>
+
+          <!-- School 4 -->
+          <article class="school-card">
+            <div class="school-top-row">
+              <span class="tile tile--sm tile--green"><svg class="i">
+                  <use href="#globe" />
+                </svg></span>
+              <span class="school-count-badge">1 Course</span>
+            </div>
+            <h3>School of Cloud &amp; Emerging Tech</h3>
+            <p>Deploy scalable multi-cloud infrastructure and production AI workloads across AWS, Azure, and GCP.</p>
+
+            <button class="school-card-link" onclick="filterCatalog('cloud')">Explore Course <svg class="i">
+                <use href="#arr" />
+              </svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMPREHENSIVE COURSE CATALOG ================= -->
+    <section class="sec" id="tracks" style="padding-top: clamp(48px, 6vw, 76px)">
+      <div class="wrap">
+        <span class="bar"></span>
+        <h2>AI &amp; Emerging Technology School "” Course Catalog</h2>
+        <p class="sub">10 industry-aligned courses designed for real-world execution. Filter by specialized school
+          below.</p>
+
+        <!-- Filter Controls -->
+        <div class="catalog-controls">
+          <div class="school-filter-tabs" role="tablist" aria-label="Filter courses by school">
+            <button class="school-filter-btn active" data-filter="all" onclick="filterCatalog('all')">All Schools
+              (10)</button>
+            <button class="school-filter-btn" data-filter="literacy" onclick="filterCatalog('literacy')">AI Literacy
+              &amp; Productivity (3)</button>
+            <button class="school-filter-btn" data-filter="applications" onclick="filterCatalog('applications')">AI
+              Applications (2)</button>
+            <button class="school-filter-btn" data-filter="engineering" onclick="filterCatalog('engineering')">AI
+              Engineering (4)</button>
+            <button class="school-filter-btn" data-filter="cloud" onclick="filterCatalog('cloud')">Cloud &amp; Emerging
+              Tech (1)</button>
+          </div>
+          <div class="catalog-count-info" id="catalog-count">Showing 10 of 10 courses</div>
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="catalog-grid" id="courses-container">
+
+          <!-- COURSE 01 -->
+          <article class="card ccard course-product-card" data-school="literacy">
+            <a href="course-preview.html?id=intro-to-ai" class="cover-link"
+              aria-label="Preview Introduction to Artificial Intelligence">
+              <div class="cover" style="background-image: url('./Superintelligence Foundations cover.png')">
+                <span class="lvl">Foundation</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=intro-to-ai">Introduction to Artificial Intelligence</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5" />
+                  </svg>
+                  Foundation Level
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                  </svg>
+                  Universal Literacy
+                </div>
+              </div>
+              <p class="card-desc">Core AI concepts, generative vs traditional AI, LLM mechanics, ethics, limitations,
+                and the future of work.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill literacy">School of AI Literacy</span>
+                <a class="card-view-link" href="course-preview.html?id=intro-to-ai">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 02 -->
+          <article class="card ccard course-product-card" data-school="literacy">
+            <a href="course-preview.html?id=ai-productivity" class="cover-link"
+              aria-label="Preview AI Productivity & Workplace Applications">
+              <div class="cover" style="background-image: url('./Applied for Sales & Marketing cover.png')">
+                <span class="lvl">High Demand</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=ai-productivity">AI Productivity &amp; Workplace Applications</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                  Workplace Mastery
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  Professionals &amp; Execs
+                </div>
+              </div>
+              <p class="card-desc">Hands-on AI workflows for communication, research, presentations, executive meetings,
+                reports, and decision support.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill literacy">School of AI Literacy</span>
+                <a class="card-view-link" href="course-preview.html?id=ai-productivity">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 03 -->
+          <article class="card ccard course-product-card" data-school="literacy">
+            <a href="course-preview.html?id=ai-business-strategy" class="cover-link"
+              aria-label="Preview AI for Business Strategy & Growth">
+              <div class="cover" style="background-image: url('./Superintelligence for Leaders cover.png')">
+                <span class="lvl">Executive</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=ai-business-strategy">AI for Business Strategy &amp; Growth</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+                  </svg>
+                  Business &amp; Industry
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM12 12h.01" />
+                    <path d="M6 12h.01M18 12h.01" />
+                  </svg>
+                  Founders &amp; Executives
+                </div>
+              </div>
+              <p class="card-desc">AI transformation, process optimization, adoption frameworks, AI governance, and
+                strategic implementation for leaders.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill literacy">School of AI Literacy</span>
+                <a class="card-view-link" href="course-preview.html?id=ai-business-strategy">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 04 -->
+          <article class="card ccard course-product-card" data-school="applications">
+            <a href="course-preview.html?id=ai-marketing" class="cover-link"
+              aria-label="Preview AI for Marketing & Content Creation">
+              <div class="cover" style="background-image: url('./Collaborative AI Learning Workspace.png')">
+                <span class="lvl">Intermediate</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=ai-marketing">AI for Marketing &amp; Content Creation</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 20l1-5L16 4l4 4L9 19z" />
+                    <path d="M14 6l4 4" />
+                  </svg>
+                  Business Applications
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  Marketers &amp; Entrepreneurs
+                </div>
+              </div>
+              <p class="card-desc">AI copywriting, content strategy, social media automation, SEO, ad creative
+                generation, and full marketing workflows.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill applications">School of AI Applications</span>
+                <a class="card-view-link" href="course-preview.html?id=ai-marketing">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 05 -->
+          <article class="card ccard course-product-card" data-school="applications">
+            <a href="course-preview.html?id=ai-automation" class="cover-link"
+              aria-label="Preview AI Automation & Workflow Design">
+              <div class="cover" style="background-image: url('./Data & Analytics Essentials.png')">
+                <span class="lvl">Intermediate</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=ai-automation">AI Automation &amp; Workflow Design</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.5" />
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+                  </svg>
+                  Business Automation
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  Operations &amp; Entrepreneurs
+                </div>
+              </div>
+              <p class="card-desc">No-code automation with AI workflows, Zapier, Make.com, AI assistants, and end-to-end
+                business process automation.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill applications">School of AI Applications</span>
+                <a class="card-view-link" href="course-preview.html?id=ai-automation">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 06 -->
+          <article class="card ccard course-product-card" data-school="engineering">
+            <a href="course-preview.html?id=prompt-engineering" class="cover-link"
+              aria-label="Preview Prompt Engineering & AI Communication">
+              <div class="cover" style="background-image: url('./Modern Blue Workspace with Graduation Icon.png')">
+                <span class="lvl">Technical</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=prompt-engineering">Prompt Engineering &amp; AI Communication</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5" />
+                  </svg>
+                  Technical AI Track
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                  Everyone (Universal)
+                </div>
+              </div>
+              <p class="card-desc">Prompt design principles, structured prompting, role prompting, chain-of-thought,
+                workflow and business prompting.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill engineering">School of AI Engineering</span>
+                <a class="card-view-link" href="course-preview.html?id=prompt-engineering">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 07 -->
+          <article class="card ccard course-product-card" data-school="engineering">
+            <a href="course-preview.html?id=ai-agents" class="cover-link"
+              aria-label="Preview Building AI Assistants & AI Agents">
+              <div class="cover" style="background-image: url('./AI-Workspace-in-Focus.png')">
+                <span class="lvl">Technical</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=ai-agents">Building AI Assistants &amp; AI Agents</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.5" />
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+                  </svg>
+                  Technical AI Track
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  Developers &amp; Technical Professionals
+                </div>
+              </div>
+              <p class="card-desc">AI agents, multi-agent systems, agent workflows, memory systems, tool use, and
+                real-world business applications.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill engineering">School of AI Engineering</span>
+                <a class="card-view-link" href="course-preview.html?id=ai-agents">View course <svg class="i" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 08 -->
+          <article class="card ccard course-product-card" data-school="engineering">
+            <a href="course-preview.html?id=ai-engineering" class="cover-link"
+              aria-label="Preview AI Engineering with Claude, APIs, RAG & MCP">
+              <div class="cover" style="background-image: url('./AI-API-Engineering-Workspace.png')">
+                <span class="lvl">Technical</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=ai-engineering">AI Engineering with APIs, RAG &amp; MCP</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  Technical AI Track
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.5" />
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+                  </svg>
+                  Developers &amp; Engineers
+                </div>
+              </div>
+              <p class="card-desc">Enterprise AI engineering with Claude API, OpenAI API, RAG systems, MCP protocols,
+                and vector knowledge bases.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill engineering">School of AI Engineering</span>
+                <a class="card-view-link" href="course-preview.html?id=ai-engineering">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 09 -->
+          <article class="card ccard course-product-card" data-school="engineering">
+            <a href="course-preview.html?id=claude-code" class="cover-link"
+              aria-label="Preview AI-Powered Software Development with Claude Code">
+              <div class="cover" style="background-image: url('./AI-Coding-in-a-Futuristic-Workspace.png')">
+                <span class="lvl">Advanced</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=claude-code">AI-Powered Software Development with Claude Code</a></h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  Technical AI Track
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.5" />
+                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+                  </svg>
+                  Developers &amp; Software Engineers
+                </div>
+              </div>
+              <p class="card-desc">Claude Code CLI, AI coding workflows, full-stack development, AI-assisted debugging,
+                and rapid prototyping at scale.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill engineering">School of AI Engineering</span>
+                <a class="card-view-link" href="course-preview.html?id=claude-code">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 10 -->
+          <article class="card ccard course-product-card" data-school="cloud">
+            <a href="course-preview.html?id=cloud-computing" class="cover-link"
+              aria-label="Preview Cloud Computing for AI & Modern Applications">
+              <div class="cover" style="background-image: url('./Cloud-AI-Workspace-Innovation.png')">
+                <span class="lvl">Infrastructure</span>
+              </div>
+            </a>
+            <div class="course-product-body">
+              <h4><a href="course-preview.html?id=cloud-computing">Cloud Computing for AI &amp; Modern Applications</a>
+              </h4>
+              <div class="card-meta-rows">
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                  </svg>
+                  Infrastructure Track
+                </div>
+                <div class="card-meta-row">
+                  <svg class="i" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  Developers &amp; IT Professionals
+                </div>
+              </div>
+              <p class="card-desc">Cloud fundamentals, AWS, Azure, Google Cloud, AI infrastructure pipelines, and
+                deployment basics for modern applications.</p>
+              <div class="card-bottom-bar">
+                <span class="school-pill cloud">School of Cloud &amp; Emerging Tech</span>
+                <a class="card-view-link" href="course-preview.html?id=cloud-computing">View course <svg class="i"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <section class="d4" id="method">
+      <div class="wrap"><span class="bar"></span>
+        <h2>How you learn</h2>
+        <p class="sub">From first lesson to measurable results.</p>
+        <ol class="steps">
+          <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+                <use href="#book" />
+              </svg></span>
+            <h4><span>01</span>Learn</h4>
+            <p>Short, focused lessons built around real work.</p>
+          </li>
+          <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+                <use href="#laptop" />
+              </svg></span>
+            <h4><span>02</span>Practice</h4>
+            <p>Hands-on exercises with the tools you will actually use.</p>
+          </li>
+          <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+                <use href="#gear" />
+              </svg></span>
+            <h4><span>03</span>Apply</h4>
+            <p>Turn what you learn into a live workflow or project.</p>
+          </li>
+          <li class="step"><span class="tile tile--blue" aria-hidden="true"><svg class="i">
+                <use href="#award" />
+              </svg></span>
+            <h4><span>04</span>Certify</h4>
+            <p>Earn recognition for your skills and show measurable impact.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="sec" id="enrol">
+      <div class="wrap">
+        <div class="band">
+          <div>
+            <h2>Invest in skills that pay back</h2>
+            <p>Programs are priced for individuals and teams, with custom quotes for larger cohorts.</p>
+          </div>
+          <div>
+            <div class="amt">$300 "“ $950</div>
+            <ul>
+              <li>Hands-on, practical curriculum</li>
+              <li>Individual and team options</li>
+              <li>Custom quote for organizations</li>
+            </ul><a class="btn gold" href="#">Enrol Now <svg class="i">
+                <use href="#arr" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ================= CTA + FOOTER ================= -->
+  <footer class="foot">
+    <div class="wrap cta">
+      <div>
+        <span class="bar"></span>
+        <p class="eyebrow">STEP FORWARD</p>
+        <h2>Build skills that turn Superintelligence into <em>real results.</em></h2>
+        <p>Practical, hands-on training for you and your team.</p>
+      </div>
+      <div class="acts">
+        <div class="act">
+          <a class="btn gold" href="#tracks">Enrol in TAFA Academy <svg class="i">
+              <use href="#arr" />
+            </svg></a>
+          <span>For individuals &amp; teams</span>
+        </div>
+        <div class="act">
+          <a class="btn line" href="tafa-ai-consulting.html#book">Talk to us about team training <svg class="i">
+              <use href="#arr" />
+            </svg></a>
+          <span>For organizations</span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="wrap">
+        <div class="bottom-top">
+          <a class="logo" href="index.html"><img src="./tafa-log.png" alt="TalentFlow Africa Logo" width="150"></a>
+          <ul class="foot-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tafa-what-we-do.html">What We Do</a></li>
+            <li><a href="tafa-academy.html">TAFA Academy</a></li>
+            <li><a href="tafa-insights.html">Insights</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <div class="soc">
+            <a href="#" aria-label="LinkedIn"><svg class="i">
+                <use href="#in" />
+              </svg></a>
+            <a href="#" aria-label="X"><svg class="i">
+                <use href="#x" />
+              </svg></a>
+            <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank"
+              rel="noopener noreferrer"><svg class="i">
+                <use href="#ig" />
+              </svg></a>
+            <a href="#" aria-label="YouTube"><svg class="i">
+                <use href="#yt" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="bottom-base">
+          <span>We build people. We scale businesses. A future-ready Africa.</span>
+          <span>Â© 2026 TalentFlow Africa. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="courses-data.js"></script>
+  <script>
+    (function () {
+      var nav = document.getElementById('nav');
+      if (nav) {
+        var mb = nav.querySelector('.menu-btn');
+        var wrap = nav.closest('.wrap, .nav-wrap');
+        var megaItems = nav.querySelectorAll('.has-mega');
+
+        function setMenu(open) {
+          nav.classList.toggle('open', open);
+          if (wrap) wrap.classList.toggle('nav-open', open);
+          if (mb) mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (!open) {
+            megaItems.forEach(function (other) {
+              other.classList.remove('expanded');
+              var tr = other.querySelector('.mega-trigger');
+              if (tr) tr.setAttribute('aria-expanded', 'false');
+            });
+          }
+        }
+        if (mb) {
+          mb.addEventListener('click', function (e) {
+            e.stopPropagation();
+            setMenu(!nav.classList.contains('open'));
+          });
+        }
+        megaItems.forEach(function (item) {
+          var trigger = item.querySelector('.mega-trigger');
+          if (!trigger) return;
+          trigger.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1020) {
+              e.preventDefault();
+              e.stopPropagation();
+              var wasExpanded = item.classList.contains('expanded');
               megaItems.forEach(function (other) {
                 other.classList.remove('expanded');
                 var tr = other.querySelector('.mega-trigger');
                 if (tr) tr.setAttribute('aria-expanded', 'false');
               });
-            }
-          }
-          if (mb) {
-            mb.addEventListener('click', function (e) {
-              e.stopPropagation();
-              setMenu(!nav.classList.contains('open'));
-            });
-          }
-          megaItems.forEach(function (item) {
-            var trigger = item.querySelector('.mega-trigger');
-            if (!trigger) return;
-            trigger.addEventListener('click', function (e) {
-              if (window.innerWidth <= 1020) {
-                e.preventDefault();
-                e.stopPropagation();
-                var wasExpanded = item.classList.contains('expanded');
-                megaItems.forEach(function (other) {
-                  other.classList.remove('expanded');
-                  var tr = other.querySelector('.mega-trigger');
-                  if (tr) tr.setAttribute('aria-expanded', 'false');
-                });
-                if (!wasExpanded) {
-                  item.classList.add('expanded');
-                  trigger.setAttribute('aria-expanded', 'true');
-                }
+              if (!wasExpanded) {
+                item.classList.add('expanded');
+                trigger.setAttribute('aria-expanded', 'true');
               }
-            });
-          });
-          nav.querySelectorAll('a:not(.mega-trigger)').forEach(function (a) {
-            a.addEventListener('click', function () {
-              if (window.innerWidth <= 1020) setMenu(false);
-            });
-          });
-          document.addEventListener('click', function (e) {
-            if (nav.classList.contains('open') && !nav.contains(e.target)) {
-              setMenu(false);
             }
           });
+        });
+        nav.querySelectorAll('a:not(.mega-trigger)').forEach(function (a) {
+          a.addEventListener('click', function () {
+            if (window.innerWidth <= 1020) setMenu(false);
+          });
+        });
+        document.addEventListener('click', function (e) {
+          if (nav.classList.contains('open') && !nav.contains(e.target)) {
+            setMenu(false);
+          }
+        });
+      }
+
+      // Global Catalog Filter
+      window.filterCatalog = function (school) {
+        var buttons = document.querySelectorAll('.school-filter-btn');
+        buttons.forEach(function (b) {
+          if (b.getAttribute('data-filter') === school) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+
+        var cards = document.querySelectorAll('.course-product-card');
+        var visible = 0;
+        cards.forEach(function (card) {
+          var cardSchool = card.getAttribute('data-school');
+          if (school === 'all' || cardSchool === school) {
+            card.style.display = 'flex';
+            visible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        var countEl = document.getElementById('catalog-count');
+        if (countEl) {
+          countEl.textContent = 'Showing ' + visible + ' of 10 courses';
         }
 
-        // Global Catalog Filter
-        window.filterCatalog = function(school) {
-          var buttons = document.querySelectorAll('.school-filter-btn');
-          buttons.forEach(function(b) {
-            if (b.getAttribute('data-filter') === school) {
-              b.classList.add('active');
-            } else {
-              b.classList.remove('active');
-            }
-          });
-
-          var cards = document.querySelectorAll('.course-product-card');
-          var visible = 0;
-          cards.forEach(function(card) {
-            var cardSchool = card.getAttribute('data-school');
-            if (school === 'all' || cardSchool === school) {
-              card.style.display = 'flex';
-              visible++;
-            } else {
-              card.style.display = 'none';
-            }
-          });
-
-          var countEl = document.getElementById('catalog-count');
-          if (countEl) {
-            countEl.textContent = 'Showing ' + visible + ' of 10 courses';
+        // If triggered from outside catalog controls, scroll to tracks
+        if (window.event && window.event.target && window.event.target.classList.contains('school-card-link')) {
+          var targetSec = document.getElementById('tracks');
+          if (targetSec) {
+            targetSec.scrollIntoView({ behavior: 'smooth' });
           }
-
-          // If triggered from outside catalog controls, scroll to tracks
-          if (window.event && window.event.target && window.event.target.classList.contains('school-card-link')) {
-            var targetSec = document.getElementById('tracks');
-            if (targetSec) {
-              targetSec.scrollIntoView({ behavior: 'smooth' });
-            }
-          }
-        };
-      })();
-    </script>
-  </body>
+        }
+      };
+    })();
+  </script>
+</body>
 
 </html>

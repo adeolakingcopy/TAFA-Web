@@ -380,8 +380,8 @@
     }
 
     .nav-link:hover,
-    .has-mega:hover > .nav-link,
-    .has-mega.expanded > .nav-link {
+    .has-mega:hover>.nav-link,
+    .has-mega.expanded>.nav-link {
       color: var(--blue);
     }
 
@@ -398,9 +398,9 @@
       transition: transform 0.22s ease;
     }
 
-    .has-mega:hover > .nav-link .chevron-icon,
-    .has-mega.is-active > .nav-link .chevron-icon,
-    .has-mega.expanded > .nav-link .chevron-icon {
+    .has-mega:hover>.nav-link .chevron-icon,
+    .has-mega.is-active>.nav-link .chevron-icon,
+    .has-mega.expanded>.nav-link .chevron-icon {
       transform: rotate(180deg);
     }
 
@@ -504,10 +504,22 @@
       box-shadow: 0 4px 10px -3px rgba(6, 26, 63, 0.25);
     }
 
-    .mega-tile.blue { background: linear-gradient(135deg, #1d4ed8, #0A2E8F); }
-    .mega-tile.purple { background: linear-gradient(135deg, #5b3fe6, #3b22b5); }
-    .mega-tile.gold { background: linear-gradient(135deg, #fbbf24, #d97706); color: #061a3f; }
-    .mega-tile.green { background: linear-gradient(135deg, #14a84f, #0e8a3e); }
+    .mega-tile.blue {
+      background: linear-gradient(135deg, #1d4ed8, #0A2E8F);
+    }
+
+    .mega-tile.purple {
+      background: linear-gradient(135deg, #5b3fe6, #3b22b5);
+    }
+
+    .mega-tile.gold {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #061a3f;
+    }
+
+    .mega-tile.green {
+      background: linear-gradient(135deg, #14a84f, #0e8a3e);
+    }
 
     .mega-tile svg.i {
       width: 18px;
@@ -1385,7 +1397,7 @@
       }
 
       nav .nav-link:active,
-      nav .has-mega.expanded > .nav-link {
+      nav .has-mega.expanded>.nav-link {
         background: #edf2f7;
         color: var(--blue);
       }
@@ -1421,11 +1433,18 @@
       }
 
       @keyframes megaFadeIn {
-        from { opacity: 0; transform: translateY(-4px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(-4px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
-      .has-mega.expanded > .nav-link .chevron-icon {
+      .has-mega.expanded>.nav-link .chevron-icon {
         transform: rotate(180deg);
       }
 
@@ -1506,7 +1525,8 @@
       }
 
       .mega-item p {
-        display: none; /* Hide heavy multi-line descriptions on mobile for a clean, fast list */
+        display: none;
+        /* Hide heavy multi-line descriptions on mobile for a clean, fast list */
       }
 
       .mega-promo-card {
@@ -1537,7 +1557,8 @@
       }
 
       .mega-promo-card p {
-        display: none; /* Hide paragraph on mobile */
+        display: none;
+        /* Hide paragraph on mobile */
       }
 
       .mega-promo-btn {
@@ -2264,15 +2285,18 @@
   <header class="hero">
     <div class="wrap">
       <nav aria-label="Main" id="nav">
-        <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png" alt="TalentFlow Africa Logo" class="mark"></a>
+        <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png"
+            alt="TalentFlow Africa Logo" class="mark"></a>
         <ul id="nav-links">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          
+
           <!-- What We Do Mega Menu -->
           <li class="nav-item has-mega">
             <a href="tafa-what-we-do.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
               What We Do
-              <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </a>
             <div class="mega-menu" role="region" aria-label="What We Do Menu">
               <div class="mega-grid">
@@ -2280,7 +2304,9 @@
                   <span class="mega-col-title">Core Services</span>
                   <div class="mega-list">
                     <a href="tafa-ai-consulting.html" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#gear" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Strategy &amp; Consulting</strong>
@@ -2290,7 +2316,9 @@
                       </div>
                     </a>
                     <a href="index.html#what" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#ppl" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#ppl" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Workforce AI Transformation</strong>
@@ -2299,7 +2327,9 @@
                       </div>
                     </a>
                     <a href="index.html#what" class="mega-item">
-                      <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#briefcase" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Executive AI Advisory</strong>
@@ -2314,7 +2344,9 @@
                   <span class="mega-col-title">Methodology &amp; Solutions</span>
                   <div class="mega-list">
                     <a href="index.html#framework" class="mega-item">
-                      <span class="mega-tile green"><svg class="i"><use href="#trend" /></svg></span>
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#trend" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>4D Delivery Framework</strong>
@@ -2323,7 +2355,9 @@
                       </div>
                     </a>
                     <a href="index.html#programs" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#chart" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#chart" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Growth Audit</strong>
@@ -2333,7 +2367,9 @@
                       </div>
                     </a>
                     <a href="tafa-what-we-do.html" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#globe" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#globe" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Overview &amp; Case Studies</strong>
@@ -2351,7 +2387,10 @@
                       <h4>Turn AI Potential into Real Business Results</h4>
                       <p>Schedule a focused 30-minute consultation with our AI transformation specialists.</p>
                     </div>
-                    <a class="btn gold sm mega-promo-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+                    <a class="btn gold sm mega-promo-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                        class="i">
+                        <use href="#arr" />
+                      </svg></a>
                   </div>
                 </div>
               </div>
@@ -2362,7 +2401,9 @@
           <li class="nav-item has-mega">
             <a href="tafa-academy.html" class="nav-link mega-trigger on" aria-haspopup="true" aria-expanded="false">
               TAFA Academy
-              <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </a>
             <div class="mega-menu" role="region" aria-label="TAFA Academy Menu">
               <div class="mega-grid">
@@ -2370,7 +2411,9 @@
                   <span class="mega-col-title">Flagship Programs</span>
                   <div class="mega-list">
                     <a href="course-superintelligence-foundations.html" class="mega-item active-item">
-                      <span class="mega-tile gold"><svg class="i"><use href="#gauge" /></svg></span>
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#gauge" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Superintelligence Foundations</strong>
@@ -2380,7 +2423,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html#tracks" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#laptop" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#laptop" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Applied AI for Sales &amp; Marketing</strong>
@@ -2390,7 +2435,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html#tracks" class="mega-item">
-                      <span class="mega-tile green"><svg class="i"><use href="#chart" /></svg></span>
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#chart" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Data &amp; Analytics Essentials</strong>
@@ -2406,7 +2453,9 @@
                   <span class="mega-col-title">Executive &amp; Corporate</span>
                   <div class="mega-list">
                     <a href="tafa-academy.html#tracks" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#award" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#award" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Superintelligence for Leaders</strong>
@@ -2416,7 +2465,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html#tracks" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#bld" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#bld" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Custom Enterprise Training</strong>
@@ -2426,7 +2477,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html" class="mega-item">
-                      <span class="mega-tile gold"><svg class="i"><use href="#cap" /></svg></span>
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#cap" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Academy Hub &amp; All Tracks</strong>
@@ -2444,7 +2497,10 @@
                       <h4>Hands-On AI Training That Builds Careers</h4>
                       <p>Join 3,200+ certified practitioners across 18 African countries with zero fluff.</p>
                     </div>
-                    <a class="btn gold sm mega-promo-btn" href="tafa-academy.html#tracks">Explore All Tracks <svg class="i"><use href="#arr" /></svg></a>
+                    <a class="btn gold sm mega-promo-btn" href="tafa-academy.html#tracks">Explore All Tracks <svg
+                        class="i">
+                        <use href="#arr" />
+                      </svg></a>
                   </div>
                 </div>
               </div>
@@ -2455,7 +2511,10 @@
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
           <li class="nav-item mobile-cta-item">
-            <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+            <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                class="i">
+                <use href="#arr" />
+              </svg></a>
           </li>
         </ul>
         <div class="nav-end"><a class="btn gold sm" href="#enrol">Enrol Now</a>
@@ -2611,7 +2670,8 @@
             <a href="#" aria-label="X"><svg class="i">
                 <use href="#x" />
               </svg></a>
-            <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="i">
+            <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank"
+              rel="noopener noreferrer"><svg class="i">
                 <use href="#ig" />
               </svg></a>
             <a href="#" aria-label="YouTube"><svg class="i">

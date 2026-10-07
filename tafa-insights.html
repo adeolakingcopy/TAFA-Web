@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Insights &amp; Research | TalentFlow Africa — Superintelligence &amp; AI for African Business</title>
-  <meta name="description" content="Actionable AI research, executive briefings, workforce transformation frameworks, and African enterprise case studies from TalentFlow Africa.">
+  <meta name="description"
+    content="Actionable AI research, executive briefings, workforce transformation frameworks, and African enterprise case studies from TalentFlow Africa.">
   <script>document.documentElement.classList.add('js');</script>
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap"
@@ -59,7 +60,15 @@
       width: 100%;
     }
 
-    h1, h2, h3, h4, h5, h6, p, .lead, .sub {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    .lead,
+    .sub {
       overflow-wrap: break-word;
       word-wrap: break-word;
     }
@@ -121,23 +130,73 @@
       display: grid;
       place-items: center;
       color: #fff;
-      box-shadow: 0 8px 18px -10px rgba(10,16,32,.5), inset 0 1px 0 rgba(255,255,255,.28);
+      box-shadow: 0 8px 18px -10px rgba(10, 16, 32, .5), inset 0 1px 0 rgba(255, 255, 255, .28);
     }
 
-    .tile svg { width: 28px; height: 28px; }
-    .tile svg.i { stroke-width: 1.7; }
-    .tile--lg { width: 68px; height: 68px; border-radius: 18px; }
-    .tile--lg svg { width: 34px; height: 34px; }
-    .tile--sm { width: 44px; height: 44px; border-radius: 12px; }
-    .tile--sm svg { width: 22px; height: 22px; }
-    .tile--xs { width: 30px; height: 30px; border-radius: 10px; box-shadow: none; }
-    .tile--xs svg { width: 16px; height: 16px; }
+    .tile svg {
+      width: 28px;
+      height: 28px;
+    }
 
-    .tile--blue  { background: linear-gradient(145deg, #3b7bff, var(--blue-3)); }
-    .tile--green { background: linear-gradient(145deg, #22b85d, var(--green-deep)); }
-    .tile--purple { background: linear-gradient(145deg, #7357f0, var(--purple-deep)); }
-    .tile--gold  { background: linear-gradient(145deg, #ffd45e, #eaa805); color: var(--navy); }
-    .tile--glass { background: rgba(255,255,255,.13); box-shadow: inset 0 0 0 1px rgba(255,255,255,.3), inset 0 1px 0 rgba(255,255,255,.25); }
+    .tile svg.i {
+      stroke-width: 1.7;
+    }
+
+    .tile--lg {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+    }
+
+    .tile--lg svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .tile--sm {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+    }
+
+    .tile--sm svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .tile--xs {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      box-shadow: none;
+    }
+
+    .tile--xs svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .tile--blue {
+      background: linear-gradient(145deg, #3b7bff, var(--blue-3));
+    }
+
+    .tile--green {
+      background: linear-gradient(145deg, #22b85d, var(--green-deep));
+    }
+
+    .tile--purple {
+      background: linear-gradient(145deg, #7357f0, var(--purple-deep));
+    }
+
+    .tile--gold {
+      background: linear-gradient(145deg, #ffd45e, #eaa805);
+      color: var(--navy);
+    }
+
+    .tile--glass {
+      background: rgba(255, 255, 255, .13);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .3), inset 0 1px 0 rgba(255, 255, 255, .25);
+    }
 
     /* ============================================================
        SHARED HEADINGS & BUTTONS
@@ -179,27 +238,84 @@
       transition: transform .15s ease, background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
     }
 
-    .btn svg.i { width: 16px; height: 16px; stroke-width: 2.2; transition: transform .2s ease; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn:hover svg.i { transform: translateX(4px); }
+    .btn svg.i {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.2;
+      transition: transform .2s ease;
+    }
 
-    .btn.sm { padding: 10px 18px; font-size: 13px; }
-    .btn.xs { padding: 7px 14px; font-size: 12px; }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
-    .btn.gold { background: var(--gold); color: var(--navy); }
-    .btn.gold:hover { background: #ffd04d; box-shadow: 0 6px 18px -4px rgba(251,191,36,.45); }
+    .btn:hover svg.i {
+      transform: translateX(4px);
+    }
 
-    .btn.blue { background: var(--blue); color: #fff; }
-    .btn.blue:hover { background: #1a42b8; box-shadow: 0 6px 18px -4px rgba(29,78,216,.4); }
+    .btn.sm {
+      padding: 10px 18px;
+      font-size: 13px;
+    }
 
-    .btn.line { border-color: rgba(255,255,255,.7); color: #fff; background: transparent; }
-    .btn.line:hover { background: rgba(255,255,255,.14); border-color: #fff; }
+    .btn.xs {
+      padding: 7px 14px;
+      font-size: 12px;
+    }
 
-    .btn.ghost { border-color: var(--line); color: var(--navy); background: #fff; }
-    .btn.ghost:hover { border-color: var(--blue); color: var(--blue); background: #f0f5ff; }
+    .btn.gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
 
-    .btn.outline-blue { border-color: var(--blue); color: var(--blue); background: transparent; }
-    .btn.outline-blue:hover { background: var(--blue); color: #fff; }
+    .btn.gold:hover {
+      background: #ffd04d;
+      box-shadow: 0 6px 18px -4px rgba(251, 191, 36, .45);
+    }
+
+    .btn.blue {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .btn.blue:hover {
+      background: #1a42b8;
+      box-shadow: 0 6px 18px -4px rgba(29, 78, 216, .4);
+    }
+
+    .btn.line {
+      border-color: rgba(255, 255, 255, .7);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn.line:hover {
+      background: rgba(255, 255, 255, .14);
+      border-color: #fff;
+    }
+
+    .btn.ghost {
+      border-color: var(--line);
+      color: var(--navy);
+      background: #fff;
+    }
+
+    .btn.ghost:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: #f0f5ff;
+    }
+
+    .btn.outline-blue {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: transparent;
+    }
+
+    .btn.outline-blue:hover {
+      background: var(--blue);
+      color: #fff;
+    }
 
     /* ============================================================
        HERO & NAVIGATION
@@ -217,24 +333,24 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(6,26,63,.98) 0%, rgba(6,26,63,.92) 42%, rgba(6,26,63,.68) 78%, rgba(6,26,63,.45) 100%);
+      background: linear-gradient(90deg, rgba(6, 26, 63, .98) 0%, rgba(6, 26, 63, .92) 42%, rgba(6, 26, 63, .68) 78%, rgba(6, 26, 63, .45) 100%);
       pointer-events: none;
     }
 
-    .hero > .wrap,
+    .hero>.wrap,
     .hero-body {
       position: relative;
       z-index: 2;
     }
 
-    .hero > .wrap {
+    .hero>.wrap {
       width: calc(100% - 40px);
       max-width: 1240px;
       margin: 14px auto 0;
       padding-inline: 0;
       background: #ffffff;
       border-radius: 50px;
-      box-shadow: 0 10px 30px -5px rgba(6,26,63,0.12), 0 0 0 1px rgba(6,26,63,0.05);
+      box-shadow: 0 10px 30px -5px rgba(6, 26, 63, 0.12), 0 0 0 1px rgba(6, 26, 63, 0.05);
       position: relative;
       z-index: 1000;
     }
@@ -251,7 +367,12 @@
       position: relative;
     }
 
-    .logo { display: flex; align-items: center; flex: 0 0 auto; }
+    .logo {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
     .hero nav img.mark {
       width: auto;
       height: 40px;
@@ -271,8 +392,13 @@
       font-weight: 600;
     }
 
-    .nav-item { position: relative; }
-    .mobile-cta-item { display: none; }
+    .nav-item {
+      position: relative;
+    }
+
+    .mobile-cta-item {
+      display: none;
+    }
 
     .nav-link {
       display: inline-flex;
@@ -292,8 +418,10 @@
     }
 
     .nav-link:hover,
-    .has-mega:hover > .nav-link,
-    .has-mega.expanded > .nav-link { color: var(--blue); }
+    .has-mega:hover>.nav-link,
+    .has-mega.expanded>.nav-link {
+      color: var(--blue);
+    }
 
     .nav-link.on {
       border-bottom-color: var(--gold);
@@ -308,14 +436,16 @@
       transition: transform 0.22s ease;
     }
 
-    .has-mega:hover > .nav-link .chevron-icon,
-    .has-mega.is-active > .nav-link .chevron-icon,
-    .has-mega.expanded > .nav-link .chevron-icon {
+    .has-mega:hover>.nav-link .chevron-icon,
+    .has-mega.is-active>.nav-link .chevron-icon,
+    .has-mega.expanded>.nav-link .chevron-icon {
       transform: rotate(180deg);
     }
 
     @media (min-width: 1021px) {
-      .nav-item.has-mega { position: static; }
+      .nav-item.has-mega {
+        position: static;
+      }
 
       .mega-menu {
         position: absolute;
@@ -406,13 +536,34 @@
       box-shadow: 0 4px 10px -3px rgba(6, 26, 63, 0.25);
     }
 
-    .mega-tile.blue { background: linear-gradient(135deg, #1d4ed8, #0A2E8F); }
-    .mega-tile.purple { background: linear-gradient(135deg, #5b3fe6, #3b22b5); }
-    .mega-tile.gold { background: linear-gradient(135deg, #fbbf24, #d97706); color: #061a3f; }
-    .mega-tile.green { background: linear-gradient(135deg, #14a84f, #0e8a3e); }
-    .mega-tile svg.i { width: 18px; height: 18px; stroke-width: 2; }
+    .mega-tile.blue {
+      background: linear-gradient(135deg, #1d4ed8, #0A2E8F);
+    }
 
-    .mega-item-body { flex: 1; min-width: 0; }
+    .mega-tile.purple {
+      background: linear-gradient(135deg, #5b3fe6, #3b22b5);
+    }
+
+    .mega-tile.gold {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #061a3f;
+    }
+
+    .mega-tile.green {
+      background: linear-gradient(135deg, #14a84f, #0e8a3e);
+    }
+
+    .mega-tile svg.i {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+    }
+
+    .mega-item-body {
+      flex: 1;
+      min-width: 0;
+    }
+
     .mega-item-head {
       display: flex;
       align-items: center;
@@ -420,13 +571,17 @@
       flex-wrap: wrap;
       line-height: 1.25;
     }
+
     .mega-item-head strong {
       font-size: 13.5px;
       font-weight: 700;
       color: var(--navy);
       transition: color 0.15s ease;
     }
-    .mega-item:hover .mega-item-head strong { color: var(--blue); }
+
+    .mega-item:hover .mega-item-head strong {
+      color: var(--blue);
+    }
 
     .mega-badge {
       font-size: 9.5px;
@@ -437,10 +592,26 @@
       text-transform: uppercase;
       line-height: 1.2;
     }
-    .mega-badge.blue { background: #dbeafe; color: #1d4ed8; }
-    .mega-badge.gold { background: #fef3c7; color: #92400e; }
-    .mega-badge.purple { background: #ede9fe; color: #5b3fe6; }
-    .mega-badge.green { background: #dcfce7; color: #15803d; }
+
+    .mega-badge.blue {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .mega-badge.gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .mega-badge.purple {
+      background: #ede9fe;
+      color: #5b3fe6;
+    }
+
+    .mega-badge.green {
+      background: #dcfce7;
+      color: #15803d;
+    }
 
     .mega-item p {
       font-size: 12px;
@@ -460,12 +631,15 @@
       overflow: hidden;
       color: #fff;
     }
+
     .advisory-promo {
       background: linear-gradient(135deg, rgba(6, 26, 63, 0.94) 0%, rgba(10, 46, 143, 0.88) 100%), url('./mega-promo-consulting.png') center right / cover no-repeat;
     }
+
     .academy-promo {
       background: linear-gradient(135deg, rgba(27, 10, 74, 0.94) 0%, rgba(74, 47, 208, 0.88) 100%), url('./mega-promo-academy.png') center right / cover no-repeat;
     }
+
     .mega-promo-content {
       position: relative;
       z-index: 2;
@@ -475,6 +649,7 @@
       justify-content: space-between;
       gap: 12px;
     }
+
     .mega-promo-tag {
       display: inline-block;
       font-size: 10px;
@@ -484,6 +659,7 @@
       text-transform: uppercase;
       margin-bottom: 6px;
     }
+
     .mega-promo-card h4 {
       font-size: 15px;
       font-weight: 700;
@@ -491,12 +667,14 @@
       margin: 0 0 6px;
       color: #fff;
     }
+
     .mega-promo-card p {
       font-size: 12px;
       color: #e2e8f0;
       margin: 0 0 14px;
       line-height: 1.45;
     }
+
     .mega-promo-btn {
       align-self: flex-start;
       padding: 8px 15px;
@@ -522,7 +700,11 @@
       place-items: center;
       padding: 0;
     }
-    .menu-btn svg.i { width: 22px; height: 22px; }
+
+    .menu-btn svg.i {
+      width: 22px;
+      height: 22px;
+    }
 
     /* Hero Body */
     .hero-body {
@@ -549,8 +731,8 @@
     }
 
     .eyebrow-pill {
-      background: rgba(251,191,36,0.18);
-      border: 1px solid rgba(251,191,36,0.4);
+      background: rgba(251, 191, 36, 0.18);
+      border: 1px solid rgba(251, 191, 36, 0.4);
       padding: 4px 12px;
       border-radius: 999px;
       font-size: 11.5px;
@@ -632,7 +814,10 @@
       padding: 8px 12px;
       border-right: 1px solid var(--line);
     }
-    .stat-box:last-child { border-right: none; }
+
+    .stat-box:last-child {
+      border-right: none;
+    }
 
     .stat-num {
       font-size: 32px;
@@ -641,7 +826,10 @@
       line-height: 1;
       letter-spacing: -1px;
     }
-    .stat-num span { color: var(--blue); }
+
+    .stat-num span {
+      color: var(--blue);
+    }
 
     .stat-desc {
       font-size: 12.5px;
@@ -721,6 +909,7 @@
       font-weight: 600;
       color: var(--mute);
     }
+
     .filter-count-badge strong {
       color: var(--navy);
     }
@@ -734,7 +923,10 @@
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
-    .category-pills::-webkit-scrollbar { display: none; }
+
+    .category-pills::-webkit-scrollbar {
+      display: none;
+    }
 
     .pill-btn {
       white-space: nowrap;
@@ -768,10 +960,11 @@
       font-size: 11px;
       padding: 1px 7px;
       border-radius: 999px;
-      background: rgba(0,0,0,0.06);
+      background: rgba(0, 0, 0, 0.06);
     }
+
     .pill-btn.active .pill-count {
-      background: rgba(255,255,255,0.22);
+      background: rgba(255, 255, 255, 0.22);
       color: #fff;
     }
 
@@ -825,10 +1018,25 @@
       border-radius: 999px;
     }
 
-    .tag-badge.gold { background: #fef3c7; color: #92400e; }
-    .tag-badge.blue { background: #dbeafe; color: #1d4ed8; }
-    .tag-badge.purple { background: #ede9fe; color: #5b3fe6; }
-    .tag-badge.green { background: #dcfce7; color: #15803d; }
+    .tag-badge.gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .tag-badge.blue {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .tag-badge.purple {
+      background: #ede9fe;
+      color: #5b3fe6;
+    }
+
+    .tag-badge.green {
+      background: #dcfce7;
+      color: #15803d;
+    }
 
     .read-time {
       font-size: 12.5px;
@@ -885,7 +1093,12 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
-    .highlight-check svg.i { width: 11px; height: 11px; stroke-width: 2.5; }
+
+    .highlight-check svg.i {
+      width: 11px;
+      height: 11px;
+      stroke-width: 2.5;
+    }
 
     .flagship-footer {
       display: flex;
@@ -914,7 +1127,7 @@
       font-weight: 700;
       font-size: 15px;
       border: 2px solid #fff;
-      box-shadow: 0 2px 8px rgba(6,26,63,0.15);
+      box-shadow: 0 2px 8px rgba(6, 26, 63, 0.15);
     }
 
     .author-info strong {
@@ -954,8 +1167,8 @@
       -webkit-backdrop-filter: blur(8px);
       padding: 16px 20px;
       border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .media-badge-stat {
@@ -966,12 +1179,14 @@
       align-items: baseline;
       gap: 6px;
     }
+
     .media-badge-stat em {
       font-style: normal;
       color: var(--green-deep);
       font-size: 13px;
       font-weight: 700;
     }
+
     .media-badge-label {
       font-size: 12px;
       color: var(--mute);
@@ -1043,7 +1258,7 @@
       font-weight: 700;
       padding: 5px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       letter-spacing: 0.05em;
     }
 
@@ -1091,7 +1306,10 @@
       gap: 10px;
       font-weight: 600;
     }
-    .report-stats-pill strong { color: var(--blue); }
+
+    .report-stats-pill strong {
+      color: var(--blue);
+    }
 
     .report-actions {
       display: flex;
@@ -1240,11 +1458,13 @@
       border-radius: 20px;
       border: 1px dashed var(--line);
     }
+
     .no-results h3 {
       font-size: 20px;
       color: var(--navy);
       margin: 12px 0 6px;
     }
+
     .no-results p {
       color: var(--mute);
       margin: 0 0 16px;
@@ -1295,6 +1515,7 @@
       color: #ffffff;
       margin-bottom: 14px;
     }
+
     .assessment-info p {
       color: #cbd5e1;
       font-size: 15px;
@@ -1308,6 +1529,7 @@
       gap: 12px;
       margin-bottom: 24px;
     }
+
     .assessment-perk {
       display: flex;
       align-items: center;
@@ -1315,6 +1537,7 @@
       font-size: 13.5px;
       color: #e2e8f0;
     }
+
     .assessment-perk svg.i {
       color: var(--gold);
       width: 16px;
@@ -1333,6 +1556,7 @@
     .assessment-step {
       display: none;
     }
+
     .assessment-step.active {
       display: block;
     }
@@ -1384,6 +1608,7 @@
       margin-bottom: 20px;
       overflow: hidden;
     }
+
     .assessment-progress-fill {
       height: 100%;
       background: var(--gold);
@@ -1395,6 +1620,7 @@
       text-align: center;
       padding: 10px 0;
     }
+
     .result-score-circle {
       width: 80px;
       height: 80px;
@@ -1408,12 +1634,14 @@
       margin: 0 auto 16px;
       box-shadow: 0 8px 24px rgba(251, 191, 36, 0.4);
     }
+
     .result-tier {
       font-size: 19px;
       font-weight: 800;
       color: #ffffff;
       margin: 0 0 8px;
     }
+
     .result-verdict {
       font-size: 13.5px;
       color: #cbd5e1;
@@ -1467,6 +1695,7 @@
     .proof-avatars {
       display: flex;
     }
+
     .proof-avatar {
       width: 30px;
       height: 30px;
@@ -1480,7 +1709,10 @@
       color: var(--navy);
       margin-left: -8px;
     }
-    .proof-avatar:first-child { margin-left: 0; }
+
+    .proof-avatar:first-child {
+      margin-left: 0;
+    }
 
     .newsletter-form {
       display: flex;
@@ -1502,6 +1734,7 @@
       font: 500 14px 'Plus Jakarta Sans', system-ui, sans-serif;
       color: var(--ink);
     }
+
     .subscribe-input:focus {
       outline: none;
       border-color: var(--blue);
@@ -1540,7 +1773,7 @@
       width: min(840px, 100vw);
       height: 100%;
       background: #ffffff;
-      box-shadow: -10px 0 40px rgba(0,0,0,0.25);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
       transform: translateX(100%);
@@ -1579,6 +1812,7 @@
       cursor: pointer;
       transition: all .16s ease;
     }
+
     .reader-close-btn:hover {
       background: #f1f5f9;
       color: #ef4444;
@@ -1634,20 +1868,28 @@
       color: #334155;
       line-height: 1.6;
     }
-    .reader-takeaways-list li { margin-bottom: 8px; }
+
+    .reader-takeaways-list li {
+      margin-bottom: 8px;
+    }
 
     .reader-body-copy {
       font-size: 15.5px;
       line-height: 1.75;
       color: #1e293b;
     }
-    .reader-body-copy p { margin-bottom: 20px; }
+
+    .reader-body-copy p {
+      margin-bottom: 20px;
+    }
+
     .reader-body-copy h3 {
       font-size: 20px;
       font-weight: 800;
       color: var(--navy);
       margin: 34px 0 14px;
     }
+
     .reader-body-copy blockquote {
       margin: 28px 0;
       padding: 18px 24px;
@@ -1671,11 +1913,13 @@
       gap: 14px;
       align-items: flex-start;
     }
+
     .reader-cta-card h4 {
       font-size: 18px;
       margin: 0;
       color: #fff;
     }
+
     .reader-cta-card p {
       font-size: 13.5px;
       color: #cbd5e1;
@@ -1710,7 +1954,7 @@
       width: 100%;
       padding: 36px;
       position: relative;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
       transform: scale(0.95);
       transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -1756,6 +2000,7 @@
       font: 500 14px 'Plus Jakarta Sans', system-ui, sans-serif;
       color: var(--ink);
     }
+
     .form-input:focus {
       outline: none;
       border-color: var(--blue);
@@ -1771,7 +2016,7 @@
       color: #fff;
       padding: 14px 22px;
       border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
       border-left: 4px solid var(--gold);
       display: flex;
       align-items: center;
@@ -1783,6 +2028,7 @@
       opacity: 0;
       transition: all .28s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .toast-msg.show {
       transform: translateY(0);
       opacity: 1;
@@ -1915,7 +2161,7 @@
        RESPONSIVE BREAKPOINTS
        ============================================================ */
     @media (max-width: 1020px) {
-      .hero > .wrap {
+      .hero>.wrap {
         border-radius: 20px;
         width: calc(100% - 24px);
       }
@@ -2016,7 +2262,9 @@
     }
 
     @media (max-width: 680px) {
-      .wrap, .hero-body {
+
+      .wrap,
+      .hero-body {
         padding-inline: 18px;
       }
 
@@ -2029,7 +2277,10 @@
         border-bottom: 1px solid var(--line);
         padding-bottom: 12px;
       }
-      .stat-box:last-child { border-bottom: none; }
+
+      .stat-box:last-child {
+        border-bottom: none;
+      }
 
       .reports-grid,
       .articles-grid {
@@ -2075,8 +2326,13 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -2085,31 +2341,101 @@
   <!-- ================= SVG ICON SPRITE ================= -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
-      <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
-      <symbol id="close" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" /></symbol>
-      <symbol id="check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></symbol>
-      <symbol id="ppl" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2.3" /><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.3c3 .1 5.5 2 5.5 5.2" /></symbol>
-      <symbol id="cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6" /></symbol>
-      <symbol id="srch" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></symbol>
-      <symbol id="pen" viewBox="0 0 24 24"><path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4" /></symbol>
-      <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" /></symbol>
-      <symbol id="chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2M14 8l4-4 3 3" /></symbol>
-      <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7" /></symbol>
-      <symbol id="bld" viewBox="0 0 24 24"><path d="M4 21V6l8-3v18M12 9h8v12M7 10h2M7 14h2M7 18h2M15 13h2M15 17h2M3 21h18" /></symbol>
-      <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></symbol>
-      <symbol id="book" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13" /></symbol>
-      <symbol id="briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5" /><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18" /></symbol>
-      <symbol id="trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" /></symbol>
-      <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" /></symbol>
-      <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></symbol>
-      <symbol id="download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" /></symbol>
-      <symbol id="file-text" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></symbol>
-      <symbol id="share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" /></symbol>
-      <symbol id="in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4" /></symbol>
-      <symbol id="x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></symbol>
-      <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17.5 6.5v.01" /></symbol>
-      <symbol id="yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" /><path d="M10 9.5l5 2.5-5 2.5z" /></symbol>
+      <symbol id="arr" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="close" viewBox="0 0 24 24">
+        <path d="M18 6L6 18M6 6l12 12" />
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24">
+        <polyline points="20 6 9 17 4 12" />
+      </symbol>
+      <symbol id="ppl" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" />
+        <circle cx="17" cy="9" r="2.3" />
+        <path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.3c3 .1 5.5 2 5.5 5.2" />
+      </symbol>
+      <symbol id="cap" viewBox="0 0 24 24">
+        <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6" />
+      </symbol>
+      <symbol id="srch" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+      <symbol id="pen" viewBox="0 0 24 24">
+        <path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4" />
+      </symbol>
+      <symbol id="gear" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3.5" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+      </symbol>
+      <symbol id="chart" viewBox="0 0 24 24">
+        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2M14 8l4-4 3 3" />
+      </symbol>
+      <symbol id="user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7" />
+      </symbol>
+      <symbol id="bld" viewBox="0 0 24 24">
+        <path d="M4 21V6l8-3v18M12 9h8v12M7 10h2M7 14h2M7 18h2M15 13h2M15 17h2M3 21h18" />
+      </symbol>
+      <symbol id="bolt" viewBox="0 0 24 24">
+        <path d="M13 2L4 14h7l-1 8 9-12h-7z" />
+      </symbol>
+      <symbol id="book" viewBox="0 0 24 24">
+        <path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13" />
+      </symbol>
+      <symbol id="briefcase" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="13" rx="2.5" />
+        <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18" />
+      </symbol>
+      <symbol id="trend" viewBox="0 0 24 24">
+        <path d="M3 17l6-6 4 4 8-8M15 7h6v6" />
+      </symbol>
+      <symbol id="globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" />
+      </symbol>
+      <symbol id="clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+      </symbol>
+      <symbol id="file-text" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="16" y1="13" x2="8" y2="13" />
+        <line x1="16" y1="17" x2="8" y2="17" />
+        <polyline points="10 9 9 9 8 9" />
+      </symbol>
+      <symbol id="share" viewBox="0 0 24 24">
+        <circle cx="18" cy="5" r="3" />
+        <circle cx="6" cy="12" r="3" />
+        <circle cx="18" cy="19" r="3" />
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+      </symbol>
+      <symbol id="in" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="4" />
+        <path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4" />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24">
+        <path d="M4 4l16 16M20 4L4 20" />
+      </symbol>
+      <symbol id="ig" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <path d="M17.5 6.5v.01" />
+      </symbol>
+      <symbol id="yt" viewBox="0 0 24 24">
+        <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+        <path d="M10 9.5l5 2.5-5 2.5z" />
+      </symbol>
     </defs>
   </svg>
 
@@ -2127,7 +2453,9 @@
           <li class="nav-item has-mega">
             <a href="tafa-what-we-do.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
               What We Do
-              <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </a>
             <div class="mega-menu" role="region" aria-label="What We Do Menu">
               <div class="mega-grid">
@@ -2135,7 +2463,9 @@
                   <span class="mega-col-title">Core Services</span>
                   <div class="mega-list">
                     <a href="tafa-ai-consulting.html" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#gear" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Strategy &amp; Consulting</strong>
@@ -2145,7 +2475,9 @@
                       </div>
                     </a>
                     <a href="tafa-what-we-do.html#workforce" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#ppl" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#ppl" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Workforce AI Transformation</strong>
@@ -2154,7 +2486,9 @@
                       </div>
                     </a>
                     <a href="tafa-what-we-do.html#executive" class="mega-item">
-                      <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#briefcase" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Executive AI Advisory</strong>
@@ -2169,7 +2503,9 @@
                   <span class="mega-col-title">Methodology &amp; Solutions</span>
                   <div class="mega-list">
                     <a href="index.html#framework" class="mega-item">
-                      <span class="mega-tile green"><svg class="i"><use href="#trend" /></svg></span>
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#trend" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>4D Delivery Framework</strong>
@@ -2178,7 +2514,9 @@
                       </div>
                     </a>
                     <a href="tafa-ai-consulting.html#audit" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#chart" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#chart" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Growth Audit</strong>
@@ -2188,7 +2526,9 @@
                       </div>
                     </a>
                     <a href="tafa-what-we-do.html" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#globe" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#globe" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Overview &amp; Case Studies</strong>
@@ -2206,7 +2546,10 @@
                       <h4>Turn AI Potential into Real Business Results</h4>
                       <p>Schedule a focused 30-minute consultation with our AI transformation specialists.</p>
                     </div>
-                    <a class="btn gold sm mega-promo-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+                    <a class="btn gold sm mega-promo-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                        class="i">
+                        <use href="#arr" />
+                      </svg></a>
                   </div>
                 </div>
               </div>
@@ -2217,7 +2560,9 @@
           <li class="nav-item has-mega">
             <a href="tafa-academy.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
               TAFA Academy
-              <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </a>
             <div class="mega-menu" role="region" aria-label="TAFA Academy Menu">
               <div class="mega-grid">
@@ -2225,7 +2570,9 @@
                   <span class="mega-col-title">The 4 Specialized Schools</span>
                   <div class="mega-list">
                     <a href="tafa-academy.html#schools" class="mega-item">
-                      <span class="mega-tile gold"><svg class="i"><use href="#book" /></svg></span>
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#book" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Literacy &amp; Productivity</strong>
@@ -2235,7 +2582,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html#schools" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#bolt" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#bolt" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>School of AI Applications</strong>
@@ -2245,7 +2594,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html#schools" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#laptop" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#laptop" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>School of AI Engineering</strong>
@@ -2255,7 +2606,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html#schools" class="mega-item">
-                      <span class="mega-tile green"><svg class="i"><use href="#globe" /></svg></span>
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#globe" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Cloud &amp; Emerging Tech</strong>
@@ -2271,7 +2624,9 @@
                   <span class="mega-col-title">Featured High-Demand Courses</span>
                   <div class="mega-list">
                     <a href="course-preview.html?id=ai-productivity" class="mega-item">
-                      <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#briefcase" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Productivity &amp; Workplace</strong>
@@ -2281,7 +2636,9 @@
                       </div>
                     </a>
                     <a href="course-preview.html?id=ai-engineering" class="mega-item">
-                      <span class="mega-tile purple"><svg class="i"><use href="#gear" /></svg></span>
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>AI Engineering (APIs, RAG &amp; MCP)</strong>
@@ -2291,7 +2648,9 @@
                       </div>
                     </a>
                     <a href="tafa-academy.html" class="mega-item">
-                      <span class="mega-tile blue"><svg class="i"><use href="#cap" /></svg></span>
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#cap" />
+                        </svg></span>
                       <div class="mega-item-body">
                         <div class="mega-item-head">
                           <strong>Full Catalog: All 10 Courses</strong>
@@ -2309,7 +2668,10 @@
                       <h4>Hands-On AI Training That Builds Careers</h4>
                       <p>Join 3,200+ certified practitioners across 18 African countries with zero fluff.</p>
                     </div>
-                    <a class="btn gold sm mega-promo-btn" href="tafa-academy.html#tracks">Explore All Tracks <svg class="i"><use href="#arr" /></svg></a>
+                    <a class="btn gold sm mega-promo-btn" href="tafa-academy.html#tracks">Explore All Tracks <svg
+                        class="i">
+                        <use href="#arr" />
+                      </svg></a>
                   </div>
                 </div>
               </div>
@@ -2320,13 +2682,19 @@
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
           <li class="nav-item mobile-cta-item">
-            <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+            <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                class="i">
+                <use href="#arr" />
+              </svg></a>
           </li>
         </ul>
         <div class="nav-end">
           <a class="btn gold sm" href="tafa-ai-consulting.html#book">Book a Call</a>
-          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
-            <svg class="i"><use href="#menu" /></svg>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"
+            aria-label="Toggle navigation menu">
+            <svg class="i">
+              <use href="#menu" />
+            </svg>
           </button>
         </div>
       </nav>
@@ -2338,16 +2706,31 @@
         <span class="eyebrow-pill">AFRICAN ENTERPRISE INTELLIGENCE</span>
       </div>
       <h1>Actionable AI perspectives for Africa's <em>forward-thinking leaders.</em></h1>
-      <p class="lead">Data-backed research, executive briefings, workforce transformation frameworks, and real-world African enterprise case studies — cut through the hype and lead with clarity.</p>
+      <p class="lead">Data-backed research, executive briefings, workforce transformation frameworks, and real-world
+        African enterprise case studies — cut through the hype and lead with clarity.</p>
       <div class="ctas">
-        <a class="btn gold" href="#flagship">Explore 2026 Flagship Report <svg class="i"><use href="#arr" /></svg></a>
-        <a class="btn line" href="#articles-grid">Browse All Insights <svg class="i"><use href="#arr" /></svg></a>
-        <a class="btn ghost" href="#assessment" style="color:#ffffff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1)">Check AI Readiness <svg class="i"><use href="#bolt" /></svg></a>
+        <a class="btn gold" href="#flagship">Explore 2026 Flagship Report <svg class="i">
+            <use href="#arr" />
+          </svg></a>
+        <a class="btn line" href="#articles-grid">Browse All Insights <svg class="i">
+            <use href="#arr" />
+          </svg></a>
+        <a class="btn ghost" href="#assessment"
+          style="color:#ffffff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1)">Check AI Readiness
+          <svg class="i">
+            <use href="#bolt" />
+          </svg></a>
       </div>
       <div class="ticks">
-        <span><i class="tile tile--gold tile--xs"><svg class="i"><use href="#trend" /></svg></i>Field-Tested Frameworks</span>
-        <span><i class="tile tile--gold tile--xs"><svg class="i"><use href="#globe" /></svg></i>African Market Realities</span>
-        <span><i class="tile tile--gold tile--xs"><svg class="i"><use href="#chart" /></svg></i>Measurable ROI Benchmarks</span>
+        <span><i class="tile tile--gold tile--xs"><svg class="i">
+              <use href="#trend" />
+            </svg></i>Field-Tested Frameworks</span>
+        <span><i class="tile tile--gold tile--xs"><svg class="i">
+              <use href="#globe" />
+            </svg></i>African Market Realities</span>
+        <span><i class="tile tile--gold tile--xs"><svg class="i">
+              <use href="#chart" />
+            </svg></i>Measurable ROI Benchmarks</span>
       </div>
     </div>
   </header>
@@ -2357,28 +2740,36 @@
     <div class="wrap">
       <div class="stats-grid">
         <div class="stat-box">
-          <i class="tile tile--blue tile--sm"><svg class="i"><use href="#globe" /></svg></i>
+          <i class="tile tile--blue tile--sm"><svg class="i">
+              <use href="#globe" />
+            </svg></i>
           <div>
             <div class="stat-num">18<span>+</span></div>
             <div class="stat-desc">African markets analyzed across East, West &amp; Southern Africa</div>
           </div>
         </div>
         <div class="stat-box">
-          <i class="tile tile--purple tile--sm"><svg class="i"><use href="#file-text" /></svg></i>
+          <i class="tile tile--purple tile--sm"><svg class="i">
+              <use href="#file-text" />
+            </svg></i>
           <div>
             <div class="stat-num">45<span>+</span></div>
             <div class="stat-desc">Strategic executive briefings, blueprints &amp; benchmarks</div>
           </div>
         </div>
         <div class="stat-box">
-          <i class="tile tile--gold tile--sm"><svg class="i"><use href="#ppl" /></svg></i>
+          <i class="tile tile--gold tile--sm"><svg class="i">
+              <use href="#ppl" />
+            </svg></i>
           <div>
             <div class="stat-num">3.2k<span>+</span></div>
             <div class="stat-desc">Enterprise leaders and knowledge workers upskilled</div>
           </div>
         </div>
         <div class="stat-box">
-          <i class="tile tile--green tile--sm"><svg class="i"><use href="#trend" /></svg></i>
+          <i class="tile tile--green tile--sm"><svg class="i">
+              <use href="#trend" />
+            </svg></i>
           <div>
             <div class="stat-num">94<span>%</span></div>
             <div class="stat-desc">Immediate workplace AI tool adoption within week one</div>
@@ -2394,8 +2785,12 @@
       <div class="filter-bar">
         <div class="filter-top-row">
           <div class="search-box">
-            <svg class="i"><use href="#srch" /></svg>
-            <input type="search" id="insight-search" class="search-input" placeholder="Search by topic, industry, keyword (e.g. RAG, Banking, ROI)..." aria-label="Search articles and insights">
+            <svg class="i">
+              <use href="#srch" />
+            </svg>
+            <input type="search" id="insight-search" class="search-input"
+              placeholder="Search by topic, industry, keyword (e.g. RAG, Banking, ROI)..."
+              aria-label="Search articles and insights">
           </div>
           <div class="filter-count-badge" id="results-count">
             Showing <strong>10</strong> insights &amp; publications
@@ -2434,38 +2829,58 @@
           <div>
             <div class="flagship-header-meta">
               <span class="tag-badge gold">
-                <svg class="i" style="width:12px;height:12px"><use href="#award" /></svg>
+                <svg class="i" style="width:12px;height:12px">
+                  <use href="#award" />
+                </svg>
                 FLAGSHIP REPORT 2026
               </span>
               <span class="read-time">
-                <svg class="i" style="width:14px;height:14px"><use href="#clock" /></svg>
+                <svg class="i" style="width:14px;height:14px">
+                  <use href="#clock" />
+                </svg>
                 9 MIN READ
               </span>
               <span class="read-time">OCTOBER 2026</span>
             </div>
 
-            <h2 class="flagship-title">The 2026 State of Enterprise AI in Africa: Moving from Experiments to Exponential ROI</h2>
-            
+            <h2 class="flagship-title">The 2026 State of Enterprise AI in Africa: Moving from Experiments to Exponential
+              ROI</h2>
+
             <p class="flagship-desc">
-              Why 78% of corporate AI pilots stall across African boardrooms, and how forward-looking financial institutions, telcos, and supply chain operators in Lagos, Nairobi, and Johannesburg are deploying custom RAG pipelines and automated decision workflows to achieve 3.4x operational efficiency without silicon extravagance.
+              Why 78% of corporate AI pilots stall across African boardrooms, and how forward-looking financial
+              institutions, telcos, and supply chain operators in Lagos, Nairobi, and Johannesburg are deploying custom
+              RAG pipelines and automated decision workflows to achieve 3.4x operational efficiency without silicon
+              extravagance.
             </p>
 
             <div class="flagship-highlights">
               <div class="highlight-item">
-                <span class="highlight-check"><svg class="i"><use href="#check" /></svg></span>
-                <span><strong>Infrastructure reality:</strong> Balancing edge models with volatile grid &amp; bandwidth constraints.</span>
+                <span class="highlight-check"><svg class="i">
+                    <use href="#check" />
+                  </svg></span>
+                <span><strong>Infrastructure reality:</strong> Balancing edge models with volatile grid &amp; bandwidth
+                  constraints.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-check"><svg class="i"><use href="#check" /></svg></span>
-                <span><strong>Workforce enablement:</strong> Why training domain experts beats hiring external AI generalists.</span>
+                <span class="highlight-check"><svg class="i">
+                    <use href="#check" />
+                  </svg></span>
+                <span><strong>Workforce enablement:</strong> Why training domain experts beats hiring external AI
+                  generalists.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-check"><svg class="i"><use href="#check" /></svg></span>
-                <span><strong>Data sovereignty:</strong> Regulatory compliance across NDPR, POPIA, and Central Bank directives.</span>
+                <span class="highlight-check"><svg class="i">
+                    <use href="#check" />
+                  </svg></span>
+                <span><strong>Data sovereignty:</strong> Regulatory compliance across NDPR, POPIA, and Central Bank
+                  directives.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-check"><svg class="i"><use href="#check" /></svg></span>
-                <span><strong>Measurable payback:</strong> Realized breakeven compressed from 18 months to 90 days.</span>
+                <span class="highlight-check"><svg class="i">
+                    <use href="#check" />
+                  </svg></span>
+                <span><strong>Measurable payback:</strong> Realized breakeven compressed from 18 months to 90
+                  days.</span>
               </div>
             </div>
           </div>
@@ -2481,10 +2896,14 @@
 
             <div style="display:flex;gap:10px;">
               <button class="btn gold sm" onclick="openReaderModal('flagship-report')">
-                Read Executive Briefing <svg class="i"><use href="#arr" /></svg>
+                Read Executive Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg>
               </button>
               <button class="btn ghost sm" onclick="openDownloadModal('The 2026 State of Enterprise AI in Africa')">
-                <svg class="i"><use href="#download" /></svg> PDF
+                <svg class="i">
+                  <use href="#download" />
+                </svg> PDF
               </button>
             </div>
           </div>
@@ -2493,7 +2912,8 @@
         <div class="flagship-media">
           <div class="flagship-media-badge">
             <div class="media-badge-stat">3.4x <em>ROI Realized</em></div>
-            <div class="media-badge-label">Average return on investment achieved within 12 weeks of structured workforce transformation.</div>
+            <div class="media-badge-label">Average return on investment achieved within 12 weeks of structured workforce
+              transformation.</div>
           </div>
         </div>
       </div>
@@ -2508,15 +2928,20 @@
           <span class="bar"></span>
           <p class="eyebrow" style="color:var(--navy);font-size:11.5px;margin-bottom:6px;">STRATEGIC PUBLICATIONS</p>
           <h2>Executive Whitepapers &amp; Benchmarks</h2>
-          <p class="sub">Rigorous field research, architectural blueprints, and regulatory playbooks designed for African enterprise C-suites and technology committees.</p>
+          <p class="sub">Rigorous field research, architectural blueprints, and regulatory playbooks designed for
+            African enterprise C-suites and technology committees.</p>
         </div>
-        <a class="btn outline-blue sm" href="tafa-ai-consulting.html#book">Request Custom Briefing <svg class="i"><use href="#arr" /></svg></a>
+        <a class="btn outline-blue sm" href="tafa-ai-consulting.html#book">Request Custom Briefing <svg class="i">
+            <use href="#arr" />
+          </svg></a>
       </div>
 
       <div class="reports-grid">
         <!-- Report 1 -->
-        <article class="report-card" data-category="reports workforce" data-keywords="workforce transformation readiness index talent upskilling survey pan-african">
-          <div class="report-card-cover" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80')">
+        <article class="report-card" data-category="reports workforce"
+          data-keywords="workforce transformation readiness index talent upskilling survey pan-african">
+          <div class="report-card-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80')">
             <span class="report-cover-badge">RESEARCH BENCHMARK</span>
           </div>
           <div class="report-card-body">
@@ -2526,15 +2951,21 @@
                 <span>&bull; 38 PAGES</span>
               </div>
               <h3 class="report-title">Pan-African AI Workforce Readiness Index 2026</h3>
-              <p class="report-desc">Empirical findings from surveying 1,200 executives across 6 African economies on knowledge-worker readiness, cognitive friction, and successful upskilling methodologies.</p>
+              <p class="report-desc">Empirical findings from surveying 1,200 executives across 6 African economies on
+                knowledge-worker readiness, cognitive friction, and successful upskilling methodologies.</p>
               <div class="report-stats-pill">
-                <svg class="i" style="width:16px;height:16px;color:var(--blue)"><use href="#ppl" /></svg>
+                <svg class="i" style="width:16px;height:16px;color:var(--blue)">
+                  <use href="#ppl" />
+                </svg>
                 <span><strong>68% of workers</strong> lack formal AI guidelines despite using LLMs daily.</span>
               </div>
             </div>
             <div class="report-actions">
-              <button class="btn gold sm" style="flex:1;justify-content:center" onclick="openDownloadModal('Pan-African AI Workforce Readiness Index 2026')">
-                <svg class="i"><use href="#download" /></svg> Download Report
+              <button class="btn gold sm" style="flex:1;justify-content:center"
+                onclick="openDownloadModal('Pan-African AI Workforce Readiness Index 2026')">
+                <svg class="i">
+                  <use href="#download" />
+                </svg> Download Report
               </button>
               <button class="btn ghost sm" onclick="openReaderModal('workforce-index')">Preview</button>
             </div>
@@ -2542,8 +2973,10 @@
         </article>
 
         <!-- Report 2 -->
-        <article class="report-card" data-category="reports engineering" data-keywords="llm architecture model context protocol mcp rag infrastructure latency cost enterprise">
-          <div class="report-card-cover" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80')">
+        <article class="report-card" data-category="reports engineering"
+          data-keywords="llm architecture model context protocol mcp rag infrastructure latency cost enterprise">
+          <div class="report-card-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80')">
             <span class="report-cover-badge">ENGINEERING BLUEPRINT</span>
           </div>
           <div class="report-card-body">
@@ -2553,15 +2986,21 @@
                 <span>&bull; 44 PAGES</span>
               </div>
               <h3 class="report-title">The African Enterprise LLM &amp; Agent Playbook</h3>
-              <p class="report-desc">A deep architectural guide covering private vector databases, Model Context Protocol (MCP) server design, token budgeting, and offline-resilient edge caches.</p>
+              <p class="report-desc">A deep architectural guide covering private vector databases, Model Context
+                Protocol (MCP) server design, token budgeting, and offline-resilient edge caches.</p>
               <div class="report-stats-pill">
-                <svg class="i" style="width:16px;height:16px;color:var(--blue)"><use href="#gear" /></svg>
+                <svg class="i" style="width:16px;height:16px;color:var(--blue)">
+                  <use href="#gear" />
+                </svg>
                 <span><strong>52% latency reduction</strong> using localized vector embeddings.</span>
               </div>
             </div>
             <div class="report-actions">
-              <button class="btn gold sm" style="flex:1;justify-content:center" onclick="openDownloadModal('The African Enterprise LLM and Agent Playbook')">
-                <svg class="i"><use href="#download" /></svg> Download Report
+              <button class="btn gold sm" style="flex:1;justify-content:center"
+                onclick="openDownloadModal('The African Enterprise LLM and Agent Playbook')">
+                <svg class="i">
+                  <use href="#download" />
+                </svg> Download Report
               </button>
               <button class="btn ghost sm" onclick="openReaderModal('agent-playbook')">Preview</button>
             </div>
@@ -2569,8 +3008,10 @@
         </article>
 
         <!-- Report 3 -->
-        <article class="report-card" data-category="reports strategy industry" data-keywords="governance banking fintech compliance central bank ndpr popia board risk ethics">
-          <div class="report-card-cover" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80')">
+        <article class="report-card" data-category="reports strategy industry"
+          data-keywords="governance banking fintech compliance central bank ndpr popia board risk ethics">
+          <div class="report-card-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80')">
             <span class="report-cover-badge">GOVERNANCE FRAMEWORK</span>
           </div>
           <div class="report-card-body">
@@ -2580,15 +3021,21 @@
                 <span>&bull; 32 PAGES</span>
               </div>
               <h3 class="report-title">Fintech &amp; Banking AI Governance Blueprint</h3>
-              <p class="report-desc">Audit templates, bias mitigation matrices, and cross-border data protection protocols compliant with CBN, CBK, SARB, and global ethical AI standards.</p>
+              <p class="report-desc">Audit templates, bias mitigation matrices, and cross-border data protection
+                protocols compliant with CBN, CBK, SARB, and global ethical AI standards.</p>
               <div class="report-stats-pill">
-                <svg class="i" style="width:16px;height:16px;color:var(--blue)"><use href="#briefcase" /></svg>
+                <svg class="i" style="width:16px;height:16px;color:var(--blue)">
+                  <use href="#briefcase" />
+                </svg>
                 <span><strong>100% compliance alignment</strong> with emerging pan-African AI acts.</span>
               </div>
             </div>
             <div class="report-actions">
-              <button class="btn gold sm" style="flex:1;justify-content:center" onclick="openDownloadModal('Fintech and Banking AI Governance Blueprint')">
-                <svg class="i"><use href="#download" /></svg> Download Report
+              <button class="btn gold sm" style="flex:1;justify-content:center"
+                onclick="openDownloadModal('Fintech and Banking AI Governance Blueprint')">
+                <svg class="i">
+                  <use href="#download" />
+                </svg> Download Report
               </button>
               <button class="btn ghost sm" onclick="openReaderModal('governance-blueprint')">Preview</button>
             </div>
@@ -2604,16 +3051,21 @@
       <div class="section-head-row">
         <div>
           <span class="bar"></span>
-          <p class="eyebrow" style="color:var(--navy);font-size:11.5px;margin-bottom:6px;">FIELD BRIEFS &amp; ARTICLES</p>
+          <p class="eyebrow" style="color:var(--navy);font-size:11.5px;margin-bottom:6px;">FIELD BRIEFS &amp; ARTICLES
+          </p>
           <h2>Featured Strategic Insights</h2>
-          <p class="sub">Practical viewpoints on enterprise implementation, prompt architecture, cognitive workflows, and African market opportunities.</p>
+          <p class="sub">Practical viewpoints on enterprise implementation, prompt architecture, cognitive workflows,
+            and African market opportunities.</p>
         </div>
       </div>
 
       <div class="articles-grid" id="insights-container">
         <!-- Article 1: Executive Strategy -->
-        <article class="article-card" data-category="strategy" data-keywords="board operating lever it budget business roi executive c-suite leadership" onclick="openReaderModal('article-operating-lever')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="strategy"
+          data-keywords="board operating lever it budget business roi executive c-suite leadership"
+          onclick="openReaderModal('article-operating-lever')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge gold">EXECUTIVE STRATEGY</span>
             </div>
@@ -2621,26 +3073,34 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 5 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 5 min read</span>
                 <span>&bull;</span>
                 <span>Strategy Brief</span>
               </div>
               <h3 class="article-title">Why African Boards Must Treat AI as an Operating Lever, Not an IT Line Item</h3>
-              <p class="article-excerpt">Delegating AI to the IT department is where enterprise transformation goes to die. Here is how leading CEOs restructure accountability and link AI directly to margin expansion.</p>
+              <p class="article-excerpt">Delegating AI to the IT department is where enterprise transformation goes to
+                die. Here is how leading CEOs restructure accountability and link AI directly to margin expansion.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar">OJ</div>
                 <span>Dr. Olumide J.</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 2: Workforce & Talent -->
-        <article class="article-card" data-category="workforce" data-keywords="10x worker sales marketing productivity content generation cycles proposal speed" onclick="openReaderModal('article-10x-worker')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="workforce"
+          data-keywords="10x worker sales marketing productivity content generation cycles proposal speed"
+          onclick="openReaderModal('article-10x-worker')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge purple">WORKFORCE &amp; TALENT</span>
             </div>
@@ -2648,26 +3108,36 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 6 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 6 min read</span>
                 <span>&bull;</span>
                 <span>Capability Building</span>
               </div>
-              <h3 class="article-title">The 10x Knowledge Worker: How African Sales &amp; Marketing Teams Cut Cycles by 60%</h3>
-              <p class="article-excerpt">Inside the tactical enablement cohorts that transformed proposal writing, competitive intelligence, and customer outreach from 14-day grinds into 4-hour high-precision sprints.</p>
+              <h3 class="article-title">The 10x Knowledge Worker: How African Sales &amp; Marketing Teams Cut Cycles by
+                60%</h3>
+              <p class="article-excerpt">Inside the tactical enablement cohorts that transformed proposal writing,
+                competitive intelligence, and customer outreach from 14-day grinds into 4-hour high-precision sprints.
+              </p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar" style="background:#5b3fe6;color:#fff">FA</div>
                 <span>Fatima Al-Hassan</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 3: AI Engineering & MCP -->
-        <article class="article-card" data-category="engineering" data-keywords="mcp model context protocol claude anthropic database integration enterprise agentic" onclick="openReaderModal('article-mcp-enterprise')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="engineering"
+          data-keywords="mcp model context protocol claude anthropic database integration enterprise agentic"
+          onclick="openReaderModal('article-mcp-enterprise')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge blue">AI ENGINEERING</span>
             </div>
@@ -2675,26 +3145,35 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 8 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 8 min read</span>
                 <span>&bull;</span>
                 <span>Technical Architecture</span>
               </div>
-              <h3 class="article-title">Model Context Protocol (MCP) in Enterprise AI: Connecting Claude to Internal Data</h3>
-              <p class="article-excerpt">How MCP is eliminating fragile REST wrappers and empowering African enterprises to securely attach legacy SQL databases and ERPs to modern AI models with strict permission guards.</p>
+              <h3 class="article-title">Model Context Protocol (MCP) in Enterprise AI: Connecting Claude to Internal
+                Data</h3>
+              <p class="article-excerpt">How MCP is eliminating fragile REST wrappers and empowering African enterprises
+                to securely attach legacy SQL databases and ERPs to modern AI models with strict permission guards.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar" style="background:#1d4ed8;color:#fff">TE</div>
                 <span>Tariq Ekwueme</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 4: Industry - Fintech -->
-        <article class="article-card" data-category="industry" data-keywords="fintech banking credit scoring underwriting fraud detection ethical bias financial inclusion" onclick="openReaderModal('article-fintech-credit')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="industry"
+          data-keywords="fintech banking credit scoring underwriting fraud detection ethical bias financial inclusion"
+          onclick="openReaderModal('article-fintech-credit')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge green">FINTECH DEEP DIVE</span>
             </div>
@@ -2702,26 +3181,35 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 7 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 7 min read</span>
                 <span>&bull;</span>
                 <span>Financial Services</span>
               </div>
-              <h3 class="article-title">Autonomous Credit Scoring in Emerging Markets: Ethical Boundaries and Algorithmic Precision</h3>
-              <p class="article-excerpt">Leveraging telco airtime logs, utility payments, and mobile money transaction velocity to underwrite unbanked merchants while maintaining auditable explainability.</p>
+              <h3 class="article-title">Autonomous Credit Scoring in Emerging Markets: Ethical Boundaries and
+                Algorithmic Precision</h3>
+              <p class="article-excerpt">Leveraging telco airtime logs, utility payments, and mobile money transaction
+                velocity to underwrite unbanked merchants while maintaining auditable explainability.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar" style="background:#0e8a3e;color:#fff">KA</div>
                 <span>Kofi Amoah</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 5: Industry - FMCG & Logistics -->
-        <article class="article-card" data-category="industry" data-keywords="logistics fmcg supply chain demand forecasting currency volatility inventory stockout" onclick="openReaderModal('article-supply-chain')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="industry"
+          data-keywords="logistics fmcg supply chain demand forecasting currency volatility inventory stockout"
+          onclick="openReaderModal('article-supply-chain')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge gold">SUPPLY CHAIN</span>
             </div>
@@ -2729,26 +3217,36 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 6 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 6 min read</span>
                 <span>&bull;</span>
                 <span>Retail &amp; Distribution</span>
               </div>
-              <h3 class="article-title">Demand Forecasting in Volatile Currencies: How FMCG Distributors Prevent Stockouts</h3>
-              <p class="article-excerpt">Case analysis of an East African consumer goods distributor who trained localized neural models to anticipate purchasing shifts under currency devaluation and fuel fluctuations.</p>
+              <h3 class="article-title">Demand Forecasting in Volatile Currencies: How FMCG Distributors Prevent
+                Stockouts</h3>
+              <p class="article-excerpt">Case analysis of an East African consumer goods distributor who trained
+                localized neural models to anticipate purchasing shifts under currency devaluation and fuel
+                fluctuations.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar">OJ</div>
                 <span>Dr. Olumide J.</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 6: Engineering - RAG in Low Bandwidth -->
-        <article class="article-card" data-category="engineering" data-keywords="rag retrieval augmented generation bandwidth offline caching edge models latency" onclick="openReaderModal('article-rag-bandwidth')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="engineering"
+          data-keywords="rag retrieval augmented generation bandwidth offline caching edge models latency"
+          onclick="openReaderModal('article-rag-bandwidth')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge blue">INFRASTRUCTURE</span>
             </div>
@@ -2756,26 +3254,36 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 9 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 9 min read</span>
                 <span>&bull;</span>
                 <span>System Design</span>
               </div>
-              <h3 class="article-title">Building Production RAG Systems in Bandwidth-Constrained Environments: Lessons from the Field</h3>
-              <p class="article-excerpt">How hybrid semantic routing, quantized local embeddings, and smart delta-caching allow mission-critical enterprise apps to maintain sub-second response times despite network instability.</p>
+              <h3 class="article-title">Building Production RAG Systems in Bandwidth-Constrained Environments: Lessons
+                from the Field</h3>
+              <p class="article-excerpt">How hybrid semantic routing, quantized local embeddings, and smart
+                delta-caching allow mission-critical enterprise apps to maintain sub-second response times despite
+                network instability.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar" style="background:#1d4ed8;color:#fff">TE</div>
                 <span>Tariq Ekwueme</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 7: Strategy & Architecture -->
-        <article class="article-card" data-category="strategy" data-keywords="prompting cognitive architecture systems business processes orchestration claude gpt" onclick="openReaderModal('article-cognitive-arch')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="strategy"
+          data-keywords="prompting cognitive architecture systems business processes orchestration claude gpt"
+          onclick="openReaderModal('article-cognitive-arch')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge gold">STRATEGIC DESIGN</span>
             </div>
@@ -2783,26 +3291,35 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 5 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 5 min read</span>
                 <span>&bull;</span>
                 <span>Executive Perspective</span>
               </div>
-              <h3 class="article-title">Prompt Engineering vs. Cognitive Architecture: What Non-Technical Leaders Must Master</h3>
-              <p class="article-excerpt">Why single prompts don't scale. Moving from conversational party tricks to multi-step reasoning chains, human validation checkpoints, and autonomous business processes.</p>
+              <h3 class="article-title">Prompt Engineering vs. Cognitive Architecture: What Non-Technical Leaders Must
+                Master</h3>
+              <p class="article-excerpt">Why single prompts don't scale. Moving from conversational party tricks to
+                multi-step reasoning chains, human validation checkpoints, and autonomous business processes.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar" style="background:#5b3fe6;color:#fff">FA</div>
                 <span>Fatima Al-Hassan</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 8: Industry - Public Sector & Healthcare -->
-        <article class="article-card" data-category="industry" data-keywords="health public sector administrative automation medical clinical triage records government" onclick="openReaderModal('article-health-admin')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="industry"
+          data-keywords="health public sector administrative automation medical clinical triage records government"
+          onclick="openReaderModal('article-health-admin')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge green">HEALTH &amp; PUBLIC SECTOR</span>
             </div>
@@ -2810,26 +3327,35 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 7 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 7 min read</span>
                 <span>&bull;</span>
                 <span>Public Health</span>
               </div>
-              <h3 class="article-title">Administrative Automation in African Healthcare: Freeing 15 Hours Weekly for Clinical Teams</h3>
-              <p class="article-excerpt">How diagnostic transcription, inventory requisition bots, and patient scheduling automation in regional referral centers returned doctors to frontline patient care.</p>
+              <h3 class="article-title">Administrative Automation in African Healthcare: Freeing 15 Hours Weekly for
+                Clinical Teams</h3>
+              <p class="article-excerpt">How diagnostic transcription, inventory requisition bots, and patient
+                scheduling automation in regional referral centers returned doctors to frontline patient care.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar" style="background:#0e8a3e;color:#fff">KA</div>
                 <span>Kofi Amoah</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
 
         <!-- Article 9: Workforce Case Study -->
-        <article class="article-card" data-category="workforce" data-keywords="case study pan-african bank upskilling cohort retention metrics business results" onclick="openReaderModal('article-bank-upskill')">
-          <div class="article-cover" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80')">
+        <article class="article-card" data-category="workforce"
+          data-keywords="case study pan-african bank upskilling cohort retention metrics business results"
+          onclick="openReaderModal('article-bank-upskill')">
+          <div class="article-cover"
+            style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80')">
             <div class="article-pill-overlay">
               <span class="tag-badge purple">ENTERPRISE CASE STUDY</span>
             </div>
@@ -2837,19 +3363,26 @@
           <div class="article-body">
             <div>
               <div class="article-meta">
-                <span><svg class="i" style="width:13px;height:13px"><use href="#clock" /></svg> 8 min read</span>
+                <span><svg class="i" style="width:13px;height:13px">
+                    <use href="#clock" />
+                  </svg> 8 min read</span>
                 <span>&bull;</span>
                 <span>Case Study</span>
               </div>
-              <h3 class="article-title">From 14-Day Reporting to Real-Time Dashboards: How a Tier-1 Bank Transformed 280 Analysts</h3>
-              <p class="article-excerpt">An unvarnished review of the 6-week workforce transformation program across 4 African subsidiaries: challenges faced, organizational friction overcome, and bottom-line savings delivered.</p>
+              <h3 class="article-title">From 14-Day Reporting to Real-Time Dashboards: How a Tier-1 Bank Transformed 280
+                Analysts</h3>
+              <p class="article-excerpt">An unvarnished review of the 6-week workforce transformation program across 4
+                African subsidiaries: challenges faced, organizational friction overcome, and bottom-line savings
+                delivered.</p>
             </div>
             <div class="article-footer">
               <div class="article-author-mini">
                 <div class="article-author-avatar">OJ</div>
                 <span>Dr. Olumide J.</span>
               </div>
-              <span class="article-read-btn">Read Briefing <svg class="i"><use href="#arr" /></svg></span>
+              <span class="article-read-btn">Read Briefing <svg class="i">
+                  <use href="#arr" />
+                </svg></span>
             </div>
           </div>
         </article>
@@ -2857,7 +3390,9 @@
 
       <!-- No Results State -->
       <div id="no-results-box" class="no-results" style="display:none">
-        <i class="tile tile--glass tile--lg" style="margin:0 auto;color:var(--navy);background:#e2e8f0"><svg class="i"><use href="#srch" /></svg></i>
+        <i class="tile tile--glass tile--lg" style="margin:0 auto;color:var(--navy);background:#e2e8f0"><svg class="i">
+            <use href="#srch" />
+          </svg></i>
         <h3>No matching insights found</h3>
         <p>Try refining your search keyword or selecting a different category from above.</p>
         <button class="btn gold sm" onclick="resetFilter()">Reset All Filters</button>
@@ -2873,18 +3408,25 @@
           <div class="assessment-info">
             <span class="eyebrow-pill" style="margin-bottom:12px;display:inline-block">EXECUTIVE SELF-CHECK</span>
             <h2>How AI-Ready Is Your Organization?</h2>
-            <p>Take this interactive 60-second diagnostic based on TAFA's 4D Delivery Framework to gauge your workforce capability, data governance, and strategic posture.</p>
+            <p>Take this interactive 60-second diagnostic based on TAFA's 4D Delivery Framework to gauge your workforce
+              capability, data governance, and strategic posture.</p>
             <div class="assessment-perks">
               <div class="assessment-perk">
-                <svg class="i"><use href="#check" /></svg>
+                <svg class="i">
+                  <use href="#check" />
+                </svg>
                 <span>Instant diagnostic maturity score and benchmark comparison</span>
               </div>
               <div class="assessment-perk">
-                <svg class="i"><use href="#check" /></svg>
+                <svg class="i">
+                  <use href="#check" />
+                </svg>
                 <span>Tailored recommendations for your operational scale</span>
               </div>
               <div class="assessment-perk">
-                <svg class="i"><use href="#check" /></svg>
+                <svg class="i">
+                  <use href="#check" />
+                </svg>
                 <span>Zero fluff — grounded in African market realities</span>
               </div>
             </div>
@@ -2977,10 +3519,15 @@
                 <div class="result-score-circle" id="result-score-num">85</div>
                 <div class="result-tier" id="result-tier-title">Emerging Enterprise Leader</div>
                 <p class="result-verdict" id="result-verdict-text">
-                  Your organization has high latent potential. You have moved past basic experimentation, but formalizing workforce transformation and proprietary agentic workflows is required to unlock full margin expansion.
+                  Your organization has high latent potential. You have moved past basic experimentation, but
+                  formalizing workforce transformation and proprietary agentic workflows is required to unlock full
+                  margin expansion.
                 </p>
                 <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-                  <a class="btn gold sm" href="tafa-ai-consulting.html#book">Book Focused AI Growth Audit <svg class="i"><use href="#arr" /></svg></a>
+                  <a class="btn gold sm" href="tafa-ai-consulting.html#book">Book Focused AI Growth Audit <svg
+                      class="i">
+                      <use href="#arr" />
+                    </svg></a>
                   <button class="btn line sm" onclick="resetAssessment()">Retake Test</button>
                 </div>
               </div>
@@ -2996,10 +3543,13 @@
     <div class="wrap">
       <div class="newsletter-box">
         <div>
-          <span class="eyebrow" style="color:var(--blue);font-size:11.5px;margin-bottom:6px">THE EXECUTIVE DISPATCH</span>
+          <span class="eyebrow" style="color:var(--blue);font-size:11.5px;margin-bottom:6px">THE EXECUTIVE
+            DISPATCH</span>
           <h3>The African Superintelligence Memo</h3>
           <p>
-            Join 12,500+ C-suite leaders, founders, and innovation directors receiving our bi-weekly intelligence briefings. Deep-dive breakdowns into African market developments, engineering architectures, and transformation tactics — delivered every other Thursday morning.
+            Join 12,500+ C-suite leaders, founders, and innovation directors receiving our bi-weekly intelligence
+            briefings. Deep-dive breakdowns into African market developments, engineering architectures, and
+            transformation tactics — delivered every other Thursday morning.
           </p>
           <div class="newsletter-proof">
             <div class="proof-avatars">
@@ -3014,9 +3564,12 @@
 
         <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
           <div class="subscribe-input-group">
-            <input type="email" id="newsletter-email" class="subscribe-input" placeholder="Enter your work email address" required>
+            <input type="email" id="newsletter-email" class="subscribe-input"
+              placeholder="Enter your work email address" required>
             <button type="submit" class="btn gold" style="white-space:nowrap">
-              Subscribe Free <svg class="i"><use href="#arr" /></svg>
+              Subscribe Free <svg class="i">
+                <use href="#arr" />
+              </svg>
             </button>
           </div>
           <p class="subscribe-privacy">
@@ -3038,11 +3591,15 @@
       </div>
       <div class="acts">
         <div class="act">
-          <a class="btn gold" href="tafa-ai-consulting.html#book">Book Your AI Growth Audit <svg class="i"><use href="#arr" /></svg></a>
+          <a class="btn gold" href="tafa-ai-consulting.html#book">Book Your AI Growth Audit <svg class="i">
+              <use href="#arr" />
+            </svg></a>
           <span>For growing businesses</span>
         </div>
         <div class="act">
-          <a class="btn line" href="tafa-academy.html">Explore TAFA Academy <svg class="i"><use href="#arr" /></svg></a>
+          <a class="btn line" href="tafa-academy.html">Explore TAFA Academy <svg class="i">
+              <use href="#arr" />
+            </svg></a>
           <span>For individuals &amp; teams</span>
         </div>
       </div>
@@ -3063,10 +3620,19 @@
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
           <div class="soc">
-            <a href="#" aria-label="LinkedIn"><svg class="i"><use href="#in" /></svg></a>
-            <a href="#" aria-label="X"><svg class="i"><use href="#x" /></svg></a>
-            <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#ig" /></svg></a>
-            <a href="#" aria-label="YouTube"><svg class="i"><use href="#yt" /></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg class="i">
+                <use href="#in" />
+              </svg></a>
+            <a href="#" aria-label="X"><svg class="i">
+                <use href="#x" />
+              </svg></a>
+            <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank"
+              rel="noopener noreferrer"><svg class="i">
+                <use href="#ig" />
+              </svg></a>
+            <a href="#" aria-label="YouTube"><svg class="i">
+                <use href="#yt" />
+              </svg></a>
           </div>
         </div>
         <div class="bottom-base">
@@ -3084,10 +3650,14 @@
         <span class="tag-badge blue" id="modal-tag">BRIEFING</span>
         <div style="display:flex;align-items:center;gap:10px;">
           <button class="btn ghost xs" onclick="copyShareLink()">
-            <svg class="i"><use href="#share" /></svg> Share
+            <svg class="i">
+              <use href="#share" />
+            </svg> Share
           </button>
           <button class="reader-close-btn" onclick="closeReaderModal()" aria-label="Close article">
-            <svg class="i"><use href="#close" /></svg>
+            <svg class="i">
+              <use href="#close" />
+            </svg>
           </button>
         </div>
       </div>
@@ -3101,13 +3671,17 @@
   <!-- ================= WHITEPAPER DOWNLOAD MODAL ================= -->
   <div class="download-modal-overlay" id="download-modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="download-modal-card">
-      <button class="reader-close-btn" style="position:absolute;top:20px;right:20px;" onclick="closeDownloadModal()" aria-label="Close modal">
-        <svg class="i"><use href="#close" /></svg>
+      <button class="reader-close-btn" style="position:absolute;top:20px;right:20px;" onclick="closeDownloadModal()"
+        aria-label="Close modal">
+        <svg class="i">
+          <use href="#close" />
+        </svg>
       </button>
       <span class="tag-badge gold" style="margin-bottom:12px;">EXECUTIVE ACCESS</span>
       <h3 id="download-modal-title">Download Research Report</h3>
-      <p id="download-modal-desc">Enter your business email to instantly receive the complete PDF whitepaper, benchmark charts, and implementation checklist.</p>
-      
+      <p id="download-modal-desc">Enter your business email to instantly receive the complete PDF whitepaper, benchmark
+        charts, and implementation checklist.</p>
+
       <form class="download-form" onsubmit="handleDownloadSubmit(event)">
         <label class="form-label">
           Full Name
@@ -3122,7 +3696,9 @@
           <input type="text" class="form-input" placeholder="e.g. First Bank, MTN, Twiga" required>
         </label>
         <button type="submit" class="btn gold" style="width:100%;justify-content:center;margin-top:6px;">
-          <svg class="i"><use href="#download" /></svg> Instant Download PDF
+          <svg class="i">
+            <use href="#download" />
+          </svg> Instant Download PDF
         </button>
       </form>
     </div>
@@ -3130,7 +3706,9 @@
 
   <!-- Toast Notification -->
   <div class="toast-msg" id="toast-msg">
-    <svg class="i" style="width:18px;height:18px;color:var(--gold)"><use href="#check" /></svg>
+    <svg class="i" style="width:18px;height:18px;color:var(--gold)">
+      <use href="#check" />
+    </svg>
     <span id="toast-text">Thank you! Subscribed to The African Superintelligence Memo.</span>
   </div>
 
@@ -3446,9 +4024,9 @@
         const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
 
         const matchesCategory = (currentCategory === 'all') || categories.includes(currentCategory);
-        const matchesSearch = !currentSearchTerm || 
-          cardTitle.includes(currentSearchTerm) || 
-          cardDesc.includes(currentSearchTerm) || 
+        const matchesSearch = !currentSearchTerm ||
+          cardTitle.includes(currentSearchTerm) ||
+          cardDesc.includes(currentSearchTerm) ||
           keywords.includes(currentSearchTerm);
 
         if (matchesCategory && matchesSearch) {

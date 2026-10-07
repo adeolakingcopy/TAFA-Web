@@ -15,7 +15,10 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="modulepreload" href="/@id/virtual:tanstack-start-dev-client-entry" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
     @import "tailwindcss" source(none);
@@ -78,7 +81,13 @@
       width: 100%;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
       overflow-wrap: break-word;
       word-wrap: break-word;
     }
@@ -442,8 +451,8 @@
     }
 
     .nav-link:hover,
-    .has-mega:hover > .nav-link,
-    .has-mega.expanded > .nav-link {
+    .has-mega:hover>.nav-link,
+    .has-mega.expanded>.nav-link {
       color: var(--blue);
     }
 
@@ -460,9 +469,9 @@
       transition: transform 0.22s ease;
     }
 
-    .has-mega:hover > .nav-link .chevron-icon,
-    .has-mega.is-active > .nav-link .chevron-icon,
-    .has-mega.expanded > .nav-link .chevron-icon {
+    .has-mega:hover>.nav-link .chevron-icon,
+    .has-mega.is-active>.nav-link .chevron-icon,
+    .has-mega.expanded>.nav-link .chevron-icon {
       transform: rotate(180deg);
     }
 
@@ -566,10 +575,22 @@
       box-shadow: 0 4px 10px -3px rgba(6, 26, 63, 0.25);
     }
 
-    .mega-tile.blue { background: linear-gradient(135deg, #1d4ed8, #0A2E8F); }
-    .mega-tile.purple { background: linear-gradient(135deg, #5b3fe6, #3b22b5); }
-    .mega-tile.gold { background: linear-gradient(135deg, #fbbf24, #d97706); color: #061a3f; }
-    .mega-tile.green { background: linear-gradient(135deg, #14a84f, #0e8a3e); }
+    .mega-tile.blue {
+      background: linear-gradient(135deg, #1d4ed8, #0A2E8F);
+    }
+
+    .mega-tile.purple {
+      background: linear-gradient(135deg, #5b3fe6, #3b22b5);
+    }
+
+    .mega-tile.gold {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #061a3f;
+    }
+
+    .mega-tile.green {
+      background: linear-gradient(135deg, #14a84f, #0e8a3e);
+    }
 
     .mega-tile svg.i {
       width: 18px;
@@ -1677,662 +1698,2224 @@
         gap: 8px;
       }
     }
-  
-/* ---- UX upgrades ---- */
-.site-header{position:sticky;top:0}
-section[id],footer[id]{scroll-margin-top:84px}
-.main-nav a{position:relative}
-.main-nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--gold);border-radius:2px}
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue-bright);outline-offset:3px;border-radius:6px}
-.service-icon{box-shadow:inset 0 0 0 1px var(--border)}
-.tf-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-.tf-sec{padding:88px 0}
-.tf-head{max-width:640px;margin-bottom:44px}
-.tf-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;color:var(--navy-deep);margin:0 0 14px;font-weight:800;letter-spacing:-.02em}
-.tf-head p{margin:0;color:var(--muted-foreground);font-size:17px;line-height:1.65}
-.tf-i{width:24px;height:24px;flex:none}
-/* challenge */
-.tf-problem{background:var(--sky-soft)}
-.tf-problem ul{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--border)}
-.tf-problem li{display:grid;grid-template-columns:56px 1fr 1.3fr;gap:24px;align-items:start;padding:26px 0;border-bottom:1px solid var(--border)}
-.tf-problem li .tf-i{color:var(--navy);margin-top:2px}
-.tf-problem h3{margin:0;font-size:19px;color:var(--navy-deep)}
-.tf-problem li p{margin:0;color:var(--muted-foreground);line-height:1.65}
-/* process */
-.tf-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s;position:relative}
-.tf-steps::before{content:"";position:absolute;top:27px;left:28px;right:28px;border-top:2px dashed var(--border)}
-.tf-steps li{position:relative}
-.tf-steps .dot{width:56px;height:56px;border-radius:50%;background:var(--navy-deep);color:var(--gold);display:grid;place-items:center;margin-bottom:18px;box-shadow:0 0 0 8px var(--background)}
-.tf-steps h3{margin:0 0 8px;font-size:18px;color:var(--navy-deep)}
-.tf-steps p{margin:0 0 10px;color:var(--muted-foreground);line-height:1.6;font-size:15px}
-.tf-steps small{display:inline-flex;gap:6px;align-items:center;font-weight:700;color:var(--navy);font-size:13px}
-.tf-steps small .tf-i{width:15px;height:15px;color:var(--accent)}
-/* industries */
-.tf-ind{background:var(--navy-deep);color:#fff}
-.tf-ind .tf-head h2{color:#fff}.tf-ind .tf-head p{color:color-mix(in oklab,#fff 72%,transparent)}
-.tf-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.tf-chip{display:flex;gap:16px;align-items:flex-start;padding:22px;border:1px solid color-mix(in oklab,#fff 18%,transparent);border-radius:14px;transition:background .2s,border-color .2s}
-.tf-chip:hover{background:color-mix(in oklab,#fff 8%,transparent);border-color:var(--gold)}
-.tf-chip .tf-i{color:var(--gold);margin-top:2px}
-.tf-chip b{display:block;margin-bottom:4px}
-.tf-chip span{font-size:14.5px;line-height:1.55;color:color-mix(in oklab,#fff 70%,transparent)}
-/* faq */
-.tf-faq .tf-wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
-.tf-faq .tf-head{margin:0;position:sticky;top:110px}
-.tf-faq details{border-bottom:1px solid var(--border)}
-.tf-faq details:first-of-type{border-top:1px solid var(--border)}
-.tf-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font-weight:700;font-size:17px;color:var(--navy-deep)}
-.tf-faq summary::-webkit-details-marker{display:none}
-.tf-faq summary .tf-i{transition:transform .2s;color:var(--navy)}
-.tf-faq details[open] summary .tf-i{transform:rotate(180deg)}
-.tf-faq details p{margin:0 0 22px;color:var(--muted-foreground);line-height:1.7;max-width:60ch}
-/* contact */
-.tf-contact{background:var(--sky-soft)}
-.tf-contact .tf-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
-.tf-contact .tf-head{margin:0}
-.tf-assure{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
-.tf-assure li{display:flex;gap:12px;align-items:center;font-weight:600;color:var(--navy-deep)}
-.tf-assure .tf-i{color:var(--navy)}
-.tf-form{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow-card);display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.tf-form label{display:grid;gap:6px;font-weight:700;font-size:14px;color:var(--navy-deep)}
-.tf-form .full{grid-column:1/-1}
-.tf-form input,.tf-form select,.tf-form textarea{font:inherit;font-weight:400;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--paper);color:var(--foreground);width:100%}
-.tf-form textarea{min-height:110px;resize:vertical}
-.tf-form button{grid-column:1/-1;justify-self:start;cursor:pointer;border:0}
-.tf-form .ok{grid-column:1/-1;display:none;font-weight:700;color:var(--navy)}
-.tf-form.sent .ok{display:block}
-@media(max-width:1050px){.tf-steps{grid-template-columns:1fr 1fr}.tf-steps::before{display:none}.tf-chips{grid-template-columns:1fr 1fr}}
-@media(max-width:780px){.tf-sec{padding:60px 0}.tf-problem li{grid-template-columns:40px 1fr;gap:6px 14px}.tf-problem li p{grid-column:2}.tf-steps,.tf-chips{grid-template-columns:1fr}.tf-faq .tf-wrap,.tf-contact .tf-wrap{grid-template-columns:1fr;gap:32px}.tf-faq .tf-head{position:static}.tf-form{grid-template-columns:1fr;padding:22px}}
 
-/* =====================  UI REFRESH  ===================== */
-:root{
-  --radius:16px; --radius-lg:22px;
-  --ring:0 0 0 1px color-mix(in oklab,var(--navy-deep) 8%,transparent);
-  --shadow-soft:0 1px 2px color-mix(in oklab,var(--navy-deep) 6%,transparent),0 10px 30px -8px color-mix(in oklab,var(--navy-deep) 14%,transparent);
-  --shadow-lift:0 2px 4px color-mix(in oklab,var(--navy-deep) 8%,transparent),0 24px 48px -12px color-mix(in oklab,var(--navy-deep) 24%,transparent);
-  --fs-body:clamp(15px,.35vw + 14px,17px);
-}
-html{-webkit-text-size-adjust:100%}
-body{font-size:var(--fs-body);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-h1,h2,h3,h4{text-wrap:balance;letter-spacing:-.02em}
-p{text-wrap:pretty}
-img{max-width:100%}
+    /* ---- UX upgrades ---- */
+    .site-header {
+      position: sticky;
+      top: 0
+    }
 
-/* Kicker / eyebrow label */
-.kicker{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.kicker::before{content:"";width:28px;height:3px;border-radius:3px;background:var(--gold)}
-.tf-ind .kicker,.impact .kicker{color:var(--gold)}
+    section[id],
+    footer[id] {
+      scroll-margin-top: 84px
+    }
 
-/* ---------- Header ---------- */
-.site-header{height:72px;background:color-mix(in oklab,var(--white) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);transition:box-shadow .25s}
-.site-header.scrolled{box-shadow:0 8px 24px -12px color-mix(in oklab,var(--navy-deep) 30%,transparent)}
-.brand img{height:40px;width:auto;display:block}
-.brand-mark{width:auto;height:auto}
-.main-nav{font-size:14px;gap:6px}
-.main-nav a{padding:9px 14px;border:0;border-radius:999px;color:var(--navy-deep);font-weight:600}
-.main-nav a:hover{background:var(--sky-soft);color:var(--navy)}
-.main-nav a.active{background:var(--navy-deep);color:var(--white)}
-.main-nav a.active::after{display:none}
-.header-cta,.cta{min-height:48px;padding:0 26px;font-size:14px;font-weight:800;gap:10px;box-shadow:0 6px 16px -6px color-mix(in oklab,var(--gold) 70%,transparent)}
-.header-cta{min-height:44px}
-.cta svg,.header-cta svg{transition:transform .2s}
-.cta:hover svg,.header-cta:hover svg{transform:translateX(4px)}
-.menu-toggle{width:46px;height:46px;border-radius:12px;background:var(--sky-soft)}
+    .main-nav a {
+      position: relative
+    }
 
-/* ---------- Hero ---------- */
-.hero{height:auto;min-height:0;display:flex;flex-direction:column}
-.hero-shade{background:
-  radial-gradient(900px 480px at 15% 40%,color-mix(in oklab,var(--blue-bright) 22%,transparent),transparent 60%),
-  linear-gradient(90deg,color-mix(in oklab,var(--navy-deep) 97%,transparent) 0%,color-mix(in oklab,var(--navy-deep) 84%,transparent) 42%,color-mix(in oklab,var(--navy-deep) 18%,transparent) 78%)}
-.hero-inner{height:auto;min-height:520px;padding:72px 0 56px;gap:48px;align-items:center}
-.hero-copy{max-width:680px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:color-mix(in oklab,var(--gold) 14%,transparent);border:1px solid color-mix(in oklab,var(--gold) 45%,transparent);font-size:12.5px;letter-spacing:.14em;margin:0 0 24px}
-.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px color-mix(in oklab,var(--gold) 25%,transparent)}
-.hero h1{font-size:clamp(38px,5.2vw,68px);line-height:1.03;letter-spacing:-.035em;font-weight:800;max-width:none}
-.hero-lead{font-size:clamp(16px,1.3vw,19px);line-height:1.65;margin:24px 0 32px;max-width:580px;color:color-mix(in oklab,var(--white) 88%,transparent)}
-.hero-actions{flex-wrap:wrap;gap:14px}
-.outline-cta{min-height:48px;padding:0 26px;font-size:14px;border-color:color-mix(in oklab,var(--white) 55%,transparent);backdrop-filter:blur(4px)}
+    .main-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px
+    }
 
-.hero-solutions{width:290px;margin:0;padding:0;align-self:center;display:grid;gap:12px}
-.hero-solutions>div{min-height:76px;border-radius:var(--radius)!important;font-size:15px;line-height:1.3;background:color-mix(in oklab,var(--navy-deep) 55%,transparent);border-color:color-mix(in oklab,var(--white) 18%,transparent);transition:transform .25s,border-color .25s,background .25s}
-.hero-solutions>div:hover{transform:translateX(-6px);border-color:var(--gold);background:color-mix(in oklab,var(--navy) 70%,transparent)}
-.hero-solutions svg{width:44px;height:44px;padding:10px;border-radius:12px;background:color-mix(in oklab,var(--gold) 18%,transparent);color:var(--gold);stroke-width:1.9;flex:none}
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--blue-bright);
+      outline-offset: 3px;
+      border-radius: 6px
+    }
 
-.hero-proof{position:relative;left:auto;bottom:auto;transform:none;height:auto;margin:0 auto;padding:22px 0 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid color-mix(in oklab,var(--white) 18%,transparent)}
-.hero-proof div{font-size:15px;font-weight:600;line-height:1.35;padding:6px 28px 6px 0}
-.hero-proof div+div{padding-left:28px}
-.hero-proof svg{width:44px;height:44px;padding:11px;background:color-mix(in oklab,var(--gold) 12%,transparent)}
+    .service-icon {
+      box-shadow: inset 0 0 0 1px var(--border)
+    }
 
-/* ---------- Services ---------- */
-.services-section{padding:88px 0;background:linear-gradient(180deg,var(--paper),var(--sky-soft) 140%)}
-.services-layout{grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:start}
-.services-main{padding-right:0;border-right:0}
-.section-heading{margin-bottom:36px}
-.section-heading>span{display:none}
-.section-heading h2{font-size:clamp(28px,3.4vw,42px);line-height:1.12;max-width:20ch;font-weight:800}
-.section-heading p:not(.kicker){margin:16px 0 0;font-size:17px;line-height:1.65;color:var(--muted-foreground);max-width:62ch}
-.service-grid{gap:22px}
-.service-card{min-height:0;padding:28px;border-radius:var(--radius-lg);border:1px solid color-mix(in oklab,var(--border) 70%,transparent);box-shadow:var(--shadow-soft);position:relative;overflow:hidden;gap:0}
-.service-card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--blue-bright),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .35s}
-.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:color-mix(in oklab,var(--blue-bright) 50%,var(--border))}
-.service-card:hover::before{transform:scaleX(1)}
-.service-top{gap:16px;margin-bottom:18px;align-items:center;flex-wrap:nowrap}
-.service-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(145deg,var(--gold-soft),color-mix(in oklab,var(--gold) 55%,var(--white)));box-shadow:none;transition:transform .3s}
-.service-card:hover .service-icon{transform:rotate(-6deg) scale(1.06)}
-.service-icon svg{width:28px;height:28px;stroke-width:2.2}
-.service-top b{display:block;font-size:12.5px;letter-spacing:.14em;color:var(--accent);margin-bottom:4px}
-.service-card h4{font-size:clamp(18px,1.6vw,21px);line-height:1.2;letter-spacing:-.015em}
-.service-top p{margin:6px 0 0;font-size:14.5px;line-height:1.45;color:var(--muted-foreground)}
-.service-card>p{margin:0 0 18px;font-size:15.5px;line-height:1.65;color:color-mix(in oklab,var(--foreground) 85%,transparent)}
-.service-card>strong{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin:0 0 12px;display:block}
-.service-card ul{margin:0 0 22px;display:grid;gap:10px}
-.service-card li{font-size:15px;line-height:1.5;gap:12px;align-items:flex-start}
-.service-card li svg{width:22px;height:22px;padding:4px;border-radius:50%;background:var(--gold-soft);color:var(--navy);stroke-width:3.2;margin-top:1px}
-.deliverable{gap:14px;padding:16px 18px;border-radius:14px;background:var(--sky-soft);border:1px dashed color-mix(in oklab,var(--blue-bright) 40%,var(--border))}
-.deliverable svg{width:28px;height:28px;padding:5px;color:var(--navy);flex:none}
-.deliverable p{font-size:14px;line-height:1.5}
-.deliverable b{color:var(--navy-deep)}
+    .tf-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
 
-/* Sidebar */
-.services-sidebar{position:sticky;top:96px;gap:18px;padding-top:0}
-.roadmap-panel,.results-panel{border-radius:var(--radius-lg);padding:28px;background:var(--white);box-shadow:var(--shadow-soft);border:1px solid color-mix(in oklab,var(--border) 60%,transparent)}
-.roadmap-panel{background:linear-gradient(160deg,var(--white),var(--sky-soft))}
-.roadmap-panel h3{font-size:clamp(22px,2vw,27px);line-height:1.15}
-.roadmap-panel>p{font-size:15.5px;line-height:1.6;color:var(--muted-foreground);margin:14px 0}
-.roadmap-panel .cta{margin:6px 0 20px}
-.assessment{font-size:14px;gap:14px;padding:18px 0 0}
-.assessment svg{flex:none;width:40px;height:40px;padding:9px;border-radius:12px;background:var(--gold-soft)}
-.africa-panel{border-radius:var(--radius-lg);min-height:230px;padding:28px;background:radial-gradient(circle at 80% 15%,color-mix(in oklab,var(--blue-bright) 60%,transparent),transparent 55%),linear-gradient(150deg,var(--navy),var(--navy-deep))}
-.africa-panel h3{font-size:clamp(20px,1.8vw,24px);line-height:1.2}
-.results-panel>h3{font-size:19px;line-height:1.2;margin-bottom:6px}
-.results-panel>div{gap:16px;padding:14px 0;margin:0;border-top:1px solid color-mix(in oklab,var(--border) 60%,transparent)}
-.results-panel>div:first-of-type{border-top:0}
-.results-panel svg{width:48px;height:48px;padding:12px;border-radius:14px;flex:none}
-.results-panel b{font-size:24px;letter-spacing:-.02em;color:var(--navy-deep)}
-.results-panel small{font-size:13.5px;color:var(--muted-foreground)}
+    .tf-sec {
+      padding: 88px 0
+    }
 
-/* ---------- Shared section system ---------- */
-.tf-sec{padding:clamp(64px,8vw,104px) 0}
-.tf-head{max-width:680px;margin-bottom:clamp(32px,4vw,52px)}
-.tf-head h2{font-size:clamp(28px,3.6vw,44px);line-height:1.12;letter-spacing:-.03em}
-.tf-head p:not(.kicker){font-size:clamp(16px,1.2vw,18px);line-height:1.7}
-.tf-i{width:26px;height:26px}
+    .tf-head {
+      max-width: 640px;
+      margin-bottom: 44px
+    }
 
-/* Problem */
-.tf-problem{background:var(--sky-soft)}
-.tf-problem ul{border:0;gap:16px;grid-template-columns:repeat(3,1fr)}
-.tf-problem li{display:flex;flex-direction:column;gap:12px;padding:30px;background:var(--white);border:1px solid color-mix(in oklab,var(--border) 60%,transparent);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);transition:transform .25s,box-shadow .25s}
-.tf-problem li:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
-.tf-problem li .tf-i{width:52px;height:52px;padding:13px;border-radius:14px;background:var(--gold-soft);color:var(--navy);margin:0 0 6px}
-.tf-problem h3{font-size:20px;line-height:1.25}
-.tf-problem li p{font-size:15.5px;line-height:1.7}
+    .tf-head h2 {
+      font-size: clamp(28px, 3.4vw, 40px);
+      line-height: 1.15;
+      color: var(--navy-deep);
+      margin: 0 0 14px;
+      font-weight: 800;
+      letter-spacing: -.02em
+    }
 
-/* Process */
-.tf-steps{gap:24px}
-.tf-steps::before{top:28px;left:40px;right:40px;border-top:2px dashed color-mix(in oklab,var(--blue-bright) 40%,var(--border))}
-.tf-steps li{padding:0 4px;display:flex;flex-direction:column}
-.tf-steps .step-n{position:absolute;right:4px;top:-4px;font-size:44px;font-weight:800;letter-spacing:-.04em;line-height:1;color:color-mix(in oklab,var(--border) 70%,transparent);z-index:0}
-.tf-steps .dot{position:relative;z-index:1;width:58px;height:58px;background:linear-gradient(145deg,var(--navy),var(--navy-deep));box-shadow:0 0 0 8px var(--background),0 8px 20px -6px color-mix(in oklab,var(--navy-deep) 50%,transparent);transition:transform .25s}
-.tf-steps li:hover .dot{transform:scale(1.08)}
-.tf-steps h3{font-size:20px}
-.tf-steps p{font-size:15.5px;line-height:1.65}
-.tf-steps small{margin-top:auto;padding:8px 12px;border-radius:10px;background:var(--sky-soft);font-size:13px;line-height:1.35;align-items:flex-start}
-.tf-steps small .tf-i{width:16px;height:16px;margin-top:1px}
+    .tf-head p {
+      margin: 0;
+      color: var(--muted-foreground);
+      font-size: 17px;
+      line-height: 1.65
+    }
 
-/* Impact band */
-.impact{height:auto;min-height:0;padding:0}
-.impact-inner{padding:clamp(56px,7vw,84px) 0;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,72px)}
-.testimonial{margin-left:clamp(0px,20vw,300px);min-width:0;padding-top:34px}
-.testimonial svg{width:40px;height:40px;left:0;top:-8px}
-.testimonial blockquote{font-size:clamp(18px,1.8vw,23px);line-height:1.5;font-weight:600;letter-spacing:-.01em}
-.testimonial cite{font-size:14px;margin-top:18px;color:var(--gold);font-weight:700}
-.impact-stats{padding-left:clamp(24px,4vw,56px)}
-.impact-stats h3{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.stat-grid{gap:0}
-.stat-grid>div{flex-direction:column;align-items:flex-start;gap:8px;padding-right:12px}
-.stat-grid>div+div{padding-left:20px}
-.stat-grid svg{width:36px;height:36px;padding:8px;border-radius:10px;background:color-mix(in oklab,var(--gold) 16%,transparent)}
-.stat-grid b{font-size:clamp(30px,3.4vw,44px);letter-spacing:-.04em;line-height:1;color:var(--white)}
-.stat-grid span{font-size:14px;line-height:1.4;color:color-mix(in oklab,var(--white) 78%,transparent)}
+    .tf-i {
+      width: 24px;
+      height: 24px;
+      flex: none
+    }
 
-/* Industries */
-.tf-ind{background:radial-gradient(900px 400px at 100% 0,color-mix(in oklab,var(--blue-bright) 22%,transparent),transparent 60%),var(--navy-deep)}
-.tf-chips{gap:16px}
-.tf-chip{padding:26px;border-radius:var(--radius-lg);background:color-mix(in oklab,#fff 4%,transparent);gap:18px}
-.tf-chip:hover{transform:translateY(-3px)}
-.tf-chip .tf-i{width:50px;height:50px;padding:12px;border-radius:14px;background:color-mix(in oklab,var(--gold) 14%,transparent);margin-top:0}
-.tf-chip b{font-size:18px;margin-bottom:6px;letter-spacing:-.01em}
-.tf-chip span{font-size:15px;line-height:1.6}
+    /* challenge */
+    .tf-problem {
+      background: var(--sky-soft)
+    }
 
-/* FAQ */
-.tf-faq details{border:1px solid color-mix(in oklab,var(--border) 70%,transparent);border-radius:var(--radius);padding:0 24px;margin-bottom:12px;background:var(--white);transition:box-shadow .25s,border-color .25s}
-.tf-faq details:first-of-type{border-top:1px solid color-mix(in oklab,var(--border) 70%,transparent)}
-.tf-faq details[open]{box-shadow:var(--shadow-soft);border-color:var(--blue-bright)}
-.tf-faq summary{padding:22px 0;font-size:17px;line-height:1.4}
-.tf-faq summary .tf-i{width:32px;height:32px;padding:6px;border-radius:50%;background:var(--sky-soft);flex:none}
-.tf-faq details p{font-size:16px;max-width:none}
+    .tf-problem ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border)
+    }
 
-/* Final CTA */
-.final-cta{padding:clamp(40px,5vw,64px) max(24px,calc((100% - 1180px)/2));min-height:0;gap:32px;background:radial-gradient(600px 240px at 90% 0,color-mix(in oklab,var(--blue-bright) 40%,transparent),transparent 70%),linear-gradient(110deg,var(--navy-deep),var(--navy));border-bottom:8px solid var(--gold)}
-.final-cta h2{font-size:clamp(24px,3vw,36px);letter-spacing:-.03em;line-height:1.15}
-.final-cta p{font-size:clamp(15px,1.2vw,17px);margin-top:10px;color:color-mix(in oklab,#fff 80%,transparent)}
-.cta-light{min-width:0;flex:none}
+    .tf-problem li {
+      display: grid;
+      grid-template-columns: 56px 1fr 1.3fr;
+      gap: 24px;
+      align-items: start;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--border)
+    }
 
-/* Contact */
-.tf-assure li{font-size:16px}
-.tf-assure .tf-i{width:34px;height:34px;padding:7px;border-radius:50%;background:var(--white);box-shadow:var(--ring)}
-.tf-form{border-radius:var(--radius-lg);padding:clamp(22px,3vw,36px);box-shadow:var(--shadow-lift);gap:20px}
-.tf-form label{font-size:14px;gap:8px}
-.tf-form input,.tf-form select,.tf-form textarea{padding:14px 16px;font-size:16px;border-radius:12px;transition:border-color .2s,box-shadow .2s}
-.tf-form input:focus,.tf-form select:focus,.tf-form textarea:focus{outline:0;border-color:var(--blue-bright);box-shadow:0 0 0 4px color-mix(in oklab,var(--blue-bright) 22%,transparent)}
-.tf-form .ok{padding:14px 16px;border-radius:12px;background:var(--gold-soft)}
-.tf-form button[disabled]{opacity:.6;cursor:default}
+    .tf-problem li .tf-i {
+      color: var(--navy);
+      margin-top: 2px
+    }
 
-/* Footer */
-footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
-.footer-main{grid-template-columns:220px 1fr 220px;gap:40px}
-.footer-main .brand{transform:none}
-.footer-main .brand img{height:44px;width:auto}
-.footer-main nav{flex-wrap:wrap;justify-content:center;gap:10px 28px;font-size:14.5px}
-.footer-main nav a{transition:color .2s}
-.footer-main nav a:hover{color:var(--blue-bright)}
-.footer-main>p{font-size:14.5px;line-height:1.6;padding-left:28px}
-.footer-bottom{margin-top:28px;padding-top:20px;font-size:14px;align-items:center;gap:16px;flex-wrap:wrap}
-.socials{display:inline-flex;gap:10px}
-.socials a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sky-soft);color:var(--navy);transition:background .2s,color .2s,transform .2s}
-.socials a:hover{background:var(--navy);color:var(--gold);transform:translateY(-2px)}
-.socials svg{width:18px;height:18px}
+    .tf-problem h3 {
+      margin: 0;
+      font-size: 19px;
+      color: var(--navy-deep)
+    }
 
-/* Scroll reveal */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+    .tf-problem li p {
+      margin: 0;
+      color: var(--muted-foreground);
+      line-height: 1.65
+    }
 
-/* ---------- Responsive ---------- */
-@media(max-width:1180px){
-  .services-layout{grid-template-columns:1fr;gap:32px}
-  .services-sidebar{position:static;grid-template-columns:repeat(2,1fr);display:grid}
-  .results-panel{grid-column:1/-1}
-}
-@media(max-width: 1020px) {
-  .hero>.wrap,
-  .nav-wrap {
-    width: calc(100% - 24px);
-    margin: 8px auto 0;
-  }
+    /* process */
+    .tf-steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      counter-reset: s;
+      position: relative
+    }
 
-  nav {
-    flex-wrap: wrap;
-    padding: 10px 18px;
-  }
+    .tf-steps::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: 28px;
+      right: 28px;
+      border-top: 2px dashed var(--border)
+    }
 
-  nav ul#nav-links {
-    display: none;
-    order: 3;
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 10px 0 16px;
-    border-top: 1px solid var(--line);
-    max-height: calc(85vh - 70px);
-    overflow-y: auto;
-  }
+    .tf-steps li {
+      position: relative
+    }
 
-  nav.open ul#nav-links {
-    display: flex;
-  }
+    .tf-steps .dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--navy-deep);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      box-shadow: 0 0 0 8px var(--background)
+    }
 
-  nav .nav-item {
-    width: 100%;
-  }
+    .tf-steps h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--navy-deep)
+    }
 
-  nav .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 10px;
-    width: 100%;
-    border-radius: 10px;
-    border-bottom: 1px solid rgba(227, 232, 242, 0.7);
-    font-size: 15px;
-    font-weight: 600;
-    transition: background 0.18s ease, color 0.18s ease;
-  }
+    .tf-steps p {
+      margin: 0 0 10px;
+      color: var(--muted-foreground);
+      line-height: 1.6;
+      font-size: 15px
+    }
 
-  nav .nav-link:active,
-  nav .has-mega.expanded > .nav-link {
-    background: #edf2f7;
-    color: var(--blue);
-  }
+    .tf-steps small {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 13px
+    }
 
-  nav .nav-link.on {
-    color: var(--blue);
-    border-bottom-color: var(--gold);
-    font-weight: 700;
-  }
+    .tf-steps small .tf-i {
+      width: 15px;
+      height: 15px;
+      color: var(--accent)
+    }
 
-  .has-mega .mega-menu {
-    position: static;
-    transform: none !important;
-    width: 100%;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    box-shadow: none;
-    border-radius: 14px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 10px 10px 12px;
-    display: none;
-    margin: 6px 0 12px;
-    transition: none;
-  }
+    /* industries */
+    .tf-ind {
+      background: var(--navy-deep);
+      color: #fff
+    }
 
-  .has-mega.expanded .mega-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    animation: megaFadeIn 0.2s ease-out;
-  }
+    .tf-ind .tf-head h2 {
+      color: #fff
+    }
 
-  @keyframes megaFadeIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+    .tf-ind .tf-head p {
+      color: color-mix(in oklab, #fff 72%, transparent)
+    }
 
-  .has-mega.expanded > .nav-link .chevron-icon {
-    transform: rotate(180deg);
-  }
+    .tf-chips {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px
+    }
 
-  .mega-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
+    .tf-chip {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 22px;
+      border: 1px solid color-mix(in oklab, #fff 18%, transparent);
+      border-radius: 14px;
+      transition: background .2s, border-color .2s
+    }
 
-  .mega-col-title {
-    font-size: 10.5px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #64748b;
-    margin: 4px 0 4px 4px;
-    display: block;
-  }
+    .tf-chip:hover {
+      background: color-mix(in oklab, #fff 8%, transparent);
+      border-color: var(--gold)
+    }
 
-  .mega-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+    .tf-chip .tf-i {
+      color: var(--gold);
+      margin-top: 2px
+    }
 
-  .mega-item {
-    background: #ffffff;
-    border: 1px solid #edf2f7;
-    border-radius: 10px;
-    padding: 10px 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    transform: none;
-    transition: background 0.15s ease, border-color 0.15s ease;
-  }
+    .tf-chip b {
+      display: block;
+      margin-bottom: 4px
+    }
 
-  .mega-item:active {
-    background: #eff6ff;
-    border-color: #bfdbfe;
-    transform: none;
-  }
+    .tf-chip span {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: color-mix(in oklab, #fff 70%, transparent)
+    }
 
-  .mega-tile {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    flex-shrink: 0;
-    display: grid;
-    place-items: center;
-  }
+    /* faq */
+    .tf-faq .tf-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 56px;
+      align-items: start
+    }
 
-  .mega-tile svg.i {
-    width: 16px;
-    height: 16px;
-  }
+    .tf-faq .tf-head {
+      margin: 0;
+      position: sticky;
+      top: 110px
+    }
 
-  .mega-item-body {
-    flex: 1;
-    min-width: 0;
-  }
+    .tf-faq details {
+      border-bottom: 1px solid var(--border)
+    }
 
-  .mega-item-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    width: 100%;
-  }
+    .tf-faq details:first-of-type {
+      border-top: 1px solid var(--border)
+    }
 
-  .mega-item-head strong {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--navy);
-  }
+    .tf-faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      padding: 22px 0;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--navy-deep)
+    }
 
-  .mega-item p {
-    display: none; /* Hide heavy multi-line descriptions on mobile for a clean, fast list */
-  }
+    .tf-faq summary::-webkit-details-marker {
+      display: none
+    }
 
-  .mega-promo-card {
-    min-height: auto;
-    border-radius: 12px;
-    margin-top: 4px;
-    overflow: hidden;
-  }
+    .tf-faq summary .tf-i {
+      transition: transform .2s;
+      color: var(--navy)
+    }
 
-  .mega-promo-content {
-    padding: 12px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+    .tf-faq details[open] summary .tf-i {
+      transform: rotate(180deg)
+    }
 
-  .mega-promo-tag {
-    font-size: 9px;
-    padding: 2px 7px;
-    margin-bottom: 0;
-    align-self: flex-start;
-  }
+    .tf-faq details p {
+      margin: 0 0 22px;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      max-width: 60ch
+    }
 
-  .mega-promo-card h4 {
-    font-size: 13px;
-    margin: 0;
-    line-height: 1.3;
-  }
+    /* contact */
+    .tf-contact {
+      background: var(--sky-soft)
+    }
 
-  .mega-promo-card p {
-    display: none; /* Hide paragraph on mobile */
-  }
+    .tf-contact .tf-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: start
+    }
 
-  .mega-promo-btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 9px 14px;
-    font-size: 12px;
-    font-weight: 700;
-  }
+    .tf-contact .tf-head {
+      margin: 0
+    }
 
-  .mobile-cta-item {
-    display: block;
-    padding-top: 12px;
-    margin-top: 8px;
-    border-top: 1px solid var(--line);
-  }
+    .tf-assure {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0 0;
+      display: grid;
+      gap: 16px
+    }
 
-  .mobile-drawer-btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 13px 20px;
-    font-size: 14px;
-    font-weight: 700;
-  }
+    .tf-assure li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 600;
+      color: var(--navy-deep)
+    }
 
-  .nav-end {
-    margin-left: auto;
-  }
+    .tf-assure .tf-i {
+      color: var(--navy)
+    }
 
-  .menu-btn {
-    display: grid;
-  }
+    .tf-form {
+      background: #fff;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
 
-  .hero>.wrap:has(nav.open),
-  .hero>.wrap.nav-open,
-  .nav-wrap:has(nav.open),
-  .nav-wrap.nav-open {
-    border-radius: 24px;
-    box-shadow: 0 16px 40px rgba(6, 26, 63, 0.16);
-  }
-}
-@media(max-width: 560px) {
-  nav .btn.sm {
-    display: none;
-  }
-  .ctas {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-  .ctas .btn {
-    width: 100%;
-    justify-content: center;
-  }
-  .bottom-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .bottom-base {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-}
-@media(max-width:1050px){
-  .hero-solutions{display:none}
-  .tf-problem ul{grid-template-columns:1fr}
-  .tf-problem li{flex-direction:row;align-items:flex-start;gap:20px}
-  .tf-problem li .tf-i{flex:none;margin:0}
-  .impact-inner{grid-template-columns:1fr}
-  .testimonial{margin-left:0}
-  .impact-stats{border-left:0;border-top:1px solid color-mix(in oklab,#fff 25%,transparent);padding:32px 0 0}
-  .footer-main{grid-template-columns:1fr;justify-items:center;text-align:center;gap:24px}
-  .footer-main>p{border-left:0;padding-left:0}
-}
-@media(max-width:780px){
-  .brand img{height:34px}
-  .hero{min-height:0}
-  .hero-image{object-position:68% center}
-  .hero-shade{background:linear-gradient(180deg,color-mix(in oklab,var(--navy-deep) 92%,transparent),color-mix(in oklab,var(--navy-deep) 78%,transparent))}
-  .hero-inner{min-height:0;padding:48px 0 36px;width:calc(100% - 40px)}
-  .hero-proof{width:calc(100% - 40px);grid-template-columns:1fr;gap:4px;padding:16px 0 24px}
-  .hero-proof div,.hero-proof div+div{padding:12px 0;border-left:0;font-size:15px}
-  .hero-proof div+div{border-top:1px solid color-mix(in oklab,#fff 14%,transparent)}
-  .services-section{padding:56px 0}
-  .services-layout{width:calc(100% - 32px)}
-  .service-grid{grid-template-columns:1fr}
-  .service-card{padding:22px}
-  .services-sidebar{grid-template-columns:1fr}
-  .tf-wrap{padding:0 20px}
-  .tf-steps{grid-template-columns:1fr;gap:28px}
-  .tf-steps li{flex-direction:row;flex-wrap:wrap;column-gap:18px;align-items:flex-start;display:grid;grid-template-columns:58px 1fr}
-  .tf-steps .dot{margin:0;grid-row:1/4}
-  .tf-steps .step-n{font-size:32px;top:0}
-  .tf-steps small{justify-self:start}
-  .stat-grid{grid-template-columns:1fr;gap:20px}
-  .stat-grid>div,.stat-grid>div+div{flex-direction:row;align-items:center;padding:0;border-left:0;gap:16px}
-  .stat-grid p{gap:2px}
-  .tf-chips{grid-template-columns:1fr}
-  .final-cta{flex-direction:column;text-align:center;align-items:center;padding-inline:24px}
-  .final-cta .cta{width:100%;max-width:340px}
-  .tf-faq details{padding:0 18px}
-  .footer-bottom{flex-direction:column;text-align:center}
-}
-@media(max-width:520px){
-  .hero h1{font-size:36px}
-  .hero-actions{flex-direction:column;align-items:stretch;width:100%}
-  .hero-actions .cta,.hero-actions .outline-cta{justify-content:center;width:100%}
-  .tf-problem li{flex-direction:column;padding:24px}
-  .tf-form{grid-template-columns:1fr}
-  .tf-form button{justify-self:stretch;width:100%}
-  .service-top{align-items:flex-start}
-  .service-icon{width:52px;height:52px;border-radius:14px}
-  .roadmap-panel,.results-panel,.africa-panel{padding:22px}
-}
+    .tf-form label {
+      display: grid;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--navy-deep)
+    }
 
-  
-/* AI Consulting dedicated page */
-.res{background:var(--sky-soft)}
-.res-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:20px;align-items:stretch}
-.res q{display:block;quotes:none;font-size:18px;line-height:1.6;color:var(--navy-deep);font-weight:600}
-.res .quote,.res .stat{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-card)}
-.res .quote span{display:block;margin-top:16px;font-size:14px;color:var(--muted-foreground)}
-.res .stat b{display:block;font-size:44px;line-height:1;color:var(--navy);letter-spacing:-.03em}
-.res .stat span{display:block;margin-top:10px;color:var(--muted-foreground);font-weight:600}
-@media(max-width:960px){.svc{grid-template-columns:1fr;gap:24px}.res-grid{grid-template-columns:1fr 1fr}.res .quote{grid-column:1/-1}}
-@media(max-width:560px){.res-grid{grid-template-columns:1fr}}
-</style>
+    .tf-form .full {
+      grid-column: 1/-1
+    }
+
+    .tf-form input,
+    .tf-form select,
+    .tf-form textarea {
+      font: inherit;
+      font-weight: 400;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--paper);
+      color: var(--foreground);
+      width: 100%
+    }
+
+    .tf-form textarea {
+      min-height: 110px;
+      resize: vertical
+    }
+
+    .tf-form button {
+      grid-column: 1/-1;
+      justify-self: start;
+      cursor: pointer;
+      border: 0
+    }
+
+    .tf-form .ok {
+      grid-column: 1/-1;
+      display: none;
+      font-weight: 700;
+      color: var(--navy)
+    }
+
+    .tf-form.sent .ok {
+      display: block
+    }
+
+    @media(max-width:1050px) {
+      .tf-steps {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .tf-steps::before {
+        display: none
+      }
+
+      .tf-chips {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:780px) {
+      .tf-sec {
+        padding: 60px 0
+      }
+
+      .tf-problem li {
+        grid-template-columns: 40px 1fr;
+        gap: 6px 14px
+      }
+
+      .tf-problem li p {
+        grid-column: 2
+      }
+
+      .tf-steps,
+      .tf-chips {
+        grid-template-columns: 1fr
+      }
+
+      .tf-faq .tf-wrap,
+      .tf-contact .tf-wrap {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .tf-faq .tf-head {
+        position: static
+      }
+
+      .tf-form {
+        grid-template-columns: 1fr;
+        padding: 22px
+      }
+    }
+
+    /* =====================  UI REFRESH  ===================== */
+    :root {
+      --radius: 16px;
+      --radius-lg: 22px;
+      --ring: 0 0 0 1px color-mix(in oklab, var(--navy-deep) 8%, transparent);
+      --shadow-soft: 0 1px 2px color-mix(in oklab, var(--navy-deep) 6%, transparent), 0 10px 30px -8px color-mix(in oklab, var(--navy-deep) 14%, transparent);
+      --shadow-lift: 0 2px 4px color-mix(in oklab, var(--navy-deep) 8%, transparent), 0 24px 48px -12px color-mix(in oklab, var(--navy-deep) 24%, transparent);
+      --fs-body: clamp(15px, .35vw + 14px, 17px);
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      font-size: var(--fs-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+      letter-spacing: -.02em
+    }
+
+    p {
+      text-wrap: pretty
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    /* Kicker / eyebrow label */
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent)
+    }
+
+    .kicker::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--gold)
+    }
+
+    .tf-ind .kicker,
+    .impact .kicker {
+      color: var(--gold)
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      height: 72px;
+      background: color-mix(in oklab, var(--white) 88%, transparent);
+      backdrop-filter: saturate(1.4) blur(14px);
+      -webkit-backdrop-filter: saturate(1.4) blur(14px);
+      transition: box-shadow .25s
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 8px 24px -12px color-mix(in oklab, var(--navy-deep) 30%, transparent)
+    }
+
+    .brand img {
+      height: 40px;
+      width: auto;
+      display: block
+    }
+
+    .brand-mark {
+      width: auto;
+      height: auto
+    }
+
+    .main-nav {
+      font-size: 14px;
+      gap: 6px
+    }
+
+    .main-nav a {
+      padding: 9px 14px;
+      border: 0;
+      border-radius: 999px;
+      color: var(--navy-deep);
+      font-weight: 600
+    }
+
+    .main-nav a:hover {
+      background: var(--sky-soft);
+      color: var(--navy)
+    }
+
+    .main-nav a.active {
+      background: var(--navy-deep);
+      color: var(--white)
+    }
+
+    .main-nav a.active::after {
+      display: none
+    }
+
+    .header-cta,
+    .cta {
+      min-height: 48px;
+      padding: 0 26px;
+      font-size: 14px;
+      font-weight: 800;
+      gap: 10px;
+      box-shadow: 0 6px 16px -6px color-mix(in oklab, var(--gold) 70%, transparent)
+    }
+
+    .header-cta {
+      min-height: 44px
+    }
+
+    .cta svg,
+    .header-cta svg {
+      transition: transform .2s
+    }
+
+    .cta:hover svg,
+    .header-cta:hover svg {
+      transform: translateX(4px)
+    }
+
+    .menu-toggle {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--sky-soft)
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      height: auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column
+    }
+
+    .hero-shade {
+      background:
+        radial-gradient(900px 480px at 15% 40%, color-mix(in oklab, var(--blue-bright) 22%, transparent), transparent 60%),
+        linear-gradient(90deg, color-mix(in oklab, var(--navy-deep) 97%, transparent) 0%, color-mix(in oklab, var(--navy-deep) 84%, transparent) 42%, color-mix(in oklab, var(--navy-deep) 18%, transparent) 78%)
+    }
+
+    .hero-inner {
+      height: auto;
+      min-height: 520px;
+      padding: 72px 0 56px;
+      gap: 48px;
+      align-items: center
+    }
+
+    .hero-copy {
+      max-width: 680px
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: color-mix(in oklab, var(--gold) 14%, transparent);
+      border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent);
+      font-size: 12.5px;
+      letter-spacing: .14em;
+      margin: 0 0 24px
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--gold) 25%, transparent)
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -.035em;
+      font-weight: 800;
+      max-width: none
+    }
+
+    .hero-lead {
+      font-size: clamp(16px, 1.3vw, 19px);
+      line-height: 1.65;
+      margin: 24px 0 32px;
+      max-width: 580px;
+      color: color-mix(in oklab, var(--white) 88%, transparent)
+    }
+
+    .hero-actions {
+      flex-wrap: wrap;
+      gap: 14px
+    }
+
+    .outline-cta {
+      min-height: 48px;
+      padding: 0 26px;
+      font-size: 14px;
+      border-color: color-mix(in oklab, var(--white) 55%, transparent);
+      backdrop-filter: blur(4px)
+    }
+
+    .hero-solutions {
+      width: 290px;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+      display: grid;
+      gap: 12px
+    }
+
+    .hero-solutions>div {
+      min-height: 76px;
+      border-radius: var(--radius) !important;
+      font-size: 15px;
+      line-height: 1.3;
+      background: color-mix(in oklab, var(--navy-deep) 55%, transparent);
+      border-color: color-mix(in oklab, var(--white) 18%, transparent);
+      transition: transform .25s, border-color .25s, background .25s
+    }
+
+    .hero-solutions>div:hover {
+      transform: translateX(-6px);
+      border-color: var(--gold);
+      background: color-mix(in oklab, var(--navy) 70%, transparent)
+    }
+
+    .hero-solutions svg {
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      border-radius: 12px;
+      background: color-mix(in oklab, var(--gold) 18%, transparent);
+      color: var(--gold);
+      stroke-width: 1.9;
+      flex: none
+    }
+
+    .hero-proof {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      transform: none;
+      height: auto;
+      margin: 0 auto;
+      padding: 22px 0 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid color-mix(in oklab, var(--white) 18%, transparent)
+    }
+
+    .hero-proof div {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.35;
+      padding: 6px 28px 6px 0
+    }
+
+    .hero-proof div+div {
+      padding-left: 28px
+    }
+
+    .hero-proof svg {
+      width: 44px;
+      height: 44px;
+      padding: 11px;
+      background: color-mix(in oklab, var(--gold) 12%, transparent)
+    }
+
+    /* ---------- Services ---------- */
+    .services-section {
+      padding: 88px 0;
+      background: linear-gradient(180deg, var(--paper), var(--sky-soft) 140%)
+    }
+
+    .services-layout {
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 40px;
+      align-items: start
+    }
+
+    .services-main {
+      padding-right: 0;
+      border-right: 0
+    }
+
+    .section-heading {
+      margin-bottom: 36px
+    }
+
+    .section-heading>span {
+      display: none
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 3.4vw, 42px);
+      line-height: 1.12;
+      max-width: 20ch;
+      font-weight: 800
+    }
+
+    .section-heading p:not(.kicker) {
+      margin: 16px 0 0;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--muted-foreground);
+      max-width: 62ch
+    }
+
+    .service-grid {
+      gap: 22px
+    }
+
+    .service-card {
+      min-height: 0;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      gap: 0
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue-bright), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lift);
+      border-color: color-mix(in oklab, var(--blue-bright) 50%, var(--border))
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1)
+    }
+
+    .service-top {
+      gap: 16px;
+      margin-bottom: 18px;
+      align-items: center;
+      flex-wrap: nowrap
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, var(--gold-soft), color-mix(in oklab, var(--gold) 55%, var(--white)));
+      box-shadow: none;
+      transition: transform .3s
+    }
+
+    .service-card:hover .service-icon {
+      transform: rotate(-6deg) scale(1.06)
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 2.2
+    }
+
+    .service-top b {
+      display: block;
+      font-size: 12.5px;
+      letter-spacing: .14em;
+      color: var(--accent);
+      margin-bottom: 4px
+    }
+
+    .service-card h4 {
+      font-size: clamp(18px, 1.6vw, 21px);
+      line-height: 1.2;
+      letter-spacing: -.015em
+    }
+
+    .service-top p {
+      margin: 6px 0 0;
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: var(--muted-foreground)
+    }
+
+    .service-card>p {
+      margin: 0 0 18px;
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: color-mix(in oklab, var(--foreground) 85%, transparent)
+    }
+
+    .service-card>strong {
+      font-size: 12.5px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin: 0 0 12px;
+      display: block
+    }
+
+    .service-card ul {
+      margin: 0 0 22px;
+      display: grid;
+      gap: 10px
+    }
+
+    .service-card li {
+      font-size: 15px;
+      line-height: 1.5;
+      gap: 12px;
+      align-items: flex-start
+    }
+
+    .service-card li svg {
+      width: 22px;
+      height: 22px;
+      padding: 4px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      color: var(--navy);
+      stroke-width: 3.2;
+      margin-top: 1px
+    }
+
+    .deliverable {
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: var(--sky-soft);
+      border: 1px dashed color-mix(in oklab, var(--blue-bright) 40%, var(--border))
+    }
+
+    .deliverable svg {
+      width: 28px;
+      height: 28px;
+      padding: 5px;
+      color: var(--navy);
+      flex: none
+    }
+
+    .deliverable p {
+      font-size: 14px;
+      line-height: 1.5
+    }
+
+    .deliverable b {
+      color: var(--navy-deep)
+    }
+
+    /* Sidebar */
+    .services-sidebar {
+      position: sticky;
+      top: 96px;
+      gap: 18px;
+      padding-top: 0
+    }
+
+    .roadmap-panel,
+    .results-panel {
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid color-mix(in oklab, var(--border) 60%, transparent)
+    }
+
+    .roadmap-panel {
+      background: linear-gradient(160deg, var(--white), var(--sky-soft))
+    }
+
+    .roadmap-panel h3 {
+      font-size: clamp(22px, 2vw, 27px);
+      line-height: 1.15
+    }
+
+    .roadmap-panel>p {
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: var(--muted-foreground);
+      margin: 14px 0
+    }
+
+    .roadmap-panel .cta {
+      margin: 6px 0 20px
+    }
+
+    .assessment {
+      font-size: 14px;
+      gap: 14px;
+      padding: 18px 0 0
+    }
+
+    .assessment svg {
+      flex: none;
+      width: 40px;
+      height: 40px;
+      padding: 9px;
+      border-radius: 12px;
+      background: var(--gold-soft)
+    }
+
+    .africa-panel {
+      border-radius: var(--radius-lg);
+      min-height: 230px;
+      padding: 28px;
+      background: radial-gradient(circle at 80% 15%, color-mix(in oklab, var(--blue-bright) 60%, transparent), transparent 55%), linear-gradient(150deg, var(--navy), var(--navy-deep))
+    }
+
+    .africa-panel h3 {
+      font-size: clamp(20px, 1.8vw, 24px);
+      line-height: 1.2
+    }
+
+    .results-panel>h3 {
+      font-size: 19px;
+      line-height: 1.2;
+      margin-bottom: 6px
+    }
+
+    .results-panel>div {
+      gap: 16px;
+      padding: 14px 0;
+      margin: 0;
+      border-top: 1px solid color-mix(in oklab, var(--border) 60%, transparent)
+    }
+
+    .results-panel>div:first-of-type {
+      border-top: 0
+    }
+
+    .results-panel svg {
+      width: 48px;
+      height: 48px;
+      padding: 12px;
+      border-radius: 14px;
+      flex: none
+    }
+
+    .results-panel b {
+      font-size: 24px;
+      letter-spacing: -.02em;
+      color: var(--navy-deep)
+    }
+
+    .results-panel small {
+      font-size: 13.5px;
+      color: var(--muted-foreground)
+    }
+
+    /* ---------- Shared section system ---------- */
+    .tf-sec {
+      padding: clamp(64px, 8vw, 104px) 0
+    }
+
+    .tf-head {
+      max-width: 680px;
+      margin-bottom: clamp(32px, 4vw, 52px)
+    }
+
+    .tf-head h2 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -.03em
+    }
+
+    .tf-head p:not(.kicker) {
+      font-size: clamp(16px, 1.2vw, 18px);
+      line-height: 1.7
+    }
+
+    .tf-i {
+      width: 26px;
+      height: 26px
+    }
+
+    /* Problem */
+    .tf-problem {
+      background: var(--sky-soft)
+    }
+
+    .tf-problem ul {
+      border: 0;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr)
+    }
+
+    .tf-problem li {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      transition: transform .25s, box-shadow .25s
+    }
+
+    .tf-problem li:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lift)
+    }
+
+    .tf-problem li .tf-i {
+      width: 52px;
+      height: 52px;
+      padding: 13px;
+      border-radius: 14px;
+      background: var(--gold-soft);
+      color: var(--navy);
+      margin: 0 0 6px
+    }
+
+    .tf-problem h3 {
+      font-size: 20px;
+      line-height: 1.25
+    }
+
+    .tf-problem li p {
+      font-size: 15.5px;
+      line-height: 1.7
+    }
+
+    /* Process */
+    .tf-steps {
+      gap: 24px
+    }
+
+    .tf-steps::before {
+      top: 28px;
+      left: 40px;
+      right: 40px;
+      border-top: 2px dashed color-mix(in oklab, var(--blue-bright) 40%, var(--border))
+    }
+
+    .tf-steps li {
+      padding: 0 4px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .tf-steps .step-n {
+      position: absolute;
+      right: 4px;
+      top: -4px;
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1;
+      color: color-mix(in oklab, var(--border) 70%, transparent);
+      z-index: 0
+    }
+
+    .tf-steps .dot {
+      position: relative;
+      z-index: 1;
+      width: 58px;
+      height: 58px;
+      background: linear-gradient(145deg, var(--navy), var(--navy-deep));
+      box-shadow: 0 0 0 8px var(--background), 0 8px 20px -6px color-mix(in oklab, var(--navy-deep) 50%, transparent);
+      transition: transform .25s
+    }
+
+    .tf-steps li:hover .dot {
+      transform: scale(1.08)
+    }
+
+    .tf-steps h3 {
+      font-size: 20px
+    }
+
+    .tf-steps p {
+      font-size: 15.5px;
+      line-height: 1.65
+    }
+
+    .tf-steps small {
+      margin-top: auto;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--sky-soft);
+      font-size: 13px;
+      line-height: 1.35;
+      align-items: flex-start
+    }
+
+    .tf-steps small .tf-i {
+      width: 16px;
+      height: 16px;
+      margin-top: 1px
+    }
+
+    /* Impact band */
+    .impact {
+      height: auto;
+      min-height: 0;
+      padding: 0
+    }
+
+    .impact-inner {
+      padding: clamp(56px, 7vw, 84px) 0;
+      grid-template-columns: 1.1fr 1fr;
+      gap: clamp(32px, 5vw, 72px)
+    }
+
+    .testimonial {
+      margin-left: clamp(0px, 20vw, 300px);
+      min-width: 0;
+      padding-top: 34px
+    }
+
+    .testimonial svg {
+      width: 40px;
+      height: 40px;
+      left: 0;
+      top: -8px
+    }
+
+    .testimonial blockquote {
+      font-size: clamp(18px, 1.8vw, 23px);
+      line-height: 1.5;
+      font-weight: 600;
+      letter-spacing: -.01em
+    }
+
+    .testimonial cite {
+      font-size: 14px;
+      margin-top: 18px;
+      color: var(--gold);
+      font-weight: 700
+    }
+
+    .impact-stats {
+      padding-left: clamp(24px, 4vw, 56px)
+    }
+
+    .impact-stats h3 {
+      font-size: 14px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px
+    }
+
+    .stat-grid {
+      gap: 0
+    }
+
+    .stat-grid>div {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding-right: 12px
+    }
+
+    .stat-grid>div+div {
+      padding-left: 20px
+    }
+
+    .stat-grid svg {
+      width: 36px;
+      height: 36px;
+      padding: 8px;
+      border-radius: 10px;
+      background: color-mix(in oklab, var(--gold) 16%, transparent)
+    }
+
+    .stat-grid b {
+      font-size: clamp(30px, 3.4vw, 44px);
+      letter-spacing: -.04em;
+      line-height: 1;
+      color: var(--white)
+    }
+
+    .stat-grid span {
+      font-size: 14px;
+      line-height: 1.4;
+      color: color-mix(in oklab, var(--white) 78%, transparent)
+    }
+
+    /* Industries */
+    .tf-ind {
+      background: radial-gradient(900px 400px at 100% 0, color-mix(in oklab, var(--blue-bright) 22%, transparent), transparent 60%), var(--navy-deep)
+    }
+
+    .tf-chips {
+      gap: 16px
+    }
+
+    .tf-chip {
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      background: color-mix(in oklab, #fff 4%, transparent);
+      gap: 18px
+    }
+
+    .tf-chip:hover {
+      transform: translateY(-3px)
+    }
+
+    .tf-chip .tf-i {
+      width: 50px;
+      height: 50px;
+      padding: 12px;
+      border-radius: 14px;
+      background: color-mix(in oklab, var(--gold) 14%, transparent);
+      margin-top: 0
+    }
+
+    .tf-chip b {
+      font-size: 18px;
+      margin-bottom: 6px;
+      letter-spacing: -.01em
+    }
+
+    .tf-chip span {
+      font-size: 15px;
+      line-height: 1.6
+    }
+
+    /* FAQ */
+    .tf-faq details {
+      border: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+      border-radius: var(--radius);
+      padding: 0 24px;
+      margin-bottom: 12px;
+      background: var(--white);
+      transition: box-shadow .25s, border-color .25s
+    }
+
+    .tf-faq details:first-of-type {
+      border-top: 1px solid color-mix(in oklab, var(--border) 70%, transparent)
+    }
+
+    .tf-faq details[open] {
+      box-shadow: var(--shadow-soft);
+      border-color: var(--blue-bright)
+    }
+
+    .tf-faq summary {
+      padding: 22px 0;
+      font-size: 17px;
+      line-height: 1.4
+    }
+
+    .tf-faq summary .tf-i {
+      width: 32px;
+      height: 32px;
+      padding: 6px;
+      border-radius: 50%;
+      background: var(--sky-soft);
+      flex: none
+    }
+
+    .tf-faq details p {
+      font-size: 16px;
+      max-width: none
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: clamp(40px, 5vw, 64px) max(24px, calc((100% - 1180px)/2));
+      min-height: 0;
+      gap: 32px;
+      background: radial-gradient(600px 240px at 90% 0, color-mix(in oklab, var(--blue-bright) 40%, transparent), transparent 70%), linear-gradient(110deg, var(--navy-deep), var(--navy));
+      border-bottom: 8px solid var(--gold)
+    }
+
+    .final-cta h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      letter-spacing: -.03em;
+      line-height: 1.15
+    }
+
+    .final-cta p {
+      font-size: clamp(15px, 1.2vw, 17px);
+      margin-top: 10px;
+      color: color-mix(in oklab, #fff 80%, transparent)
+    }
+
+    .cta-light {
+      min-width: 0;
+      flex: none
+    }
+
+    /* Contact */
+    .tf-assure li {
+      font-size: 16px
+    }
+
+    .tf-assure .tf-i {
+      width: 34px;
+      height: 34px;
+      padding: 7px;
+      border-radius: 50%;
+      background: var(--white);
+      box-shadow: var(--ring)
+    }
+
+    .tf-form {
+      border-radius: var(--radius-lg);
+      padding: clamp(22px, 3vw, 36px);
+      box-shadow: var(--shadow-lift);
+      gap: 20px
+    }
+
+    .tf-form label {
+      font-size: 14px;
+      gap: 8px
+    }
+
+    .tf-form input,
+    .tf-form select,
+    .tf-form textarea {
+      padding: 14px 16px;
+      font-size: 16px;
+      border-radius: 12px;
+      transition: border-color .2s, box-shadow .2s
+    }
+
+    .tf-form input:focus,
+    .tf-form select:focus,
+    .tf-form textarea:focus {
+      outline: 0;
+      border-color: var(--blue-bright);
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--blue-bright) 22%, transparent)
+    }
+
+    .tf-form .ok {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--gold-soft)
+    }
+
+    .tf-form button[disabled] {
+      opacity: .6;
+      cursor: default
+    }
+
+    /* Footer */
+    footer {
+      padding: clamp(40px, 5vw, 56px) max(24px, calc((100% - 1180px)/2)) 24px
+    }
+
+    .footer-main {
+      grid-template-columns: 220px 1fr 220px;
+      gap: 40px
+    }
+
+    .footer-main .brand {
+      transform: none
+    }
+
+    .footer-main .brand img {
+      height: 44px;
+      width: auto
+    }
+
+    .footer-main nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 28px;
+      font-size: 14.5px
+    }
+
+    .footer-main nav a {
+      transition: color .2s
+    }
+
+    .footer-main nav a:hover {
+      color: var(--blue-bright)
+    }
+
+    .footer-main>p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      padding-left: 28px
+    }
+
+    .footer-bottom {
+      margin-top: 28px;
+      padding-top: 20px;
+      font-size: 14px;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap
+    }
+
+    .socials {
+      display: inline-flex;
+      gap: 10px
+    }
+
+    .socials a {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--sky-soft);
+      color: var(--navy);
+      transition: background .2s, color .2s, transform .2s
+    }
+
+    .socials a:hover {
+      background: var(--navy);
+      color: var(--gold);
+      transform: translateY(-2px)
+    }
+
+    .socials svg {
+      width: 18px;
+      height: 18px
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none
+      }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media(max-width:1180px) {
+      .services-layout {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .services-sidebar {
+        position: static;
+        grid-template-columns: repeat(2, 1fr);
+        display: grid
+      }
+
+      .results-panel {
+        grid-column: 1/-1
+      }
+    }
+
+    @media(max-width: 1020px) {
+
+      .hero>.wrap,
+      .nav-wrap {
+        width: calc(100% - 24px);
+        margin: 8px auto 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        padding: 10px 18px;
+      }
+
+      nav ul#nav-links {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0 16px;
+        border-top: 1px solid var(--line);
+        max-height: calc(85vh - 70px);
+        overflow-y: auto;
+      }
+
+      nav.open ul#nav-links {
+        display: flex;
+      }
+
+      nav .nav-item {
+        width: 100%;
+      }
+
+      nav .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 10px;
+        width: 100%;
+        border-radius: 10px;
+        border-bottom: 1px solid rgba(227, 232, 242, 0.7);
+        font-size: 15px;
+        font-weight: 600;
+        transition: background 0.18s ease, color 0.18s ease;
+      }
+
+      nav .nav-link:active,
+      nav .has-mega.expanded>.nav-link {
+        background: #edf2f7;
+        color: var(--blue);
+      }
+
+      nav .nav-link.on {
+        color: var(--blue);
+        border-bottom-color: var(--gold);
+        font-weight: 700;
+      }
+
+      .has-mega .mega-menu {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: none;
+        border-radius: 14px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 10px 10px 12px;
+        display: none;
+        margin: 6px 0 12px;
+        transition: none;
+      }
+
+      .has-mega.expanded .mega-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        animation: megaFadeIn 0.2s ease-out;
+      }
+
+      @keyframes megaFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-4px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .has-mega.expanded>.nav-link .chevron-icon {
+        transform: rotate(180deg);
+      }
+
+      .mega-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .mega-col-title {
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #64748b;
+        margin: 4px 0 4px 4px;
+        display: block;
+      }
+
+      .mega-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .mega-item {
+        background: #ffffff;
+        border: 1px solid #edf2f7;
+        border-radius: 10px;
+        padding: 10px 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        transform: none;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+
+      .mega-item:active {
+        background: #eff6ff;
+        border-color: #bfdbfe;
+        transform: none;
+      }
+
+      .mega-tile {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .mega-tile svg.i {
+        width: 16px;
+        height: 16px;
+      }
+
+      .mega-item-body {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .mega-item-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        width: 100%;
+      }
+
+      .mega-item-head strong {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .mega-item p {
+        display: none;
+        /* Hide heavy multi-line descriptions on mobile for a clean, fast list */
+      }
+
+      .mega-promo-card {
+        min-height: auto;
+        border-radius: 12px;
+        margin-top: 4px;
+        overflow: hidden;
+      }
+
+      .mega-promo-content {
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .mega-promo-tag {
+        font-size: 9px;
+        padding: 2px 7px;
+        margin-bottom: 0;
+        align-self: flex-start;
+      }
+
+      .mega-promo-card h4 {
+        font-size: 13px;
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      .mega-promo-card p {
+        display: none;
+        /* Hide paragraph on mobile */
+      }
+
+      .mega-promo-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 9px 14px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .mobile-cta-item {
+        display: block;
+        padding-top: 12px;
+        margin-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+
+      .mobile-drawer-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 13px 20px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .nav-end {
+        margin-left: auto;
+      }
+
+      .menu-btn {
+        display: grid;
+      }
+
+      .hero>.wrap:has(nav.open),
+      .hero>.wrap.nav-open,
+      .nav-wrap:has(nav.open),
+      .nav-wrap.nav-open {
+        border-radius: 24px;
+        box-shadow: 0 16px 40px rgba(6, 26, 63, 0.16);
+      }
+    }
+
+    @media(max-width: 560px) {
+      nav .btn.sm {
+        display: none;
+      }
+
+      .ctas {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      .ctas .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .bottom-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .bottom-base {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    @media(max-width:1050px) {
+      .hero-solutions {
+        display: none
+      }
+
+      .tf-problem ul {
+        grid-template-columns: 1fr
+      }
+
+      .tf-problem li {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px
+      }
+
+      .tf-problem li .tf-i {
+        flex: none;
+        margin: 0
+      }
+
+      .impact-inner {
+        grid-template-columns: 1fr
+      }
+
+      .testimonial {
+        margin-left: 0
+      }
+
+      .impact-stats {
+        border-left: 0;
+        border-top: 1px solid color-mix(in oklab, #fff 25%, transparent);
+        padding: 32px 0 0
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 24px
+      }
+
+      .footer-main>p {
+        border-left: 0;
+        padding-left: 0
+      }
+    }
+
+    @media(max-width:780px) {
+      .brand img {
+        height: 34px
+      }
+
+      .hero {
+        min-height: 0
+      }
+
+      .hero-image {
+        object-position: 68% center
+      }
+
+      .hero-shade {
+        background: linear-gradient(180deg, color-mix(in oklab, var(--navy-deep) 92%, transparent), color-mix(in oklab, var(--navy-deep) 78%, transparent))
+      }
+
+      .hero-inner {
+        min-height: 0;
+        padding: 48px 0 36px;
+        width: calc(100% - 40px)
+      }
+
+      .hero-proof {
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 16px 0 24px
+      }
+
+      .hero-proof div,
+      .hero-proof div+div {
+        padding: 12px 0;
+        border-left: 0;
+        font-size: 15px
+      }
+
+      .hero-proof div+div {
+        border-top: 1px solid color-mix(in oklab, #fff 14%, transparent)
+      }
+
+      .services-section {
+        padding: 56px 0
+      }
+
+      .services-layout {
+        width: calc(100% - 32px)
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr
+      }
+
+      .service-card {
+        padding: 22px
+      }
+
+      .services-sidebar {
+        grid-template-columns: 1fr
+      }
+
+      .tf-wrap {
+        padding: 0 20px
+      }
+
+      .tf-steps {
+        grid-template-columns: 1fr;
+        gap: 28px
+      }
+
+      .tf-steps li {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 18px;
+        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 58px 1fr
+      }
+
+      .tf-steps .dot {
+        margin: 0;
+        grid-row: 1/4
+      }
+
+      .tf-steps .step-n {
+        font-size: 32px;
+        top: 0
+      }
+
+      .tf-steps small {
+        justify-self: start
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+        gap: 20px
+      }
+
+      .stat-grid>div,
+      .stat-grid>div+div {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        border-left: 0;
+        gap: 16px
+      }
+
+      .stat-grid p {
+        gap: 2px
+      }
+
+      .tf-chips {
+        grid-template-columns: 1fr
+      }
+
+      .final-cta {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding-inline: 24px
+      }
+
+      .final-cta .cta {
+        width: 100%;
+        max-width: 340px
+      }
+
+      .tf-faq details {
+        padding: 0 18px
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center
+      }
+    }
+
+    @media(max-width:520px) {
+      .hero h1 {
+        font-size: 36px
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%
+      }
+
+      .hero-actions .cta,
+      .hero-actions .outline-cta {
+        justify-content: center;
+        width: 100%
+      }
+
+      .tf-problem li {
+        flex-direction: column;
+        padding: 24px
+      }
+
+      .tf-form {
+        grid-template-columns: 1fr
+      }
+
+      .tf-form button {
+        justify-self: stretch;
+        width: 100%
+      }
+
+      .service-top {
+        align-items: flex-start
+      }
+
+      .service-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px
+      }
+
+      .roadmap-panel,
+      .results-panel,
+      .africa-panel {
+        padding: 22px
+      }
+    }
+
+
+    /* AI Consulting dedicated page */
+    .res {
+      background: var(--sky-soft)
+    }
+
+    .res-grid {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch
+    }
+
+    .res q {
+      display: block;
+      quotes: none;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--navy-deep);
+      font-weight: 600
+    }
+
+    .res .quote,
+    .res .stat {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-card)
+    }
+
+    .res .quote span {
+      display: block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--muted-foreground)
+    }
+
+    .res .stat b {
+      display: block;
+      font-size: 44px;
+      line-height: 1;
+      color: var(--navy);
+      letter-spacing: -.03em
+    }
+
+    .res .stat span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted-foreground);
+      font-weight: 600
+    }
+
+    @media(max-width:960px) {
+      .svc {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+
+      .res-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .res .quote {
+        grid-column: 1/-1
+      }
+    }
+
+    @media(max-width:560px) {
+      .res-grid {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
 </head>
 
 <body data-tsd-source="/src/routes/__root.tsx:108:7">
   <!-- Icon sprite -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
-      <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
-      <symbol id="ppl" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2.3" /><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.3c3 .1 5.5 2 5.5 5.2" /></symbol>
-      <symbol id="cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6" /></symbol>
-      <symbol id="srch" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></symbol>
-      <symbol id="pen" viewBox="0 0 24 24"><path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4" /></symbol>
-      <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" /></symbol>
-      <symbol id="chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2M14 8l4-4 3 3" /></symbol>
-      <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7" /></symbol>
-      <symbol id="bld" viewBox="0 0 24 24"><path d="M4 21V6l8-3v18M12 9h8v12M7 10h2M7 14h2M7 18h2M15 13h2M15 17h2M3 21h18" /></symbol>
-      <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></symbol>
-      <symbol id="book" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13" /></symbol>
-      <symbol id="briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5" /><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18" /></symbol>
-      <symbol id="trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" /></symbol>
-      <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" /><circle cx="12" cy="10" r="2.6" /></symbol>
-      <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" /></symbol>
-      <symbol id="award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5" /><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5" /></symbol>
-      <symbol id="gauge" viewBox="0 0 24 24"><path d="M3.5 17a8.5 8.5 0 1 1 17 0" /><path d="M12 17l4.5-6" /><circle cx="12" cy="17" r="1.2" /></symbol>
-      <symbol id="laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="2" /><path d="M2 19.5h20" /></symbol>
-      <symbol id="in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" /><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4" /></symbol>
-      <symbol id="x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></symbol>
-      <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17.5 6.5v.01" /></symbol>
-      <symbol id="yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" /><path d="M10 9.5l5 2.5-5 2.5z" /></symbol>
+      <symbol id="arr" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="ppl" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" />
+        <circle cx="17" cy="9" r="2.3" />
+        <path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.3c3 .1 5.5 2 5.5 5.2" />
+      </symbol>
+      <symbol id="cap" viewBox="0 0 24 24">
+        <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v6" />
+      </symbol>
+      <symbol id="srch" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+      <symbol id="pen" viewBox="0 0 24 24">
+        <path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4" />
+      </symbol>
+      <symbol id="gear" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3.5" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+      </symbol>
+      <symbol id="chart" viewBox="0 0 24 24">
+        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2M14 8l4-4 3 3" />
+      </symbol>
+      <symbol id="user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7" />
+      </symbol>
+      <symbol id="bld" viewBox="0 0 24 24">
+        <path d="M4 21V6l8-3v18M12 9h8v12M7 10h2M7 14h2M7 18h2M15 13h2M15 17h2M3 21h18" />
+      </symbol>
+      <symbol id="bolt" viewBox="0 0 24 24">
+        <path d="M13 2L4 14h7l-1 8 9-12h-7z" />
+      </symbol>
+      <symbol id="book" viewBox="0 0 24 24">
+        <path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13" />
+      </symbol>
+      <symbol id="briefcase" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="13" rx="2.5" />
+        <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18" />
+      </symbol>
+      <symbol id="trend" viewBox="0 0 24 24">
+        <path d="M3 17l6-6 4 4 8-8M15 7h6v6" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.6" />
+      </symbol>
+      <symbol id="globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" />
+      </symbol>
+      <symbol id="award" viewBox="0 0 24 24">
+        <circle cx="12" cy="9" r="5.5" />
+        <path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5" />
+      </symbol>
+      <symbol id="gauge" viewBox="0 0 24 24">
+        <path d="M3.5 17a8.5 8.5 0 1 1 17 0" />
+        <path d="M12 17l4.5-6" />
+        <circle cx="12" cy="17" r="1.2" />
+      </symbol>
+      <symbol id="laptop" viewBox="0 0 24 24">
+        <rect x="4" y="5" width="16" height="11" rx="2" />
+        <path d="M2 19.5h20" />
+      </symbol>
+      <symbol id="in" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="4" />
+        <path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4" />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24">
+        <path d="M4 4l16 16M20 4L4 20" />
+      </symbol>
+      <symbol id="ig" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <path d="M17.5 6.5v.01" />
+      </symbol>
+      <symbol id="yt" viewBox="0 0 24 24">
+        <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+        <path d="M10 9.5l5 2.5-5 2.5z" />
+      </symbol>
     </defs>
   </svg>
   <!--$-->
   <main id="top">
     <section class="hero" id="consulting">
-      <img class="hero-image" src="./core--services.gif" alt="African business leader planning an AI strategy" width="1920" height="960" />
+      <img class="hero-image" src="./core--services.gif" alt="African business leader planning an AI strategy"
+        width="1920" height="960" />
       <div class="hero-shade"></div>
-      
+
       <div class="wrap nav-wrap">
         <nav aria-label="Main" id="nav">
-          <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png" alt="TalentFlow Africa Logo" class="mark"></a>
+          <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png"
+              alt="TalentFlow Africa Logo" class="mark"></a>
           <ul id="nav-links">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            
+
             <!-- What We Do Mega Menu -->
             <li class="nav-item has-mega">
-              <a href="tafa-what-we-do.html" class="nav-link mega-trigger on" aria-haspopup="true" aria-expanded="false">
+              <a href="tafa-what-we-do.html" class="nav-link mega-trigger on" aria-haspopup="true"
+                aria-expanded="false">
                 What We Do
-                <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+                <svg class="chevron-icon i" viewBox="0 0 24 24">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
               </a>
               <div class="mega-menu" role="region" aria-label="What We Do Menu">
                 <div class="mega-grid">
@@ -2340,7 +3923,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                     <span class="mega-col-title">Core Services</span>
                     <div class="mega-list">
                       <a href="tafa-ai-consulting.html" class="mega-item active-item">
-                        <span class="mega-tile blue"><svg class="i"><use href="#gear" /></svg></span>
+                        <span class="mega-tile blue"><svg class="i">
+                            <use href="#gear" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>AI Strategy &amp; Consulting</strong>
@@ -2350,7 +3935,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="index.html#what" class="mega-item">
-                        <span class="mega-tile purple"><svg class="i"><use href="#ppl" /></svg></span>
+                        <span class="mega-tile purple"><svg class="i">
+                            <use href="#ppl" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>Workforce AI Transformation</strong>
@@ -2359,7 +3946,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="index.html#what" class="mega-item">
-                        <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
+                        <span class="mega-tile gold"><svg class="i">
+                            <use href="#briefcase" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>Executive AI Advisory</strong>
@@ -2374,7 +3963,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                     <span class="mega-col-title">Methodology &amp; Solutions</span>
                     <div class="mega-list">
                       <a href="index.html#framework" class="mega-item">
-                        <span class="mega-tile green"><svg class="i"><use href="#trend" /></svg></span>
+                        <span class="mega-tile green"><svg class="i">
+                            <use href="#trend" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>4D Delivery Framework</strong>
@@ -2383,7 +3974,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="index.html#programs" class="mega-item">
-                        <span class="mega-tile blue"><svg class="i"><use href="#chart" /></svg></span>
+                        <span class="mega-tile blue"><svg class="i">
+                            <use href="#chart" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>AI Growth Audit</strong>
@@ -2393,7 +3986,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="tafa-what-we-do.html" class="mega-item">
-                        <span class="mega-tile purple"><svg class="i"><use href="#globe" /></svg></span>
+                        <span class="mega-tile purple"><svg class="i">
+                            <use href="#globe" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>Overview &amp; Case Studies</strong>
@@ -2411,7 +4006,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         <h4>Turn AI Potential into Real Business Results</h4>
                         <p>Schedule a focused 30-minute consultation with our AI transformation specialists.</p>
                       </div>
-                      <a class="btn gold sm mega-promo-btn" href="#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+                      <a class="btn gold sm mega-promo-btn" href="#book">Book a Consultation <svg class="i">
+                          <use href="#arr" />
+                        </svg></a>
                     </div>
                   </div>
                 </div>
@@ -2422,7 +4019,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
             <li class="nav-item has-mega">
               <a href="tafa-academy.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
                 TAFA Academy
-                <svg class="chevron-icon i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+                <svg class="chevron-icon i" viewBox="0 0 24 24">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
               </a>
               <div class="mega-menu" role="region" aria-label="TAFA Academy Menu">
                 <div class="mega-grid">
@@ -2430,7 +4029,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                     <span class="mega-col-title">The 4 Specialized Schools</span>
                     <div class="mega-list">
                       <a href="tafa-academy.html#schools" class="mega-item">
-                        <span class="mega-tile gold"><svg class="i"><use href="#book" /></svg></span>
+                        <span class="mega-tile gold"><svg class="i">
+                            <use href="#book" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>AI Literacy &amp; Productivity</strong>
@@ -2440,7 +4041,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="tafa-academy.html#schools" class="mega-item">
-                        <span class="mega-tile blue"><svg class="i"><use href="#bolt" /></svg></span>
+                        <span class="mega-tile blue"><svg class="i">
+                            <use href="#bolt" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>School of AI Applications</strong>
@@ -2450,7 +4053,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="tafa-academy.html#schools" class="mega-item">
-                        <span class="mega-tile purple"><svg class="i"><use href="#laptop" /></svg></span>
+                        <span class="mega-tile purple"><svg class="i">
+                            <use href="#laptop" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>School of AI Engineering</strong>
@@ -2460,7 +4065,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="tafa-academy.html#schools" class="mega-item">
-                        <span class="mega-tile green"><svg class="i"><use href="#globe" /></svg></span>
+                        <span class="mega-tile green"><svg class="i">
+                            <use href="#globe" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>Cloud &amp; Emerging Tech</strong>
@@ -2476,7 +4083,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                     <span class="mega-col-title">Featured High-Demand Courses</span>
                     <div class="mega-list">
                       <a href="tafa-academy.html#tracks" class="mega-item">
-                        <span class="mega-tile gold"><svg class="i"><use href="#briefcase" /></svg></span>
+                        <span class="mega-tile gold"><svg class="i">
+                            <use href="#briefcase" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>AI Productivity &amp; Workplace</strong>
@@ -2486,7 +4095,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="tafa-academy.html#tracks" class="mega-item">
-                        <span class="mega-tile purple"><svg class="i"><use href="#gear" /></svg></span>
+                        <span class="mega-tile purple"><svg class="i">
+                            <use href="#gear" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>AI Engineering (APIs, RAG &amp; MCP)</strong>
@@ -2496,7 +4107,9 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         </div>
                       </a>
                       <a href="tafa-academy.html" class="mega-item">
-                        <span class="mega-tile blue"><svg class="i"><use href="#cap" /></svg></span>
+                        <span class="mega-tile blue"><svg class="i">
+                            <use href="#cap" />
+                          </svg></span>
                         <div class="mega-item-body">
                           <div class="mega-item-head">
                             <strong>Full Catalog: All 10 Courses</strong>
@@ -2514,7 +4127,10 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                         <h4>Hands-On AI Training That Builds Careers</h4>
                         <p>Join 3,200+ certified practitioners across 18 African countries with zero fluff.</p>
                       </div>
-                      <a class="btn gold sm mega-promo-btn" href="tafa-academy.html#tracks">Explore All Tracks <svg class="i"><use href="#arr" /></svg></a>
+                      <a class="btn gold sm mega-promo-btn" href="tafa-academy.html#tracks">Explore All Tracks <svg
+                          class="i">
+                          <use href="#arr" />
+                        </svg></a>
                     </div>
                   </div>
                 </div>
@@ -2525,13 +4141,18 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
             <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#book">Contact</a></li>
             <li class="nav-item mobile-cta-item">
-              <a class="btn gold mobile-drawer-btn" href="#book">Book a Consultation <svg class="i"><use href="#arr" /></svg></a>
+              <a class="btn gold mobile-drawer-btn" href="#book">Book a Consultation <svg class="i">
+                  <use href="#arr" />
+                </svg></a>
             </li>
           </ul>
           <div class="nav-end">
             <a class="btn gold sm" href="#book">Book a Call</a>
-            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
-              <svg class="i"><use href="#menu" /></svg>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"
+              aria-label="Toggle navigation menu">
+              <svg class="i">
+                <use href="#menu" />
+              </svg>
             </button>
           </div>
         </nav>
@@ -2539,91 +4160,80 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">AI CONSULTING · CORE SERVICE</p>
-          <h1>Turn AI potential<br
-              />into <em
-             >real business<br
-                />results.</em></h1>
-          <p class="hero-lead">Our core service for businesses: a clear path from first assessment to working AI solutions, a trained team and continuous improvement, built for African market realities.</p>
-          <div class="hero-actions"><a class="cta" href="#book"
-             >Book a Consultation<svg xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"
-               >
+          <h1>Turn AI potential<br />into <em>real business<br />results.</em></h1>
+          <p class="hero-lead">Our core service for businesses: a clear path from first assessment to working AI
+            solutions, a trained team and continuous improvement, built for African market realities.</p>
+          <div class="hero-actions"><a class="cta" href="#book">Book a Consultation<svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-right" aria-hidden="true">
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg></a><a class="outline-cta" href="#services">See the Four Services</a></div>
         </div>
         <div class="hero-solutions" aria-label="AI outcomes">
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" class="lucide lucide-bot" aria-hidden="true"
-             >
+          <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-bot" aria-hidden="true">
               <path d="M12 8V4H8"></path>
               <rect width="16" height="12" x="4" y="8" rx="2"></rect>
               <path d="M2 14h2"></path>
               <path d="M20 14h2"></path>
               <path d="M15 13v2"></path>
               <path d="M9 13v2"></path>
-            </svg><span>Automate<br
-                />Workflows</span></div>
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true"
-             >
+            </svg><span>Automate<br />Workflows</span></div>
+          <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-chart-column" aria-hidden="true">
               <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
               <path d="M18 17V9"></path>
               <path d="M13 17V5"></path>
               <path d="M8 17v-3"></path>
-            </svg><span>Improve<br
-                />Decision Making</span></div>
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" class="lucide lucide-lightbulb" aria-hidden="true"
-             >
+            </svg><span>Improve<br />Decision Making</span></div>
+          <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-lightbulb" aria-hidden="true">
               <path
                 d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5">
               </path>
               <path d="M9 18h6"></path>
               <path d="M10 22h4"></path>
-            </svg><span>Unlock<br
-                />New Opportunities</span></div>
+            </svg><span>Unlock<br />New Opportunities</span></div>
         </div>
       </div>
       <div class="hero-proof">
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-zap" aria-hidden="true"
-           >
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-zap" aria-hidden="true">
             <path
               d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
             </path>
           </svg><span>Practical, not theoretical</span></div>
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true"
-           >
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-briefcase-business" aria-hidden="true">
             <path d="M12 12h.01"></path>
             <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
             <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
             <rect width="20" height="14" x="2" y="6" rx="2"></rect>
           </svg><span>Built for African business realities</span></div>
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-target" aria-hidden="true"
-           >
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-target" aria-hidden="true">
             <circle cx="12" cy="12" r="10"></circle>
             <circle cx="12" cy="12" r="6"></circle>
             <circle cx="12" cy="12" r="2"></circle>
           </svg><span>End-to-end support from strategy to
             execution</span></div>
       </div>
-    </section><section class="services-section" id="services">
+    </section>
+    <section class="services-section" id="services">
       <div class="services-layout">
         <div class="services-main">
-          <div class="section-heading"><span
-             ></span>
-            <p class="kicker">What we do</p><h2>AI consulting, from first idea to lasting results</h2>
-            
+          <div class="section-heading"><span></span>
+            <p class="kicker">What we do</p>
+            <h2>AI consulting, from first idea to lasting results</h2>
+
             <p>We help organizations identify opportunities for AI,
               develop practical solutions, and integrate intelligent systems into their operations. From initial
               assessment to implementation and ongoing support, we help turn AI ideas into measurable business outcomes.
@@ -2631,63 +4241,59 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
           </div>
           <div class="service-grid">
             <article class="service-card">
-              <div class="service-top"><span class="service-icon"
-                 ><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              <div class="service-top"><span class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" aria-hidden="true"
-                   >
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" aria-hidden="true">
                     <path d="m21 21-4.34-4.34"></path>
                     <circle cx="11" cy="11" r="8"></circle>
                   </svg></span>
-                <div><b
-                   >01</b>
+                <div><b>01</b>
                   <h4>AI Strategy &amp; Opportunity Assessment</h4>
                   <p>Identify where AI can create value for your
                     organization.</p>
                 </div>
               </div>
               <p>We evaluate your processes, identify opportunities for
-                AI adoption, and develop a practical strategy aligned with your goals.</p><strong
-               >Our <!-- -->assessment<!-- -->
+                AI adoption, and develop a practical strategy aligned with your goals.</p><strong>Our
+                <!-- -->assessment<!-- -->
                 <!-- -->covers<!-- -->:</strong>
               <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Business process and operational analysis</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>AI readiness and capability assessment</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>High-impact AI opportunity mapping</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Prioritized AI adoption roadmap</li>
               </ul>
-              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
-                <p><b
-                   >Deliverable:</b> <!-- -->A tailored AI strategy and
+              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="" aria-hidden="true">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="m9 15 2 2 4-4" />
+                </svg>
+                <p><b>Deliverable:</b> <!-- -->A tailored AI strategy and
                   implementation roadmap.</p>
               </div>
             </article>
             <article class="service-card">
-              <div class="service-top"><span class="service-icon"
-                 ><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              <div class="service-top"><span class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot" aria-hidden="true"
-                   >
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot" aria-hidden="true">
                     <path d="M12 8V4H8"></path>
                     <rect width="16" height="12" x="4" y="8" rx="2"></rect>
                     <path d="M2 14h2"></path>
@@ -2695,154 +4301,149 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
                     <path d="M15 13v2"></path>
                     <path d="M9 13v2"></path>
                   </svg></span>
-                <div><b
-                   >02</b>
+                <div><b>02</b>
                   <h4>Solution Design &amp; Implementation</h4>
                   <p>Turn AI opportunities into practical business
                     solutions.</p>
                 </div>
               </div>
               <p>We design and implement AI-powered systems that address
-                specific business challenges and support better decisions.</p><strong
-               >Our <!-- -->implementation<!-- -->
+                specific business challenges and support better decisions.</p><strong>Our <!-- -->implementation<!-- -->
                 <!-- -->covers<!-- -->:</strong>
               <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Custom AI solution design</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Business process automation</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>AI tool selection and integration</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>System testing and deployment</li>
               </ul>
-              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
-                <p><b
-                   >Deliverable:</b> <!-- -->Functional AI solutions
+              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="" aria-hidden="true">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="m9 15 2 2 4-4" />
+                </svg>
+                <p><b>Deliverable:</b> <!-- -->Functional AI solutions
                   integrated into your operations.</p>
               </div>
             </article>
             <article class="service-card">
-              <div class="service-top"><span class="service-icon"
-                 ><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              <div class="service-top"><span class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true"
-                   >
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                     <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                   </svg></span>
-                <div><b
-                   >03</b>
+                <div><b>03</b>
                   <h4>Team Enablement &amp; Training</h4>
                   <p>Equip your people with the knowledge to work
                     confidently with AI.</p>
                 </div>
               </div>
               <p>Successful AI adoption requires more than technology. We
-                help employees understand, use, and integrate AI into everyday work.</p><strong
-               >Our <!-- -->training<!-- -->
+                help employees understand, use, and integrate AI into everyday work.</p><strong>Our
+                <!-- -->training<!-- -->
                 <!-- -->covers<!-- -->:</strong>
               <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Practical AI literacy and awareness training</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Role-specific AI skills development</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Hands-on workshops and demonstrations</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>AI-assisted workflow training</li>
               </ul>
-              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
-                <p><b
-                   >Deliverable:</b> <!-- -->A workforce equipped to use
+              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="" aria-hidden="true">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="m9 15 2 2 4-4" />
+                </svg>
+                <p><b>Deliverable:</b> <!-- -->A workforce equipped to use
                   AI tools effectively.</p>
               </div>
             </article>
             <article class="service-card">
-              <div class="service-top"><span class="service-icon"
-                 ><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              <div class="service-top"><span class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true"
-                   >
+                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column"
+                    aria-hidden="true">
                     <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
                     <path d="M18 17V9"></path>
                     <path d="M13 17V5"></path>
                     <path d="M8 17v-3"></path>
                   </svg></span>
-                <div><b
-                   >04</b>
+                <div><b>04</b>
                   <h4>Ongoing Optimization &amp; Support</h4>
                   <p>Ensure your AI solutions continue delivering value.
                   </p>
                 </div>
               </div>
               <p>AI implementation is an ongoing process. We help your
-                systems evolve as your organization and business needs change.</p><strong
-               >Our <!-- -->support<!-- -->
+                systems evolve as your organization and business needs change.</p><strong>Our <!-- -->support<!-- -->
                 <!-- -->includes<!-- -->:</strong>
               <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>AI system performance monitoring</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Workflow and process optimization</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Solution maintenance and troubleshooting</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"
-                   >
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>Performance measurement and reporting</li>
               </ul>
-              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
-                <p><b
-                   >Deliverable:</b> <!-- -->Continuous improvement,
+              <div class="deliverable"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="" aria-hidden="true">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="m9 15 2 2 4-4" />
+                </svg>
+                <p><b>Deliverable:</b> <!-- -->Continuous improvement,
                   ongoing technical support, and performance insights.</p>
               </div>
             </article>
@@ -2850,31 +4451,26 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
         </div>
         <aside class="services-sidebar">
           <div class="roadmap-panel" id="programs">
-            <h3>Let’s Build Your<br
-                />AI Roadmap</h3>
+            <h3>Let’s Build Your<br />AI Roadmap</h3>
             <p>Whether you’re just starting or ready to scale, we’ll help
-              you create a plan that fits your goals, team and industry.</p><a class="cta " href="#book"
-             >Book a Consultation<svg xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"
-               >
+              you create a plan that fits your goals, team and industry.</p><a class="cta " href="#book">Book a
+              Consultation<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-right" aria-hidden="true">
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg></a>
-            <div class="assessment"><svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-briefcase-business" aria-hidden="true"
-               >
+            <div class="assessment"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-briefcase-business" aria-hidden="true">
                 <path d="M12 12h.01"></path>
                 <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
                 <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
                 <rect width="20" height="14" x="2" y="6" rx="2"></rect>
               </svg>Free initial assessment<br />(30 mins)</div>
           </div>
-          <div class="africa-panel"><svg
-              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          <div class="africa-panel"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="lucide lucide-network" aria-hidden="true">
               <rect x="16" y="16" width="6" height="6" rx="1"></rect>
               <rect x="2" y="16" width="6" height="6" rx="1"></rect>
@@ -2882,67 +4478,373 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
               <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
               <path d="M12 12V8"></path>
             </svg>
-            <h3>AI solutions<br
-                />for Africa’s<br
-                />unique challenges<br
-                /><em
-               >and opportunities.</em></h3><span
-             ></span>
+            <h3>AI solutions<br />for Africa’s<br />unique challenges<br /><em>and opportunities.</em></h3><span></span>
           </div>
           <div class="results-panel">
-            <h3>Real Results.<br
-                />Lasting Impact.</h3>
-            <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true"
-               >
+            <h3>Real Results.<br />Lasting Impact.</h3>
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-users" aria-hidden="true">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                 <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
                 <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                 <circle cx="9" cy="7" r="4"></circle>
               </svg>
-              <p><b
-                 >3,200+</b><small
-                 >Practitioners Certified</small></p>
+              <p><b>3,200+</b><small>Practitioners Certified</small></p>
             </div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business"
-                aria-hidden="true">
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-briefcase-business" aria-hidden="true">
                 <path d="M12 12h.01"></path>
                 <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
                 <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
                 <rect width="20" height="14" x="2" y="6" rx="2"></rect>
               </svg>
-              <p><b
-                 >400+</b><small
-                 >Executives Advised</small></p>
+              <p><b>400+</b><small>Executives Advised</small></p>
             </div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true"
-               >
+            <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chart-column" aria-hidden="true">
                 <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
                 <path d="M18 17V9"></path>
                 <path d="M13 17V5"></path>
                 <path d="M8 17v-3"></path>
               </svg>
-              <p><b
-                 >AWI</b><small
-                 >Readiness Index</small></p>
+              <p><b>AWI</b><small>Readiness Index</small></p>
             </div>
           </div>
         </aside>
       </div>
-    </section><section class="tf-sec tf-problem" id="why"><div class="tf-wrap"><div class="tf-head"><p class="kicker">The challenge</p><h2>Why most AI projects stall before they pay off</h2><p>The technology is rarely the problem. These are the three gaps we see most often, and the ones we design around from day one.</p></div><ul>
-<li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><h3>Tools without a business case</h3><p>Pilots start with what is possible, not what is valuable. We begin with the processes where AI can raise revenue or remove cost, and rank them by impact and effort.</p></li>
-<li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><h3>Teams left out of the change</h3><p>If people do not understand or trust a new system, they work around it. Training and change support are built into every engagement, not added at the end.</p></li>
-<li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><h3>Solutions that do not fit local reality</h3><p>Data quality, connectivity, regulation and budgets differ across African markets. We design for those conditions rather than copy a model built elsewhere.</p></li></ul></div></section><section class="tf-sec" id="process"><div class="tf-wrap"><div class="tf-head"><p class="kicker">Our process</p><h2>How we work with you</h2><p>A clear path from first conversation to results you can measure, with a defined output at every stage.</p></div><ol class="tf-steps"><li><span class="step-n">01</span><div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></div><h3>Discover</h3><p>We map your processes, data and goals, then identify where AI can create measurable value.</p><small><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Output: opportunity assessment</small></li><li><span class="step-n">02</span><div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></div><h3>Design</h3><p>We shape the highest-value use cases into a practical solution and a phased roadmap.</p><small><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Output: strategy and roadmap</small></li><li><span class="step-n">03</span><div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></div><h3>Deliver</h3><p>We build and integrate the solution into your operations and train the people who will use it.</p><small><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Output: working solution, trained team</small></li><li><span class="step-n">04</span><div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div><h3>Improve</h3><p>We monitor performance, fix what is not working and extend what is.</p><small><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Output: ongoing support and insights</small></li></ol></div></section><section class="tf-sec res" id="results"><div class="tf-wrap"><div class="tf-head"><p class="kicker">The impact</p><h2>Results clients can measure</h2></div><div class="res-grid"><div class="quote"><q>The approach was practical, well-structured and delivered real results.</q><span>CEO, Financial Services Company</span></div><div class="stat"><b>40%</b><span>Faster process turnaround</span></div><div class="stat"><b>42%</b><span>Higher operational efficiency</span></div><div class="stat"><b>30%</b><span>Increase in team productivity</span></div></div></div></section><section class="tf-sec tf-ind" id="industries"><div class="tf-wrap"><div class="tf-head"><p class="kicker">Industries</p><h2>Where we apply AI</h2><p>Every sector has repetitive work, slow decisions and untapped data. We start from your industry, not from a generic playbook.</p></div><div class="tf-chips"><div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg><div><b>Financial services</b><span>Faster, more accurate decisions on credit, service and operations.</span></div></div><div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg><div><b>Telecoms and technology</b><span>Smarter customer operations and network-side efficiency.</span></div></div><div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg><div><b>Retail and consumer goods</b><span>Demand insight, stock planning and customer engagement.</span></div></div><div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg><div><b>Public sector and development</b><span>Service delivery, reporting and capability building at scale.</span></div></div><div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg><div><b>Health and education</b><span>Administrative automation that frees skilled people for core work.</span></div></div><div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg><div><b>Manufacturing and logistics</b><span>Process visibility, planning and quality improvements.</span></div></div></div></div></section><section class="tf-sec tf-faq" id="faq"><div class="tf-wrap"><div class="tf-head"><p class="kicker">FAQ</p><h2>Questions we hear first</h2><p>Not seeing yours? Send it through the form below and we will answer directly.</p></div><div><details><summary>What happens in the free 30-minute assessment?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>We learn about your business, the processes you want to improve and your current tools. You leave with an honest view of where AI could help, and whether we are the right partner.</p></details><details><summary>Do we need existing data or technical staff?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>No. Part of our work is assessing what data you already have and what it can support. We recommend solutions that match your current capability and help you build the rest.</p></details><details><summary>Will you train our people as well?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Yes. Team enablement is one of our four core services, and training is built into implementation so your staff can use and improve the solutions after we step back.</p></details><details><summary>How long does an engagement take?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>It depends on scope. An assessment and roadmap is much shorter than a full implementation. We confirm timelines and deliverables once we understand your goals.</p></details><details><summary>Can you support us after the solution is live?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Yes. Our optimization and support service covers technical support, continuous improvement and performance insights as your needs change.</p></details></div></div></section>    <section class="tf-sec tf-contact" id="book"><div class="tf-wrap"><div class="tf-head"><p class="kicker">Get started</p><h2>Book your free consultation</h2><p>Tell us a little about your organization. We will reply with a time for your 30-minute assessment.</p><ul class="tf-assure"><li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>30 minutes, no obligation</li><li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Practical advice, not a sales pitch</li><li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Strategy, implementation and training under one roof</li></ul></div>
-<form class="tf-form" onsubmit="event.preventDefault();this.classList.add('sent');this.querySelector('button').disabled=true">
-<label>Full name<input required name="name" autocomplete="name"></label><label>Work email<input required type="email" name="email" autocomplete="email"></label>
-<label>Organization<input name="org" autocomplete="organization"></label><label>I am interested in<select name="topic"><option>AI strategy and assessment</option><option>Solution design and implementation</option><option>Team training</option><option>Ongoing support</option><option>Not sure yet</option></select></label>
-<label class="full">What would you like to improve?<textarea name="msg"></textarea></label>
-<button class="cta" type="submit">Request consultation <svg class="tf-i" style="width:16px;height:16px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg></button><p class="ok" role="status">Thank you. We will be in touch shortly.</p></form></div></section>
+    </section>
+    <section class="tf-sec tf-problem" id="why">
+      <div class="tf-wrap">
+        <div class="tf-head">
+          <p class="kicker">The challenge</p>
+          <h2>Why most AI projects stall before they pay off</h2>
+          <p>The technology is rarely the problem. These are the three gaps we see most often, and the ones we design
+            around from day one.</p>
+        </div>
+        <ul>
+          <li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
+            <h3>Tools without a business case</h3>
+            <p>Pilots start with what is possible, not what is valuable. We begin with the processes where AI can raise
+              revenue or remove cost, and rank them by impact and effort.</p>
+          </li>
+          <li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <h3>Teams left out of the change</h3>
+            <p>If people do not understand or trust a new system, they work around it. Training and change support are
+              built into every engagement, not added at the end.</p>
+          </li>
+          <li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <path
+                d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+              <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+              <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+            </svg>
+            <h3>Solutions that do not fit local reality</h3>
+            <p>Data quality, connectivity, regulation and budgets differ across African markets. We design for those
+              conditions rather than copy a model built elsewhere.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="tf-sec" id="process">
+      <div class="tf-wrap">
+        <div class="tf-head">
+          <p class="kicker">Our process</p>
+          <h2>How we work with you</h2>
+          <p>A clear path from first conversation to results you can measure, with a defined output at every stage.</p>
+        </div>
+        <ol class="tf-steps">
+          <li><span class="step-n">01</span>
+            <div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg></div>
+            <h3>Discover</h3>
+            <p>We map your processes, data and goals, then identify where AI can create measurable value.</p><small><svg
+                class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Output: opportunity assessment</small>
+          </li>
+          <li><span class="step-n">02</span>
+            <div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" />
+              </svg></div>
+            <h3>Design</h3>
+            <p>We shape the highest-value use cases into a practical solution and a phased roadmap.</p><small><svg
+                class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Output: strategy and roadmap</small>
+          </li>
+          <li><span class="step-n">03</span>
+            <div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z" />
+              </svg></div>
+            <h3>Deliver</h3>
+            <p>We build and integrate the solution into your operations and train the people who will use it.</p>
+            <small><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Output: working solution, trained team</small>
+          </li>
+          <li><span class="step-n">04</span>
+            <div class="dot"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+                <path d="M21 3v5h-5" />
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+                <path d="M8 16H3v5" />
+              </svg></div>
+            <h3>Improve</h3>
+            <p>We monitor performance, fix what is not working and extend what is.</p><small><svg class="tf-i"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Output: ongoing support and insights</small>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="tf-sec res" id="results">
+      <div class="tf-wrap">
+        <div class="tf-head">
+          <p class="kicker">The impact</p>
+          <h2>Results clients can measure</h2>
+        </div>
+        <div class="res-grid">
+          <div class="quote"><q>The approach was practical, well-structured and delivered real results.</q><span>CEO,
+              Financial Services Company</span></div>
+          <div class="stat"><b>40%</b><span>Faster process turnaround</span></div>
+          <div class="stat"><b>42%</b><span>Higher operational efficiency</span></div>
+          <div class="stat"><b>30%</b><span>Increase in team productivity</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="tf-sec tf-ind" id="industries">
+      <div class="tf-wrap">
+        <div class="tf-head">
+          <p class="kicker">Industries</p>
+          <h2>Where we apply AI</h2>
+          <p>Every sector has repetitive work, slow decisions and untapped data. We start from your industry, not from a
+            generic playbook.</p>
+        </div>
+        <div class="tf-chips">
+          <div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="12" x="2" y="6" rx="2" />
+              <circle cx="12" cy="12" r="2" />
+              <path d="M6 12h.01M18 12h.01" />
+            </svg>
+            <div><b>Financial services</b><span>Faster, more accurate decisions on credit, service and
+                operations.</span></div>
+          </div>
+          <div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
+            <div><b>Telecoms and technology</b><span>Smarter customer operations and network-side efficiency.</span>
+            </div>
+          </div>
+          <div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg>
+            <div><b>Retail and consumer goods</b><span>Demand insight, stock planning and customer engagement.</span>
+            </div>
+          </div>
+          <div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M10 18v-7" />
+              <path
+                d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z" />
+              <path d="M14 18v-7" />
+              <path d="M18 18v-7" />
+              <path d="M3 22h18" />
+              <path d="M6 18v-7" />
+            </svg>
+            <div><b>Public sector and development</b><span>Service delivery, reporting and capability building at
+                scale.</span></div>
+          </div>
+          <div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+            </svg>
+            <div><b>Health and education</b><span>Administrative automation that frees skilled people for core
+                work.</span></div>
+          </div>
+          <div class="tf-chip"><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+              <path d="M17 18h1" />
+              <path d="M12 18h1" />
+              <path d="M7 18h1" />
+            </svg>
+            <div><b>Manufacturing and logistics</b><span>Process visibility, planning and quality improvements.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tf-sec tf-faq" id="faq">
+      <div class="tf-wrap">
+        <div class="tf-head">
+          <p class="kicker">FAQ</p>
+          <h2>Questions we hear first</h2>
+          <p>Not seeing yours? Send it through the form below and we will answer directly.</p>
+        </div>
+        <div>
+          <details>
+            <summary>What happens in the free 30-minute assessment?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg></summary>
+            <p>We learn about your business, the processes you want to improve and your current tools. You leave with an
+              honest view of where AI could help, and whether we are the right partner.</p>
+          </details>
+          <details>
+            <summary>Do we need existing data or technical staff?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg></summary>
+            <p>No. Part of our work is assessing what data you already have and what it can support. We recommend
+              solutions that match your current capability and help you build the rest.</p>
+          </details>
+          <details>
+            <summary>Will you train our people as well?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg></summary>
+            <p>Yes. Team enablement is one of our four core services, and training is built into implementation so your
+              staff can use and improve the solutions after we step back.</p>
+          </details>
+          <details>
+            <summary>How long does an engagement take?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg></summary>
+            <p>It depends on scope. An assessment and roadmap is much shorter than a full implementation. We confirm
+              timelines and deliverables once we understand your goals.</p>
+          </details>
+          <details>
+            <summary>Can you support us after the solution is live?<svg class="tf-i" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg></summary>
+            <p>Yes. Our optimization and support service covers technical support, continuous improvement and
+              performance insights as your needs change.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="tf-sec tf-contact" id="book">
+      <div class="tf-wrap">
+        <div class="tf-head">
+          <p class="kicker">Get started</p>
+          <h2>Book your free consultation</h2>
+          <p>Tell us a little about your organization. We will reply with a time for your 30-minute assessment.</p>
+          <ul class="tf-assure">
+            <li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>30 minutes, no obligation</li>
+            <li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>Practical advice, not a sales pitch</li>
+            <li><svg class="tf-i" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                <path d="M22 10v6" />
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+              </svg>Strategy, implementation and training under one roof</li>
+          </ul>
+        </div>
+        <form class="tf-form"
+          onsubmit="event.preventDefault();this.classList.add('sent');this.querySelector('button').disabled=true">
+          <label>Full name<input required name="name" autocomplete="name"></label><label>Work email<input required
+              type="email" name="email" autocomplete="email"></label>
+          <label>Organization<input name="org" autocomplete="organization"></label><label>I am interested in<select
+              name="topic">
+              <option>AI strategy and assessment</option>
+              <option>Solution design and implementation</option>
+              <option>Team training</option>
+              <option>Ongoing support</option>
+              <option>Not sure yet</option>
+            </select></label>
+          <label class="full">What would you like to improve?<textarea name="msg"></textarea></label>
+          <button class="cta" type="submit">Request consultation <svg class="tf-i" style="width:16px;height:16px"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+              <path d="m21.854 2.147-10.94 10.939" />
+            </svg></button>
+          <p class="ok" role="status">Thank you. We will be in touch shortly.</p>
+        </form>
+      </div>
+    </section>
     <!-- ================= CTA + FOOTER ================= -->
     <footer class="foot" id="resources">
       <div class="wrap foot-cta" id="contact">
@@ -2954,11 +4856,15 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
         </div>
         <div class="acts">
           <div class="act">
-            <a class="btn gold" href="#book">Book Your AI Growth Audit <svg class="i"><use href="#arr" /></svg></a>
+            <a class="btn gold" href="#book">Book Your AI Growth Audit <svg class="i">
+                <use href="#arr" />
+              </svg></a>
             <span>For growing businesses</span>
           </div>
           <div class="act">
-            <a class="btn line" href="tafa-academy.html">Explore TAFA Academy <svg class="i"><use href="#arr" /></svg></a>
+            <a class="btn line" href="tafa-academy.html">Explore TAFA Academy <svg class="i">
+                <use href="#arr" />
+              </svg></a>
             <span>For individuals &amp; teams</span>
           </div>
         </div>
@@ -2976,10 +4882,19 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
               <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="soc">
-              <a href="#" aria-label="LinkedIn"><svg class="i"><use href="#in" /></svg></a>
-              <a href="#" aria-label="X"><svg class="i"><use href="#x" /></svg></a>
-              <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#ig" /></svg></a>
-              <a href="#" aria-label="YouTube"><svg class="i"><use href="#yt" /></svg></a>
+              <a href="#" aria-label="LinkedIn"><svg class="i">
+                  <use href="#in" />
+                </svg></a>
+              <a href="#" aria-label="X"><svg class="i">
+                  <use href="#x" />
+                </svg></a>
+              <a href="https://www.instagram.com/talentflowafrica/" aria-label="Instagram" target="_blank"
+                rel="noopener noreferrer"><svg class="i">
+                  <use href="#ig" />
+                </svg></a>
+              <a href="#" aria-label="YouTube"><svg class="i">
+                  <use href="#yt" />
+                </svg></a>
             </div>
           </div>
           <div class="bottom-base">
@@ -3049,7 +4964,7 @@ footer{padding:clamp(40px,5vw,56px) max(24px,calc((100% - 1180px)/2)) 24px}
       }
     })();
   </script>
-<script>(function(){if(!('IntersectionObserver'in window))return;var els=document.querySelectorAll('.service-card,.tf-problem li,.tf-steps li,.tf-chip,.tf-faq details,.roadmap-panel,.results-panel,.africa-panel,.tf-form');els.forEach(function(e){e.classList.add('reveal')});var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})})();</script>
+  <script>(function () { if (!('IntersectionObserver' in window)) return; var els = document.querySelectorAll('.service-card,.tf-problem li,.tf-steps li,.tf-chip,.tf-faq details,.roadmap-panel,.results-panel,.africa-panel,.tf-form'); els.forEach(function (e) { e.classList.add('reveal') }); var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target) } }) }, { threshold: .12, rootMargin: '0px 0px -40px 0px' }); els.forEach(function (e) { io.observe(e) }) })();</script>
 </body>
 
 </html>
