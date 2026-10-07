@@ -781,9 +781,9 @@
       align-items: center;
       gap: 10px;
       padding: 6px 16px 6px 6px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, .1);
-      border: 1px solid rgba(255, 255, 255, .2);
+      /* border-radius: 999px;
+      background: rgba(255, 255, 255, .1); */
+      /* border: 1px solid rgba(255, 255, 255, .2); */
       font-size: 13px;
       font-weight: 600;
       -webkit-backdrop-filter: blur(6px);
@@ -1694,24 +1694,30 @@
 
     .proof-avatars {
       display: flex;
+      align-items: center;
     }
 
     .proof-avatar {
-      width: 30px;
-      height: 30px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: #e2e8f0;
+      background: #fff;
       border: 2px solid #fff;
       display: grid;
       place-items: center;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--navy);
+      overflow: hidden;
       margin-left: -8px;
+      box-shadow: 0 2px 8px rgba(6, 26, 63, .12);
     }
 
     .proof-avatar:first-child {
       margin-left: 0;
+    }
+
+    .proof-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .newsletter-form {
@@ -2040,7 +2046,9 @@
        CTA & FOOTER (MATCHING TAFA THEME)
        ============================================================ */
     .foot {
-      background: var(--navy) url('./footerbg.png') right center/cover no-repeat;
+      background:
+        linear-gradient(90deg, rgba(6, 26, 63, .88) 0%, rgba(6, 26, 63, .68) 55%, rgba(6, 26, 63, .42) 100%),
+        var(--navy) url('./footerbg.png') right center/cover no-repeat;
       color: #fff;
       padding-top: 56px;
     }
@@ -2093,7 +2101,10 @@
 
     .bottom {
       padding: 36px 0 28px;
+      background: #fff;
+  
     }
+  
 
     .bottom-top {
       display: flex;
@@ -2120,7 +2131,9 @@
       color: #cbd5e1;
       transition: color .15s ease;
     }
-
+  .bottom a{
+  color: var(--ink);
+    }
     .foot-nav a:hover,
     .foot-nav a.on {
       color: var(--gold);
@@ -2735,11 +2748,10 @@
     <div class="hero-body">
       <div class="eyebrow">
         <span>TAFA RESEARCH &amp; THOUGHT LEADERSHIP</span>
-        <span class="eyebrow-pill">AFRICAN ENTERPRISE INTELLIGENCE</span>
       </div>
       <h1>Actionable AI perspectives for Africa's <em>forward-thinking leaders.</em></h1>
       <p class="lead">Data-backed research, executive briefings, workforce transformation frameworks, and real-world
-        African enterprise case studies — cut through the hype and lead with clarity.</p>
+        African enterprise case studies  cut through the hype and lead with clarity.</p>
       <div class="ctas">
         <a class="btn gold" href="#flagship">Explore 2026 Flagship Report <svg class="i">
             <use href="#arr" />
@@ -3585,10 +3597,10 @@
           </p>
           <div class="newsletter-proof">
             <div class="proof-avatars">
-              <div class="proof-avatar" style="background:#061a3f;color:#fbbf24">MT</div>
-              <div class="proof-avatar" style="background:#1d4ed8;color:#fff">SB</div>
-              <div class="proof-avatar" style="background:#5b3fe6;color:#fff">FW</div>
-              <div class="proof-avatar" style="background:#14a84f;color:#fff">SF</div>
+              <div class="proof-avatar"><img src="./mtn-log.jpg" alt="MTN"></div>
+              <div class="proof-avatar"><img src="./Stanbic logo.jpg" alt="Stanic"></div>
+              <div class="proof-avatar"><img src="./Flutterwave logo.png" alt="Flutterwave"></div>
+              <div class="proof-avatar"><img src="./Safaricom logo.jpg" alt="Safaricom"></div>
             </div>
             <span>Read by executives across MTN, Stanbic, Flutterwave, Safaricom &amp; more.</span>
           </div>
