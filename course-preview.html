@@ -1355,7 +1355,8 @@
         <a class="btn gold" href="#enrol" id="hero-enrol-btn">Enrol in Cohort <svg class="i">
             <use href="#arr" />
           </svg></a>
-        <button class="btn line" id="syllabus-download-btn" type="button" style="cursor:pointer">Download Syllabus <svg class="i">
+        <button class="btn line" id="syllabus-download-btn" type="button" style="cursor:pointer">Download Syllabus <svg
+            class="i">
             <use href="#arr" />
           </svg></button>
 
@@ -1433,14 +1434,19 @@
                   <use href="#award" />
                 </svg><span>TAFA Academy Verified Certificate</span></li>
             </ul>
-            <button class="btn gold" id="enrol-btn" type="button" style="width:100%;justify-content:center;cursor:pointer">Enrol in Cohort <svg class="i">
+            <button class="btn gold" id="enrol-btn" type="button"
+              style="width:100%;justify-content:center;cursor:pointer">Enrol in Cohort <svg class="i">
                 <use href="#arr" />
               </svg></button>
-            <button class="btn ghost" type="button" style="margin-top:8px;width:100%;justify-content:center;cursor:pointer"
+            <button class="btn ghost" type="button"
+              style="margin-top:8px;width:100%;justify-content:center;cursor:pointer"
               onclick="typeof tafaOpenTeamEnrolModal==='function' ? tafaOpenTeamEnrolModal(document.getElementById('course-title').textContent) : window.location.href='tafa-ai-consulting.html#book'">
               Ask About Team Training</button>
-            <button class="btn line" id="syllabus-download-btn" type="button" style="margin-top:6px;width:100%;justify-content:center;cursor:pointer;font-size:13px">
-              <svg class="i" style="width:15px;height:15px"><use href="#award"/></svg> Download Full Syllabus (Free)
+            <button class="btn line" id="syllabus-download-btn" type="button"
+              style="margin-top:6px;width:100%;justify-content:center;cursor:pointer;font-size:13px">
+              <svg class="i" style="width:15px;height:15px">
+                <use href="#award" />
+              </svg> Download Full Syllabus (Free)
             </button>
           </div>
         </aside>
@@ -1516,8 +1522,13 @@
             <span>© 2026 TalentFlow Africa. All rights reserved.</span>
           </div>
         </div>
-        <div class="foot-disclaimer" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 11px; line-height: 1.6; color: rgba(255,255,255,0.55);">
-          <strong>Disclaimer:</strong> Case studies, efficiency estimates, and benchmark metrics reflect specific client engagements, pilot programs, or research surveys. Individual operational outcomes and return on investment vary based on data maturity, existing technical architecture, organizational adoption, and operational execution. AI advisory and systems are delivered for enterprise enablement without express or implied financial guarantees.
+        <div class="foot-disclaimer"
+          style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 11px; line-height: 1.6; color: rgba(255,255,255,0.55);">
+          <strong>Disclaimer:</strong> Case studies, efficiency estimates, and benchmark metrics reflect specific client
+          engagements, pilot programs, or research surveys. Individual operational outcomes and return on investment
+          vary based on data maturity, existing technical architecture, organizational adoption, and operational
+          execution. AI advisory and systems are delivered for enterprise enablement without express or implied
+          financial guarantees.
         </div>
       </div>
     </div>
@@ -1630,7 +1641,7 @@
       if (enrolBtn) {
         enrolBtn.removeAttribute('href');
         enrolBtn.style.cursor = 'pointer';
-        enrolBtn.addEventListener('click', function(e) {
+        enrolBtn.addEventListener('click', function (e) {
           e.preventDefault();
           if (typeof tafaOpenEnrolModal === 'function') {
             tafaOpenEnrolModal(course.title, course.price, 300);
@@ -1643,7 +1654,7 @@
       // ── Wire syllabus download button ──
       const syllabusBtn = document.getElementById('syllabus-download-btn');
       if (syllabusBtn) {
-        syllabusBtn.addEventListener('click', function() {
+        syllabusBtn.addEventListener('click', function () {
           if (typeof tafaOpenSyllabusModal === 'function') {
             tafaOpenSyllabusModal(course.title);
           }
@@ -1653,7 +1664,7 @@
       // ── Wire hero enrol CTA ──
       const heroEnrolBtn = document.getElementById('hero-enrol-btn');
       if (heroEnrolBtn) {
-        heroEnrolBtn.addEventListener('click', function(e) {
+        heroEnrolBtn.addEventListener('click', function (e) {
           e.preventDefault();
           if (typeof tafaOpenEnrolModal === 'function') {
             tafaOpenEnrolModal(course.title, course.price, 300);
