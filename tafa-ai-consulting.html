@@ -4093,7 +4093,7 @@
                             <strong>AI Productivity &amp; Workplace</strong>
                             <span class="mega-badge gold">HIGH DEMAND</span>
                           </div>
-                          <p>Teach professionals how to 10x output across reports, meetings &amp; workflows.</p>
+                          <p>Equip professionals to dramatically accelerate output across reports, meetings &amp; workflows.</p>
                         </div>
                       </a>
                       <a href="tafa-academy.html#tracks" class="mega-item">
@@ -4659,6 +4659,7 @@
           <div class="stat"><b>42%</b><span>Higher operational efficiency</span></div>
           <div class="stat"><b>30%</b><span>Increase in team productivity</span></div>
         </div>
+        <p style="margin-top: 18px; text-align: center; font-size: 12px; color: var(--mute);">*Representative results from tailored operational pilot engagements. Actual turnaround and productivity gains depend on workflow complexity, data readiness, and team adoption.</p>
       </div>
     </section>
     <section class="tf-sec tf-ind" id="industries">
@@ -4823,8 +4824,8 @@
               </svg>Strategy, implementation and training under one roof</li>
           </ul>
         </div>
-        <form class="tf-form"
-          onsubmit="event.preventDefault();this.classList.add('sent');this.querySelector('button').disabled=true">
+        <form class="tf-form" id="tafa-consulting-form"
+          data-form-type="Consulting Enquiry">
           <label>Full name<input required name="name" autocomplete="name"></label><label>Work email<input required
               type="email" name="email" autocomplete="email"></label>
           <label>Organization<input name="org" autocomplete="organization"></label><label>I am interested in<select
@@ -4904,7 +4905,16 @@
           </div>
           <div class="bottom-base">
             <span>We build people. We scale businesses. A future-ready Africa.</span>
-            <span>© 2026 TalentFlow Africa. All rights reserved.</span>
+            <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+              <a href="privacy-policy.html" style="color:#fbbf24;text-decoration:none;">Privacy Policy</a>
+              <span>•</span>
+              <a href="terms-of-service.html" style="color:#fbbf24;text-decoration:none;">Terms of Service</a>
+              <span>•</span>
+              <span>© 2026 TalentFlow Africa. All rights reserved.</span>
+            </div>
+          </div>
+          <div class="foot-disclaimer" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 11px; line-height: 1.6; color: rgba(255,255,255,0.55);">
+            <strong>Disclaimer:</strong> Case studies, efficiency estimates, and benchmark metrics reflect specific client engagements, pilot programs, or research surveys. Individual operational outcomes and return on investment vary based on data maturity, existing technical architecture, organizational adoption, and operational execution. AI advisory and systems are delivered for enterprise enablement without express or implied financial guarantees.
           </div>
         </div>
       </div>
@@ -4970,6 +4980,12 @@
     })();
   </script>
   <script>(function () { if (!('IntersectionObserver' in window)) return; var els = document.querySelectorAll('.service-card,.tf-problem li,.tf-steps li,.tf-chip,.tf-faq details,.roadmap-panel,.results-panel,.africa-panel,.tf-form'); els.forEach(function (e) { e.classList.add('reveal') }); var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target) } }) }, { threshold: .12, rootMargin: '0px 0px -40px 0px' }); els.forEach(function (e) { io.observe(e) }) })();</script>
+
+  <!-- ===== PAYSTACK INLINE CHECKOUT ===== -->
+  <script src="https://js.paystack.co/v1/inline.js" defer></script>
+  <!-- ===== TAFA LEAD CAPTURE & CONVERSION ENGINE ===== -->
+  <script src="./Asset/tafa-leads.js" defer></script>
+
 </body>
 
 </html>

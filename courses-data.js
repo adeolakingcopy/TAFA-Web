@@ -89,7 +89,7 @@ const COURSES_DATA = [
     price: "$450",
     image: "./Applied for Sales & Marketing cover.png",
     badge: "Highest-Demand Course",
-    purpose: "Teach professionals and teams how to use AI to 10x their day-to-day workplace productivity and output.",
+    purpose: "Teach professionals and teams how to use AI to dramatically increase their day-to-day workplace productivity and output.",
     description: "Our flagship workplace curriculum designed for knowledge workers, managers, and executives. Move from casual prompting to structured workplace workflows across research, presentations, executive reporting, meetings, and data-backed decision support.",
     topics: [
       "AI for communication",

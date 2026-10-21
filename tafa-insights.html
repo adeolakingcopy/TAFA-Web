@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Insights &amp; Research | TalentFlow Africa — Superintelligence &amp; AI for African Business</title>
+  <title>Insights &amp; Research | TalentFlow Africa — Applied AI &amp; Strategy for African Business</title>
   <meta name="description"
     content="Actionable AI research, executive briefings, workforce transformation frameworks, and African enterprise case studies from TalentFlow Africa.">
   <script>document.documentElement.classList.add('js');</script>
@@ -1650,7 +1650,7 @@
     }
 
     /* ============================================================
-       NEWSLETTER SECTION (THE SUPERINTELLIGENCE MEMO)
+       NEWSLETTER SECTION (THE AI EXECUTIVE MEMO)
        ============================================================ */
     .newsletter-section {
       padding: 60px 0 80px;
@@ -2679,7 +2679,7 @@
                           <strong>AI Productivity &amp; Workplace</strong>
                           <span class="mega-badge gold">HIGH DEMAND</span>
                         </div>
-                        <p>Teach professionals how to 10x output across reports, meetings &amp; workflows.</p>
+                        <p>Equip professionals to dramatically accelerate output across reports, meetings &amp; workflows.</p>
                       </div>
                     </a>
                     <a href="course-preview.html?id=ai-engineering" class="mega-item">
@@ -3073,7 +3073,7 @@
                 <svg class="i" style="width:16px;height:16px;color:var(--blue)">
                   <use href="#briefcase" />
                 </svg>
-                <span><strong>100% compliance alignment</strong> with emerging pan-African AI acts.</span>
+                <span><strong>Comprehensive governance alignment</strong> with emerging pan-African AI frameworks.</span>
               </div>
             </div>
             <div class="report-actions">
@@ -3584,14 +3584,14 @@
     </div>
   </section>
 
-  <!-- ================= THE AFRICAN SUPERINTELLIGENCE MEMO (NEWSLETTER) ================= -->
+  <!-- ================= THE AFRICAN AI EXECUTIVE MEMO (NEWSLETTER) ================= -->
   <section class="newsletter-section" id="newsletter">
     <div class="wrap">
       <div class="newsletter-box">
         <div>
           <span class="eyebrow" style="color:var(--blue);font-size:11.5px;margin-bottom:6px">THE EXECUTIVE
             DISPATCH</span>
-          <h3>The African Superintelligence Memo</h3>
+          <h3>The African AI Executive Memo</h3>
           <p>
             Join 12,500+ C-suite leaders, founders, and innovation directors receiving our bi-weekly intelligence
             briefings. Deep-dive breakdowns into African market developments, engineering architectures, and
@@ -3685,7 +3685,16 @@
         </div>
         <div class="bottom-base">
           <span>We build people. We scale businesses. A future-ready Africa.</span>
-          <span>&copy; 2026 TalentFlow Africa. All rights reserved.</span>
+          <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+            <a href="privacy-policy.html" style="color:#fbbf24;text-decoration:none;">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms-of-service.html" style="color:#fbbf24;text-decoration:none;">Terms of Service</a>
+            <span>•</span>
+            <span>&copy; 2026 TalentFlow Africa. All rights reserved.</span>
+          </div>
+        </div>
+        <div class="foot-disclaimer" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 11px; line-height: 1.6; color: rgba(255,255,255,0.55);">
+          <strong>Disclaimer:</strong> Case studies, efficiency estimates, and benchmark metrics reflect specific client engagements, pilot programs, or research surveys. Individual operational outcomes and return on investment vary based on data maturity, existing technical architecture, organizational adoption, and operational execution. AI advisory and systems are delivered for enterprise enablement without express or implied financial guarantees.
         </div>
       </div>
     </div>
@@ -3757,7 +3766,7 @@
     <svg class="i" style="width:18px;height:18px;color:var(--gold)">
       <use href="#check" />
     </svg>
-    <span id="toast-text">Thank you! Subscribed to The African Superintelligence Memo.</span>
+    <span id="toast-text">Thank you! Subscribed to The African AI Executive Memo.</span>
   </div>
 
   <!-- ================= JAVASCRIPT LOGIC ================= -->
@@ -3780,7 +3789,7 @@
           <p>Over the past 24 months, executive committees across Lagos, Nairobi, Johannesburg, and Cairo have approved hundreds of AI exploratory budgets. Boardrooms were enamored with the promise of generative intelligence. Yet as of late 2026, our comprehensive survey reveals a sobering truth: less than 22% of these initiatives have delivered measurable improvements to EBITDA.</p>
           <p>The failure is rarely algorithmic. The open-source and API landscapes have matured rapidly. Instead, enterprise AI stalls because leadership treats it as a software procurement problem rather than an operating model transformation.</p>
           
-          <blockquote>"Enterprises that succeed do not buy AI tools for their teams; they rebuild their operational workflows around superintelligence."</blockquote>
+          <blockquote>"Enterprises that succeed do not buy AI tools for their teams; they rebuild their operational workflows around applied AI and intelligent automation."</blockquote>
 
           <h3>The Three Killers of African AI Pilots</h3>
           <p>Through our diagnostics with tier-1 banks, telecom operators, and manufacturing conglomerates, we have identified three recurring bottlenecks:</p>
@@ -3898,7 +3907,7 @@
       'article-fintech-credit': {
         tag: 'FINTECH DEEP DIVE',
         tagClass: 'green',
-        title: 'Autonomous Credit Scoring in Emerging Markets: Ethical Boundaries and Algorithmic Precision',
+        title: 'AI-Assisted Credit Scoring in Emerging Markets: Ethical Boundaries and Algorithmic Precision',
         author: 'Kofi Amoah',
         date: 'October 2026 &bull; 7 min read',
         takeaways: [
@@ -4192,10 +4201,18 @@
     const downloadTitle = document.getElementById('download-modal-title');
 
     function openDownloadModal(reportName) {
+      // Route to the centralised lead-capture modal (tafa-leads.js) for real gating + PDF delivery
+      if (typeof tafaOpenDownloadModal === 'function') {
+        tafaOpenDownloadModal(reportName);
+        return;
+      }
+      // Fallback: show old modal
       if (downloadTitle) downloadTitle.textContent = `Download: ${reportName}`;
-      downloadModal.classList.add('open');
-      downloadModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      if (downloadModal) {
+        downloadModal.classList.add('open');
+        downloadModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeDownloadModal() {
@@ -4212,8 +4229,15 @@
 
     function handleDownloadSubmit(e) {
       e.preventDefault();
+      // Delegate to tafa-leads.js central modal for real lead capture + download
+      const titleEl = document.getElementById('download-modal-title');
+      const resourceName = (titleEl ? titleEl.textContent : '') || 'TAFA Executive Briefing';
       closeDownloadModal();
-      showToast('Thank you! The executive report PDF has been sent to your email.');
+      if (typeof tafaOpenDownloadModal === 'function') {
+        tafaOpenDownloadModal(resourceName);
+      } else {
+        showToast('Thank you! Your download request has been received.');
+      }
     }
 
     /* ================= AI READINESS TEST ================= */
@@ -4251,7 +4275,7 @@
       if (scoreNum) scoreNum.textContent = finalScore;
 
       if (finalScore >= 80) {
-        if (tierTitle) tierTitle.textContent = 'Tier 1: High Superintelligence Readiness';
+        if (tierTitle) tierTitle.textContent = 'Tier 1: High Enterprise AI Readiness';
         if (verdictText) verdictText.textContent = 'Your enterprise possesses strong foundations and is primed for custom autonomous agent workflows, Model Context Protocol integration, and competitive market acceleration.';
       } else if (finalScore >= 50) {
         if (tierTitle) tierTitle.textContent = 'Tier 2: Tactical Adopter / High Latent Growth';
@@ -4287,7 +4311,7 @@
       e.preventDefault();
       const emailInput = document.getElementById('newsletter-email');
       if (emailInput) emailInput.value = '';
-      showToast('Thank you! You are now subscribed to The African Superintelligence Memo.');
+      showToast('Thank you! You are now subscribed to The African AI Executive Memo.');
     }
 
     function copyShareLink() {
@@ -4306,6 +4330,12 @@
       }
     });
   </script>
+
+  <!-- ===== PAYSTACK INLINE CHECKOUT ===== -->
+  <script src="https://js.paystack.co/v1/inline.js" defer></script>
+  <!-- ===== TAFA LEAD CAPTURE & CONVERSION ENGINE ===== -->
+  <script src="./Asset/tafa-leads.js" defer></script>
+
 </body>
 
 </html>
