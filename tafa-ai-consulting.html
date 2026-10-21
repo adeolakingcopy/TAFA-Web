@@ -70,6 +70,26 @@
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #1d4ed8 transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #1d4ed8, #0A2E8F);
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #3b7bff, #1d4ed8);
     }
 
     body {
