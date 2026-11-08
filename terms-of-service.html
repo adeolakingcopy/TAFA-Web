@@ -582,6 +582,46 @@
       font-size: 12px;
       z-index: 3;
     }
+    
+    /* SVG Base & Header Button Icon Sizing */
+    svg.i {
+      width: 1em;
+      height: 1em;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex: none;
+    }
+    .btn svg.i,
+    .nav-end .btn svg.i,
+    .mobile-drawer-btn svg.i,
+    nav#nav .btn svg.i {
+      width: 16px !important;
+      height: 16px !important;
+      max-width: 16px !important;
+      max-height: 16px !important;
+      stroke-width: 2.2;
+      transition: transform .2s ease;
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .btn:hover svg.i,
+    .nav-end .btn:hover svg.i {
+      transform: translateX(4px);
+    }
+    nav#nav .nav-end .btn {
+      padding: 10px 18px;
+      font-size: 13.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+
     .nav-end {
       display: flex;
       align-items: center;
@@ -810,6 +850,305 @@
       }
     }
 
+  
+    /* ============================================================
+       TOP ANNOUNCEMENT BAR & MOBILE EVENT POP-UP
+       ============================================================ */
+    .top-announcement-bar {
+      background: #0b1f4d;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+      color: #fff;
+      font-size: 13px;
+      padding: 9px 16px;
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+      z-index: 999;
+    }
+    .top-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .top-bar-badge {
+      background: #fbbf24;
+      color: #061a3f;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      white-space: nowrap;
+    }
+    .top-bar-icon {
+      color: #fbbf24;
+      display: inline-block;
+      vertical-align: -2px;
+      margin-right: 4px;
+    }
+    .top-bar-link {
+      color: #fbbf24;
+      text-decoration: underline;
+      font-weight: 700;
+      margin-left: 4px;
+      white-space: nowrap;
+    }
+    /* On Mobile (<= 860px): Hide the tall top bar so header remains clean and visible */
+    @media (max-width: 860px) {
+      .top-announcement-bar {
+        display: none !important;
+      }
+    }
+
+    /* Mobile Event Pop-Up Card */
+    .mobile-event-popup {
+      display: none;
+      position: fixed;
+      bottom: -220px;
+      left: 14px;
+      right: 14px;
+      z-index: 10000;
+      max-width: 420px;
+      margin: 0 auto;
+      transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .mobile-event-popup.show {
+      bottom: 16px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .m-popup-card {
+      background: linear-gradient(135deg, rgba(6, 26, 63, 0.97) 0%, rgba(10, 36, 82, 0.98) 100%);
+      border: 1.5px solid rgba(251, 191, 36, 0.55);
+      border-radius: 18px;
+      padding: 14px 16px 14px 18px;
+      box-shadow: 0 16px 40px -8px rgba(6, 26, 63, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      color: #fff;
+      position: relative;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .m-popup-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.12);
+      border: none;
+      border-radius: 50%;
+      color: #e2e8f0;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background 0.15s ease;
+    }
+    .m-popup-close:active {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .m-popup-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      padding-right: 32px;
+    }
+    .m-popup-tag {
+      background: #fbbf24;
+      color: #061a3f;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 999px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .m-popup-dates {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #fbbf24;
+    }
+    .m-popup-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: 'Sora', sans-serif;
+      margin-bottom: 4px;
+      letter-spacing: -0.2px;
+    }
+    .m-popup-desc {
+      font-size: 12px;
+      color: #cbd5e1;
+      margin: 0 0 12px;
+      line-height: 1.4;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .m-popup-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .m-popup-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s ease;
+    }
+    .m-popup-btn:active {
+      transform: scale(0.97);
+    }
+    .m-popup-btn.primary {
+      background: #fbbf24;
+      color: #061a3f;
+      flex: 1;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.25);
+    }
+    .m-popup-btn.secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    @media (min-width: 861px) {
+      .mobile-event-popup {
+        display: none !important;
+      }
+    }
+
+  
+    /* ============================================================
+       MOBILE NAVIGATION DRAWER & HEADER RESPONSIVENESS
+       ============================================================ */
+    @media (max-width: 1020px) {
+      nav#nav,
+      nav {
+        flex-wrap: wrap !important;
+        padding: 10px 18px !important;
+      }
+
+      /* Hide Desktop "Book a Call" button in header on mobile */
+      nav#nav .nav-end .btn,
+      .nav-end .btn {
+        display: none !important;
+      }
+
+      nav#nav .nav-end,
+      .nav-end {
+        display: flex !important;
+        align-items: center !important;
+        margin-left: auto !important;
+      }
+
+      .menu-btn {
+        display: grid !important;
+        place-items: center !important;
+      }
+
+      /* Mobile Nav Links Drawer */
+      nav#nav ul#nav-links,
+      nav ul#nav-links {
+        display: none !important;
+        order: 3 !important;
+        flex-basis: 100% !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        padding: 10px 0 16px !important;
+        border-top: 1px solid var(--line, #e2e8f0) !important;
+        max-height: calc(85vh - 70px) !important;
+        overflow-y: auto !important;
+      }
+
+      nav#nav.open ul#nav-links,
+      nav.open ul#nav-links {
+        display: flex !important;
+      }
+
+      .mobile-cta-item {
+        display: block !important;
+        padding-top: 14px !important;
+        margin-top: 10px !important;
+        border-top: 1px solid var(--line, #e2e8f0) !important;
+      }
+
+      .mobile-drawer-btn {
+        display: flex !important;
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 13px 20px !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    /* ============================================================
+       UPCOMING OPEN EVENT / COHORT PROMO CARD (UN-SQUASHED MOBILE)
+       ============================================================ */
+    .cohort-promo-card {
+      background: #ffffff;
+      border: 2px solid #3b82f6;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(6, 26, 63, .08);
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0;
+      margin-bottom: 32px;
+    }
+    .cohort-promo-cover {
+      background: #061a3f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cohort-promo-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 16 / 9;
+    }
+    .cohort-promo-body {
+      padding: clamp(24px, 4vw, 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media (max-width: 900px) {
+      .cohort-promo-card {
+        grid-template-columns: 1fr !important;
+      }
+      .cohort-promo-cover {
+        width: 100%;
+        max-height: 320px;
+        background: #061a3f;
+      }
+      .cohort-promo-cover img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+      }
+      .cohort-promo-body {
+        padding: 24px 20px;
+      }
+    }
+
   </style>
 </head>
 
@@ -921,10 +1260,12 @@
     </defs>
   </svg>
     <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
-  <aside style="background:#0b1f4d;border-bottom:1px solid rgba(251,191,36,.3);color:#fff;font-size:13px;padding:9px 16px;text-align:center;font-weight:600;display:flex;align-items:center;justify-content:center;gap:12px;position:relative;z-index:999;">
-    <span style="background:#fbbf24;color:#061a3f;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;">FREE LIVE EVENT</span>
-    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#fbbf24;display:inline-block;vertical-align:-2px;margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <strong>2-Day Virtual AI Mastery Class</strong> (21&ndash;22 Nov 2026 via Zoom) &bull; Real skills, practical tools &amp; immediate impact.</span>
-    <a href="free-ai-mastery-class.html" style="color:#fbbf24;text-decoration:underline;font-weight:700;margin-left:4px;">Claim Free Seat &rarr;</a>
+  <aside id="top-announcement-bar" class="top-announcement-bar" data-expire="2026-11-23T00:00:00">
+    <div class="top-bar-inner">
+      <span class="top-bar-badge">FREE LIVE EVENT</span>
+      <span class="top-bar-text"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="top-bar-icon"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <strong>2-Day Virtual AI Mastery Class</strong> (21&ndash;22 Nov 2026 via Zoom) &bull; Real skills, practical tools &amp; immediate impact.</span>
+      <a href="free-ai-mastery-class.html" class="top-bar-link">Claim Free Seat &rarr;</a>
+    </div>
   </aside>
 
   <header class="hero">
@@ -1372,6 +1713,71 @@
           setMenu(false);
         }
       });
+    })();
+  </script>
+  <!-- ================= MOBILE EVENT POP-UP / TOAST ================= -->
+  <div id="mobile-event-popup" class="mobile-event-popup" data-expire="2026-11-23T00:00:00" role="dialog" aria-label="Upcoming Free Event">
+    <div class="m-popup-card">
+      <button class="m-popup-close" id="m-popup-close-btn" aria-label="Dismiss notification">&times;</button>
+      <div class="m-popup-header">
+        <span class="m-popup-tag">FREE LIVE EVENT</span>
+        <span class="m-popup-dates">21&ndash;22 Nov 2026</span>
+      </div>
+      <div class="m-popup-body">
+        <div class="m-popup-title">2-Day Virtual AI Mastery Class</div>
+        <p class="m-popup-desc">Live Zoom workshop. Learn prompt engineering, workplace automation &amp; build a real AI solution.</p>
+      </div>
+      <div class="m-popup-actions">
+        <a href="free-ai-mastery-class.html" class="m-popup-btn primary">Claim Free Seat &rarr;</a>
+        <a href="https://forms.gle/r8kEEanVCL1nZqg37" target="_blank" rel="noopener noreferrer" class="m-popup-btn secondary">Google Form</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Event Notification & Expiry Controller
+    (function () {
+      var eventEndDate = new Date('2026-11-23T00:00:00');
+      var now = new Date();
+      var topBar = document.getElementById('top-announcement-bar');
+      var mPopup = document.getElementById('mobile-event-popup');
+
+      // Auto-expire check: Do not show if event date has passed
+      if (now > eventEndDate) {
+        if (topBar) topBar.style.display = 'none';
+        if (mPopup) mPopup.remove();
+        return;
+      }
+
+      // Mobile Popup Trigger
+      if (mPopup && window.innerWidth <= 860) {
+        var dismissedAt = localStorage.getItem('tafa_event_dismissed');
+        var oneDay = 24 * 60 * 60 * 1000;
+        if (dismissedAt && (now.getTime() - parseInt(dismissedAt, 10) < oneDay)) {
+          return;
+        }
+
+        // Don't show popup on the dedicated class page itself
+        if (window.location.pathname.indexOf('free-ai-mastery-class') !== -1) {
+          return;
+        }
+
+        mPopup.style.display = 'block';
+        setTimeout(function () {
+          mPopup.classList.add('show');
+        }, 1800);
+
+        var closeBtn = document.getElementById('m-popup-close-btn');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            mPopup.classList.remove('show');
+            setTimeout(function () {
+              mPopup.style.display = 'none';
+            }, 400);
+            localStorage.setItem('tafa_event_dismissed', now.getTime().toString());
+          });
+        }
+      }
     })();
   </script>
 </body>
