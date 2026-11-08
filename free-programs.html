@@ -1121,6 +1121,205 @@
       }
     }
 
+
+    /* ============================================================
+       COUNTDOWN BAR
+       ============================================================ */
+    .fp-countdown-bar {
+      background: linear-gradient(90deg, #061a3f 0%, #0a2452 100%);
+      border-bottom: 2px solid rgba(251,191,36,.35);
+      padding: 14px 0;
+    }
+    .fp-cd-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .fp-cd-label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .fp-cd-label strong {
+      font-size: 13px;
+      font-weight: 800;
+      color: #fbbf24;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .fp-cd-label span {
+      font-size: 12px;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+    .fp-cd-units {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .fp-cd-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      padding: 8px 14px;
+      min-width: 54px;
+    }
+    .fp-cd-box span:first-child {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Sora', system-ui, sans-serif;
+      line-height: 1.1;
+      letter-spacing: -.5px;
+    }
+    .fp-cd-box span:last-child {
+      font-size: 10px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 2px;
+    }
+    .fp-cd-sep {
+      font-size: 22px;
+      font-weight: 800;
+      color: rgba(251,191,36,.6);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .fp-cd-done {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fbbf24;
+      letter-spacing: .02em;
+    }
+
+    /* ============================================================
+       MOBILE OVERFLOW GUARD
+       ============================================================ */
+    @media (max-width: 768px) {
+      html, body { overflow-x: hidden; }
+      *, *::before, *::after { box-sizing: border-box; }
+      img, svg { max-width: 100%; }
+      .wrap { padding: 0 16px; }
+
+      /* Featured card – stack + contain image */
+      .featured-card {
+        grid-template-columns: 1fr !important;
+        border-radius: 14px !important;
+        overflow: hidden;
+      }
+      .featured-cover-col {
+        width: 100%;
+        max-height: 240px;
+        overflow: hidden;
+      }
+      .featured-cover-col img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+      }
+      .featured-body {
+        padding: 22px 18px !important;
+      }
+
+      /* Prog cards */
+      .prog-grid { grid-template-columns: 1fr !important; }
+      .prog-card {
+        padding: 24px 18px !important;
+        overflow: hidden;
+      }
+
+      /* Countdown bar on mobile */
+      .fp-cd-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+      }
+      .fp-cd-box {
+        min-width: 48px;
+        padding: 7px 10px;
+      }
+      .fp-cd-box span:first-child { font-size: 18px; }
+      .fp-cd-btn { width: 100%; justify-content: center; text-align: center; }
+
+      /* Featured meta items wrap cleanly */
+      .featured-meta {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .featured-meta-item {
+        font-size: 13px;
+      }
+
+      /* Button row in featured card */
+      .featured-body > div[style*="display:flex"] {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+      .featured-body .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        padding: 12px 18px !important;
+      }
+
+      /* Foot */
+      .foot-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .foot-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .foot-base {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+
+    /* ============================================================
+       MOBILE TEXT CENTERING
+       ============================================================ */
+    @media (max-width: 768px) {
+      .hero { text-align: center; }
+      .hero h1, .hero p, .eyebrow { text-align: center; }
+      .hero .ctas { justify-content: center; flex-wrap: wrap; }
+
+      .featured-body h2,
+      .featured-body > p,
+      .status-badge { text-align: center; }
+      .status-badge { margin-left: auto; margin-right: auto; }
+
+      .featured-meta { align-items: center; }
+
+      .sec-kicker, .sec-title { text-align: center; }
+      .sec > .wrap > p { text-align: center; }
+
+      .prog-card { text-align: center; }
+      .prog-card .prog-type-pill { margin-left: auto; margin-right: auto; }
+      .prog-card > div:last-child .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .foot-top { align-items: center; }
+      .foot-nav { align-items: center; }
+      .foot-base { align-items: center; text-align: center; }
+      .foot-base > div { justify-content: center; }
+    }
   </style>
 </head>
 
@@ -1482,6 +1681,41 @@
       </nav>
     </div>
 
+
+  <!-- ================= COUNTDOWN TIMER BAR ================= -->
+  <section class="fp-countdown-bar" id="fp-countdown-bar" data-expire="2026-11-23T00:00:00">
+    <div class="wrap fp-cd-flex">
+      <div class="fp-cd-label">
+        <strong>2-Day Free AI Mastery Class</strong>
+        <span>21&ndash;22 November 2026 &bull; Live via Zoom</span>
+      </div>
+      <div class="fp-cd-units" id="fp-cd-units">
+        <div class="fp-cd-box">
+          <span id="fp-days">00</span>
+          <span>Days</span>
+        </div>
+        <span class="fp-cd-sep">:</span>
+        <div class="fp-cd-box">
+          <span id="fp-hours">00</span>
+          <span>Hours</span>
+        </div>
+        <span class="fp-cd-sep">:</span>
+        <div class="fp-cd-box">
+          <span id="fp-mins">00</span>
+          <span>Mins</span>
+        </div>
+        <span class="fp-cd-sep">:</span>
+        <div class="fp-cd-box">
+          <span id="fp-secs">00</span>
+          <span>Secs</span>
+        </div>
+      </div>
+      <a href="free-ai-mastery-class.html" class="btn gold fp-cd-btn" style="font-size:13.5px;padding:11px 22px;white-space:nowrap;">
+        Register Free &rarr;
+      </a>
+    </div>
+  </section>
+
   <section class="hero">
     <div class="wrap">
       <span class="eyebrow">TAFA COMMUNITY &amp; LEARNING INITIATIVES</span>
@@ -1721,6 +1955,58 @@
           });
         }
       }
+    })();
+  </script>
+
+  <script>
+    // Countdown Timer for Free AI Mastery Class
+    (function () {
+      var bar = document.getElementById('fp-countdown-bar');
+      if (!bar) return;
+
+      var eventDate = new Date('2026-11-21T09:00:00');
+      var expireDate = new Date('2026-11-23T00:00:00');
+      var now = new Date();
+
+      // Hide bar entirely after event expires
+      if (now >= expireDate) {
+        bar.style.display = 'none';
+        return;
+      }
+
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+      function updateCountdown() {
+        var now = new Date();
+        var diff = eventDate - now;
+
+        if (diff <= 0) {
+          // Event is live / in progress
+          var unitsEl = document.getElementById('fp-cd-units');
+          if (unitsEl) {
+            unitsEl.innerHTML = '<span class="fp-cd-done">Event is Live Now!</span>';
+          }
+          return;
+        }
+
+        var days  = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins  = Math.floor((diff % 3600000) / 60000);
+        var secs  = Math.floor((diff % 60000) / 1000);
+
+        var dEl = document.getElementById('fp-days');
+        var hEl = document.getElementById('fp-hours');
+        var mEl = document.getElementById('fp-mins');
+        var sEl = document.getElementById('fp-secs');
+
+        if (dEl) dEl.textContent = pad(days);
+        if (hEl) hEl.textContent = pad(hours);
+        if (mEl) mEl.textContent = pad(mins);
+        if (sEl) sEl.textContent = pad(secs);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
     })();
   </script>
 </body>
