@@ -339,24 +339,833 @@
         align-items: flex-start;
       }
     }
+  
+    /* ============================================================
+       UNIVERSAL NAVIGATION & MEGA-MENU CSS
+       ============================================================ */
+    .hero > .wrap, .nav-wrap-container {
+      position: relative;
+      z-index: 1000;
+    }
+    nav#nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 10px 24px;
+      color: var(--navy);
+      position: relative;
+    }
+    nav#nav .logo {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+    nav#nav img.mark {
+      width: auto;
+      height: 40px;
+      max-width: 190px;
+      object-fit: contain;
+      display: block;
+    }
+    nav#nav ul#nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .mobile-cta-item {
+      display: none;
+    }
+    nav#nav .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 2px;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font: inherit;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    nav#nav .nav-link:hover,
+    nav#nav .has-mega:hover > .nav-link,
+    nav#nav .has-mega.expanded > .nav-link {
+      color: var(--blue, #1d4ed8);
+    }
+    nav#nav .nav-link.on {
+      border-bottom-color: var(--gold, #fbbf24);
+      color: var(--blue, #1d4ed8);
+      font-weight: 700;
+    }
+    .chevron-icon {
+      width: 13px;
+      height: 13px;
+      stroke-width: 2.4;
+      flex-shrink: 0;
+      transition: transform 0.22s ease;
+    }
+    .has-mega:hover > .nav-link .chevron-icon,
+    .has-mega.is-active > .nav-link .chevron-icon,
+    .has-mega.expanded > .nav-link .chevron-icon {
+      transform: rotate(180deg);
+    }
+    @media (min-width: 1021px) {
+      .nav-item.has-mega {
+        position: static;
+      }
+      .mega-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%) translateY(8px);
+        width: min(1040px, calc(100% - 24px));
+        background: #ffffff;
+        border-radius: 22px;
+        padding: 24px 24px 20px;
+        box-shadow: 0 24px 50px -12px rgba(6, 26, 63, 0.22), 0 0 0 1px rgba(6, 26, 63, 0.08);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+        z-index: 1200;
+      }
+      .mega-menu::before {
+        content: "";
+        position: absolute;
+        top: -16px;
+        left: 0;
+        right: 0;
+        height: 18px;
+      }
+      .has-mega:hover .mega-menu,
+      .has-mega:focus-within .mega-menu,
+      .has-mega.is-active .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    .mega-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 270px;
+      gap: 20px;
+      align-items: stretch;
+      text-align: left;
+    }
+    .mega-col-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin: 0 0 10px;
+      display: block;
+      padding-left: 6px;
+    }
+    .mega-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .mega-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 9px 10px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--navy, #061a3f);
+      transition: background 0.16s ease, transform 0.16s ease;
+    }
+    .mega-item:hover {
+      background: #f4f7fc;
+      transform: translateX(3px);
+    }
+    .mega-tile {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      margin-top: 2px;
+      box-shadow: 0 4px 10px -3px rgba(6, 26, 63, 0.25);
+    }
+    .mega-tile.blue { background: linear-gradient(135deg, #1d4ed8, #0A2E8F); }
+    .mega-tile.purple { background: linear-gradient(135deg, #5b3fe6, #3b22b5); }
+    .mega-tile.gold { background: linear-gradient(135deg, #fbbf24, #d97706); color: #061a3f; }
+    .mega-tile.green { background: linear-gradient(135deg, #14a84f, #0e8a3e); }
+    .mega-tile svg.i { width: 18px; height: 18px; stroke-width: 2; }
+    .mega-item-body { flex: 1; min-width: 0; }
+    .mega-item-head { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; line-height: 1.25; }
+    .mega-item-head strong { font-size: 13.5px; font-weight: 700; color: var(--navy, #061a3f); }
+    .mega-item:hover .mega-item-head strong { color: var(--blue, #1d4ed8); }
+    .mega-badge { font-size: 9.5px; font-weight: 800; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 999px; line-height: 1.2; text-transform: uppercase; white-space: nowrap; }
+    .mega-badge.gold { background: #fef3c7; color: #92400e; }
+    .mega-badge.blue { background: #dbeafe; color: #1e40af; }
+    .mega-badge.purple { background: #ede9fe; color: #5b21b6; }
+    .mega-badge.green { background: #dcfce7; color: #166534; }
+    .mega-item p { font-size: 12px; color: #64748b; margin: 3px 0 0; line-height: 1.38; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .mega-promo-card {
+      border-radius: 16px;
+      padding: 0;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 24px -6px rgba(10, 46, 143, 0.4);
+      position: relative;
+      overflow: hidden;
+      min-height: 270px;
+      background: linear-gradient(135deg, rgba(6, 26, 63, 0.93) 0%, rgba(6, 26, 63, 0.72) 55%, rgba(10, 46, 143, 0.4) 100%), url('./mega-promo-consulting.png') center right / cover no-repeat;
+    }
+    .mega-promo-card.purple-promo {
+      background: linear-gradient(135deg, rgba(27, 10, 74, 0.93) 0%, rgba(35, 12, 90, 0.72) 55%, rgba(74, 47, 208, 0.4) 100%), url('./mega-promo-academy.png') center right / cover no-repeat;
+      box-shadow: 0 10px 24px -6px rgba(74, 47, 208, 0.4);
+    }
+    .mega-promo-content {
+      position: relative;
+      z-index: 2;
+      padding: 22px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      flex: 1;
+      box-sizing: border-box;
+    }
+    .mega-promo-tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold, #fbbf24);
+      margin-bottom: 8px;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.32);
+      padding: 3px 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+    .mega-promo-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 0 0 8px;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+    .mega-promo-card p {
+      font-size: 12px;
+      color: #e2e8f0;
+      margin: 0 0 16px;
+      line-height: 1.45;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .mega-promo-btn {
+      align-self: flex-start;
+      padding: 9px 16px;
+      font-size: 12px;
+      z-index: 3;
+    }
+    .nav-end {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1.5px solid var(--line, #e2e8f0);
+      background: #fff;
+      color: var(--navy, #061a3f);
+      cursor: pointer;
+      place-items: center;
+      padding: 0;
+    }
+    .menu-btn svg.i {
+      width: 22px;
+      height: 22px;
+    }
+    @media (max-width: 1020px) {
+      nav#nav {
+        flex-wrap: wrap;
+        padding: 10px 18px;
+      }
+      nav#nav ul#nav-links {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0 16px;
+        border-top: 1px solid var(--line, #e2e8f0);
+        max-height: calc(85vh - 70px);
+        overflow-y: auto;
+      }
+      nav#nav.open ul#nav-links {
+        display: flex;
+      }
+      nav#nav .nav-item {
+        width: 100%;
+      }
+      nav#nav .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 10px;
+        width: 100%;
+        border-radius: 10px;
+        border-bottom: 1px solid rgba(227, 232, 242, 0.7);
+        font-size: 15px;
+        font-weight: 600;
+        transition: background 0.18s ease, color 0.18s ease;
+      }
+      nav#nav .nav-link:active,
+      nav#nav .has-mega.expanded > .nav-link {
+        background: #edf2f7;
+        color: var(--blue, #1d4ed8);
+      }
+      nav#nav .nav-link.on {
+        color: var(--blue, #1d4ed8);
+        border-bottom-color: var(--gold, #fbbf24);
+        font-weight: 700;
+      }
+      .has-mega .mega-menu {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: none;
+        border-radius: 14px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 10px 10px 12px;
+        display: none;
+        margin: 6px 0 12px;
+        transition: none;
+      }
+      .has-mega.expanded .mega-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        animation: megaFadeIn 0.2s ease-out;
+      }
+      @keyframes megaFadeIn {
+        from { opacity: 0; transform: translateY(-4px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .has-mega.expanded > .nav-link .chevron-icon {
+        transform: rotate(180deg);
+      }
+      .mega-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      .mega-col-title {
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #64748b;
+        margin: 4px 0 4px 4px;
+        display: block;
+      }
+      .mega-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .mega-item {
+        background: #ffffff;
+        border: 1px solid #edf2f7;
+        border-radius: 10px;
+        padding: 10px 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        transform: none;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      .mega-item:active {
+        background: #eff6ff;
+        border-color: #bfdbfe;
+        transform: none;
+      }
+      .mega-tile {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+      }
+      .mega-tile svg.i {
+        width: 16px;
+        height: 16px;
+      }
+      .mega-item-body {
+        flex: 1;
+        min-width: 0;
+      }
+      .mega-item-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        width: 100%;
+      }
+      .mega-item-head strong {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: var(--navy, #061a3f);
+      }
+      .mega-item p {
+        display: none;
+      }
+      .mega-promo-card {
+        min-height: auto;
+        border-radius: 12px;
+        margin-top: 4px;
+        overflow: hidden;
+      }
+      .mega-promo-content {
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .mega-promo-tag {
+        font-size: 9px;
+        padding: 2px 7px;
+        margin-bottom: 0;
+        align-self: flex-start;
+      }
+      .mega-promo-card h4 {
+        font-size: 13px;
+        margin: 0;
+        line-height: 1.3;
+      }
+      .mega-promo-card p {
+        display: none;
+      }
+      .mega-promo-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 9px 14px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .mobile-cta-item {
+        display: block;
+        padding-top: 12px;
+        margin-top: 8px;
+        border-top: 1px solid var(--line, #e2e8f0);
+      }
+      .mobile-drawer-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 13px 20px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .nav-end {
+        margin-left: auto;
+      }
+      .menu-btn {
+        display: grid;
+      }
+      .hero > .wrap:has(nav.open),
+      .hero > .wrap.nav-open,
+      .nav-wrap-container:has(nav.open),
+      .nav-wrap-container.nav-open {
+        border-radius: 24px;
+        box-shadow: 0 16px 40px rgba(6, 26, 63, 0.16);
+      }
+    }
+
   </style>
 </head>
 
 <body>
+  <!-- ================= SVG ICON SPRITE ================= -->
+  <svg width="0" height="0" class="visually-hidden" style="display:none" aria-hidden="true" id="tafa-icon-sprite">
+    <defs>
+      <symbol id="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 5l7 7-7 7" />
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </symbol>
+      <symbol id="ppl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+      </symbol>
+      <symbol id="srch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </symbol>
+      <symbol id="pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </symbol>
+      <symbol id="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </symbol>
+      <symbol id="chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </symbol>
+      <symbol id="user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </symbol>
+      <symbol id="bld" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" />
+        <line x1="9" y1="22" x2="9" y2="18" />
+        <line x1="15" y1="22" x2="15" y2="18" />
+        <line x1="8" y1="6" x2="10" y2="6" />
+        <line x1="14" y1="6" x2="16" y2="6" />
+        <line x1="8" y1="10" x2="10" y2="10" />
+        <line x1="14" y1="10" x2="16" y2="10" />
+        <line x1="8" y1="14" x2="10" y2="14" />
+        <line x1="14" y1="14" x2="16" y2="14" />
+      </symbol>
+      <symbol id="bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </symbol>
+      <symbol id="book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+      </symbol>
+      <symbol id="briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      </symbol>
+      <symbol id="trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+        <polyline points="17 6 23 6 23 12" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+      </symbol>
+      <symbol id="award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="7" />
+        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+      </symbol>
+      <symbol id="gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+        <path d="M19.4 15a8 8 0 1 0-14.8 0" />
+        <path d="M12 9v3" />
+      </symbol>
+      <symbol id="laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="12" rx="2" />
+        <line x1="2" y1="20" x2="22" y2="20" />
+      </symbol>
+      <symbol id="in" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </symbol>
+      <symbol id="ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </symbol>
+      <symbol id="yt" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+      </symbol>
+    </defs>
+  </svg>
+    <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <aside style="background:#0b1f4d;border-bottom:1px solid rgba(251,191,36,.3);color:#fff;font-size:13px;padding:9px 16px;text-align:center;font-weight:600;display:flex;align-items:center;justify-content:center;gap:12px;position:relative;z-index:999;">
+    <span style="background:#fbbf24;color:#061a3f;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;">FREE LIVE EVENT</span>
+    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#fbbf24;display:inline-block;vertical-align:-2px;margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <strong>2-Day Virtual AI Mastery Class</strong> (21&ndash;22 Nov 2026 via Zoom) &bull; Real skills, practical tools &amp; immediate impact.</span>
+    <a href="free-ai-mastery-class.html" style="color:#fbbf24;text-decoration:underline;font-weight:700;margin-left:4px;">Claim Free Seat &rarr;</a>
+  </aside>
+
   <header class="hero">
     <div class="wrap">
-      <nav class="nav-wrap">
-        <a class="logo" href="index.html">
-          <img src="./tafa-log.png" alt="TalentFlow Africa Logo">
-        </a>
-        <ul class="nav-links">
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="tafa-what-we-do.html">What We Do</a></li>
-          <li><a class="nav-link" href="tafa-ai-consulting.html">AI Consulting</a></li>
-          <li><a class="nav-link" href="tafa-academy.html">TAFA Academy</a></li>
-          <li><a class="nav-link" href="tafa-insights.html">Insights</a></li>
+      <nav aria-label="Main" id="nav">
+        <a class="logo" href="index.html" aria-label="TalentFlow Africa Home"><img width="180" src="./tafa-log.png"
+            alt="TalentFlow Africa Logo" class="mark"></a>
+        <ul id="nav-links">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <!-- What We Do Mega Menu -->
+          <li class="nav-item has-mega">
+            <a href="tafa-what-we-do.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
+              What We Do
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="mega-menu" role="region" aria-label="What We Do Menu">
+              <div class="mega-grid">
+                <div>
+                  <span class="mega-col-title">Core Services</span>
+                  <div class="mega-list">
+                    <a href="tafa-ai-consulting.html" class="mega-item">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Consulting &amp; Solutions</strong>
+                          <span class="mega-badge gold">Core</span>
+                        </div>
+                        <p>Diagnostics, custom AI solutions, workflows and measurable ROI for business.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-what-we-do.html#workforce" class="mega-item">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#ppl" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Workforce Transformation</strong>
+                        </div>
+                        <p>Upskill cross-functional teams with practical AI workflows and prompt craft.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-what-we-do.html#agents" class="mega-item">
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#laptop" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Autonomous Agents &amp; Systems</strong>
+                        </div>
+                        <p>Deploy secure agentic systems, RAG architectures, and custom automations.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <span class="mega-col-title">Quick Links</span>
+                  <div class="mega-list">
+                    <a href="tafa-what-we-do.html#framework" class="mega-item">
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#chart" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>4D Delivery Framework</strong>
+                        </div>
+                        <p>Diagnose, Design, Deploy, Scale &mdash; structured execution that delivers results.</p>
+                      </div>
+                    </a>
+                    <a href="index.html#programs" class="mega-item">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#cap" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Executive AI Briefings</strong>
+                        </div>
+                        <p>Tailored briefings for boards, executive directors, and business unit leaders.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-what-we-do.html#enterprise-security" class="mega-item">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#bolt" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Enterprise AI Governance</strong>
+                          <span class="mega-badge blue">Safe AI</span>
+                        </div>
+                        <p>Compliance, ethical risk mitigation, NDPR data privacy, and secure AI adoption.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="mega-promo-card">
+                    <div class="mega-promo-content">
+                      <div>
+                        <span class="mega-promo-tag">Strategic Audit</span>
+                        <h4>Enterprise AI Diagnostic</h4>
+                        <p>Pinpoint high-ROI automation opportunities and build a tailored implementation roadmap.</p>
+                      </div>
+                      <a href="tafa-ai-consulting.html#book" class="btn gold mega-promo-btn">Request Diagnostic &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- TAFA Academy Mega Menu -->
+          <li class="nav-item has-mega">
+            <a href="tafa-academy.html" class="nav-link mega-trigger" aria-haspopup="true" aria-expanded="false">
+              TAFA Academy
+              <svg class="chevron-icon i" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="mega-menu" role="region" aria-label="TAFA Academy Menu">
+              <div class="mega-grid">
+                <div>
+                  <span class="mega-col-title">Schools &amp; Tracks</span>
+                  <div class="mega-list">
+                    <a href="tafa-academy.html#executive" class="mega-item">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#user" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Executive &amp; Leadership Track</strong>
+                          <span class="mega-badge gold">Leadership</span>
+                        </div>
+                        <p>Strategic decision-making, AI governance, and high-impact deployment roadmaps.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#engineering" class="mega-item">
+                      <span class="mega-tile purple"><svg class="i">
+                          <use href="#laptop" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Applied AI Engineering</strong>
+                          <span class="mega-badge purple">Builders</span>
+                        </div>
+                        <p>Production LLMs, multi-agent frameworks, fine-tuning, and robust RAG pipelines.</p>
+                      </div>
+                    </a>
+                    <a href="tafa-academy.html#business" class="mega-item">
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#gear" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Enterprise Workflow Automation</strong>
+                        </div>
+                        <p>End-to-end task automation, custom bots, and modern workflow intelligence.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <span class="mega-col-title">Featured Cohorts</span>
+                  <div class="mega-list">
+                    <a href="course-preview.html?id=ai-mastery-prompt-eng" class="mega-item">
+                      <span class="mega-tile gold"><svg class="i">
+                          <use href="#pen" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>AI Mastery &amp; Prompt Engineering</strong>
+                          <span class="mega-badge gold">Enroll Open</span>
+                        </div>
+                        <p>Hands-on mastery of advanced reasoning, system prompts, and multi-modal models.</p>
+                      </div>
+                    </a>
+                    <a href="course-preview.html?id=enterprise-ai-systems" class="mega-item">
+                      <span class="mega-tile blue"><svg class="i">
+                          <use href="#bld" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Enterprise AI Systems Architect</strong>
+                        </div>
+                        <p>Design and deploy resilient, production-ready AI solutions for enterprise scale.</p>
+                      </div>
+                    </a>
+                    <a href="free-ai-mastery-class.html" class="mega-item">
+                      <span class="mega-tile green"><svg class="i">
+                          <use href="#bolt" />
+                        </svg></span>
+                      <div class="mega-item-body">
+                        <div class="mega-item-head">
+                          <strong>Virtual Free AI Mastery Class</strong>
+                          <span class="mega-badge green">Free Event</span>
+                        </div>
+                        <p>2-day intensive virtual class covering AI tools, workflows &amp; real business use cases.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="mega-promo-card purple-promo">
+                    <div class="mega-promo-content">
+                      <div>
+                        <span class="mega-promo-tag">Next Cohort</span>
+                        <h4>Join TAFA Academy</h4>
+                        <p>Live cohort-based learning, hands-on enterprise projects, and verified credentials.</p>
+                      </div>
+                      <a href="tafa-academy.html#programs" class="btn gold mega-promo-btn">Explore All Programs &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="free-programs.html">Free Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="tafa-insights.html">Insights</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+
+          <!-- Mobile CTA in Drawer -->
+          <li class="nav-item mobile-cta-item">
+            <a class="btn gold mobile-drawer-btn" href="tafa-ai-consulting.html#book">Book a Consultation <svg
+                class="i">
+                <use href="#arr" />
+              </svg></a>
+          </li>
         </ul>
-        <a class="btn gold" href="tafa-ai-consulting.html#book">Book Consultation</a>
+        <div class="nav-end">
+          <a class="btn gold" href="tafa-ai-consulting.html#book">Book a Call <svg class="i">
+              <use href="#arr" />
+            </svg></a>
+          <button class="menu-btn" aria-label="Toggle navigation" aria-expanded="false"><svg class="i">
+              <use href="#menu" />
+            </svg></button>
+        </div>
       </nav>
 
       <div class="hero-content">
@@ -502,6 +1311,69 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Universal Mobile Menu & Mega Menu Accordion Handler
+    (function () {
+      var nav = document.getElementById('nav');
+      if (!nav) return;
+      var mb = nav.querySelector('.menu-btn');
+      var wrap = nav.closest('.wrap, .nav-wrap');
+      var megaItems = nav.querySelectorAll('.has-mega');
+
+      function setMenu(open) {
+        nav.classList.toggle('open', open);
+        if (wrap) wrap.classList.toggle('nav-open', open);
+        if (mb) mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (!open) {
+          megaItems.forEach(function (other) {
+            other.classList.remove('expanded');
+            var tr = other.querySelector('.mega-trigger');
+            if (tr) tr.setAttribute('aria-expanded', 'false');
+          });
+        }
+      }
+
+      if (mb) {
+        mb.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setMenu(!nav.classList.contains('open'));
+        });
+      }
+
+      megaItems.forEach(function (item) {
+        var trigger = item.querySelector('.mega-trigger');
+        if (!trigger) return;
+        trigger.addEventListener('click', function (e) {
+          if (window.innerWidth <= 1020) {
+            e.preventDefault();
+            e.stopPropagation();
+            var wasExpanded = item.classList.contains('expanded');
+            megaItems.forEach(function (other) {
+              other.classList.remove('expanded');
+              var tr = other.querySelector('.mega-trigger');
+              if (tr) tr.setAttribute('aria-expanded', 'false');
+            });
+            if (!wasExpanded) {
+              item.classList.add('expanded');
+              trigger.setAttribute('aria-expanded', 'true');
+            }
+          }
+        });
+      });
+
+      nav.querySelectorAll('a:not(.mega-trigger)').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (window.innerWidth <= 1020) setMenu(false);
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (nav.classList.contains('open') && !nav.contains(e.target)) {
+          setMenu(false);
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEMURE MODELS — Presence. Poise. Power.</title>
+  <meta name="description" content="DEMURE MODELS is an international talent agency discovering, developing, and selectively representing talent across fashion, commercial, beauty, and screen.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/demure-monogram.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            demure: {
+              orange: '#FF5500',
+              dark: '#060608',
+              card: '#0a0a0d'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#000000] text-[#FFFFFF] antialiased selection:bg-[#FF5500] selection:text-white">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Mobile Top Navigation Bar (Visible on mobile/tablet) -->
+  <header class="lg:hidden sticky top-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <img src="assets/demure-monogram.png" alt="DM" class="h-8 w-8 object-contain" />
+      <span class="text-xs font-bold tracking-editorial uppercase text-white">DEMURE <span class="text-orange-500">MODELS</span></span>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a href="#sec-desk" class="px-3.5 py-1.5 bg-white text-black text-[10px] font-bold tracking-editorial uppercase">
+        Book
+      </a>
+      <button 
+        onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" 
+        class="text-zinc-400 hover:text-white p-1"
+        aria-label="Toggle menu"
+      >
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div id="mobile-drawer" class="hidden lg:hidden bg-zinc-950 border-b border-white/10 px-6 py-6 space-y-4 text-xs uppercase tracking-editorial text-zinc-400">
+    <a href="#sec-roster" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" class="block hover:text-white">01 / Roster</a>
+    <a href="#sec-philosophy" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" class="block hover:text-white">02 / Philosophy</a>
+    <a href="#sec-services" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" class="block hover:text-white">03 / Practice</a>
+    <a href="#sec-bootcamp" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" class="block hover:text-white">04 / Bootcamp</a>
+    <a href="#sec-welfare" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" class="block hover:text-white">05 / Welfare</a>
+    <a href="#sec-desk" onclick="document.getElementById('mobile-drawer').classList.add('hidden')" class="block hover:text-white">06 / Agency Desk</a>
+  </div>
+
+  <!-- Main Container: Split-Pane Architecture -->
+  <div class="max-w-[1600px] mx-auto min-h-screen flex flex-col lg:flex-row">
+    
+    <!-- LEFT PANE: Sticky Editorial Anchor (Desktop ~38%) -->
+    <aside class="hidden lg:flex lg:w-[38%] left-pane-sticky flex-col justify-between p-12 xl:p-16 border-r border-white/10 bg-[#060608]">
+      
+      <!-- Top Brand Anchor -->
+      <div class="space-y-8">
+        
+        <!-- Logo -->
+        <a href="#" class="block group">
+          <div class="flex items-center gap-3.5 mb-2">
+            <img src="assets/demure-monogram.png" alt="DM" class="h-9 w-9 object-contain" />
+            <span class="text-base font-bold tracking-editorial uppercase text-white group-hover:text-zinc-300 transition-colors">
+              DEMURE <span class="text-orange-500">MODELS</span>
+            </span>
+          </div>
+          <div class="text-[10px] font-mono tracking-wide-editorial text-zinc-500 uppercase">
+            Presence • Poise • Power
+          </div>
+        </a>
+
+        <!-- Tagline & Core Statement -->
+        <div class="space-y-3 pt-2">
+          <div class="text-2xl xl:text-3xl font-bold tracking-tight uppercase text-white leading-tight">
+            Make an <br />
+            <span class="text-orange-500">Impression.</span>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed font-light max-w-sm">
+            An international talent agency discovering, developing, and selectively representing models across fashion, commercial, beauty, and screen productions.
+          </p>
+        </div>
+
+        <!-- Vertical Editorial Navigation with Scrollspy -->
+        <nav class="space-y-3.5 pt-6 border-t border-white/5">
+          <a href="#sec-roster" class="editorial-nav-link active">
+            <span class="nav-indicator"></span>
+            <span>01 / The Roster</span>
+          </a>
+          <a href="#sec-philosophy" class="editorial-nav-link">
+            <span class="nav-indicator"></span>
+            <span>02 / Philosophy & Purpose</span>
+          </a>
+          <a href="#sec-services" class="editorial-nav-link">
+            <span class="nav-indicator"></span>
+            <span>03 / Services & Practice</span>
+          </a>
+          <a href="#sec-bootcamp" class="editorial-nav-link">
+            <span class="nav-indicator"></span>
+            <span>04 / DEMURE Bootcamp '26</span>
+          </a>
+          <a href="#sec-welfare" class="editorial-nav-link">
+            <span class="nav-indicator"></span>
+            <span>05 / Professional Welfare</span>
+          </a>
+          <a href="#sec-desk" class="editorial-nav-link">
+            <span class="nav-indicator"></span>
+            <span>06 / Client & Talent Desk</span>
+          </a>
+        </nav>
+
+      </div>
+
+      <!-- Bottom Anchor & Verified Coordinates -->
+      <div class="space-y-6 pt-10 border-t border-white/5">
+        
+        <!-- Direct CTA -->
+        <div>
+          <a 
+            href="#sec-desk" 
+            class="w-full btn-editorial-primary justify-center text-xs"
+          >
+            Submit Client Brief
+          </a>
+        </div>
+
+        <!-- Official Coordinates -->
+        <div class="grid grid-cols-2 gap-4 text-[11px] font-mono text-zinc-500">
+          <div>
+            <span class="block text-[9px] uppercase tracking-wide-editorial text-zinc-600 mb-0.5">Telephone</span>
+            <a href="tel:07059624764" class="text-zinc-300 hover:text-orange-500 transition-colors">07059624764</a>
+          </div>
+          <div>
+            <span class="block text-[9px] uppercase tracking-wide-editorial text-zinc-600 mb-0.5">Official Desk</span>
+            <a href="mailto:demuremodelshq@gmail.com" class="text-zinc-300 hover:text-orange-500 transition-colors">demuremodelshq@gmail.com</a>
+          </div>
+          <div>
+            <span class="block text-[9px] uppercase tracking-wide-editorial text-zinc-600 mb-0.5">Instagram</span>
+            <a href="https://instagram.com/demuremodels" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-orange-500 transition-colors">@demuremodels</a>
+          </div>
+          <div>
+            <span class="block text-[9px] uppercase tracking-wide-editorial text-zinc-600 mb-0.5">TikTok</span>
+            <a href="https://tiktok.com/@demuremodels" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-orange-500 transition-colors">@demuremodels</a>
+          </div>
+        </div>
+
+        <!-- Wordmark Preview Ribbon -->
+        <div class="pt-2 opacity-60 hover:opacity-100 transition-opacity">
+          <img src="assets/demure-wordmark.png" alt="DEMURE MODELS" class="h-6 object-contain" />
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- RIGHT PANE: Fluid Editorial Canvas (Desktop ~62%) -->
+    <main class="w-full lg:w-[62%] p-6 sm:p-12 xl:p-16 space-y-32">
+      
+      <!-- ========================================================
+           SECTION 01: THE ROSTER
+           ======================================================== -->
+      <section id="sec-roster" class="editorial-section space-y-10 pt-4">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-6 border-b border-white/10">
+          <div>
+            <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block mb-1">01 / Catalog</span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight uppercase text-white">Active Talent Roster</h2>
+          </div>
+
+          <!-- Category Filter Bar -->
+          <div class="flex flex-wrap items-center gap-5 text-[11px] tracking-editorial uppercase">
+            <button class="cat-filter-btn active" data-category="All">All Talent</button>
+            <button class="cat-filter-btn" data-category="Fashion & Runway">Runway</button>
+            <button class="cat-filter-btn" data-category="Commercial & Advertising">Commercial</button>
+            <button class="cat-filter-btn" data-category="Beauty & Skincare">Beauty</button>
+            <button class="cat-filter-btn" data-category="Plus-Size Modelling">Curve</button>
+            <button class="cat-filter-btn" data-category="Kids' & Child Modelling">Youth</button>
+            <button class="cat-filter-btn" data-category="Fitness & Sports">Fitness & Screen</button>
+          </div>
+        </div>
+
+        <!-- Roster Grid (Responsive 2 to 3 columns) -->
+        <div id="editorial-roster-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+          <!-- Injected via app.js from talent-data.js -->
+        </div>
+
+        <!-- Inclusivity Note -->
+        <div class="pt-6 border-t border-white/5 text-xs text-zinc-500 font-light leading-relaxed">
+          Inclusivity informs who can be discovered across diverse backgrounds, ages, and body types. Professional standards and verified readiness inform who is selected for representation.
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           SECTION 02: PHILOSOPHY & PURPOSE
+           ======================================================== -->
+      <section id="sec-philosophy" class="editorial-section space-y-12 pt-8 border-t border-white/10">
+        
+        <div>
+          <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block mb-1">02 / Identity</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight uppercase text-white">The Meaning of Demure</h2>
+        </div>
+
+        <!-- Monograph Prose -->
+        <div class="space-y-6 text-sm text-zinc-300 font-light leading-relaxed max-w-2xl">
+          <p>
+            The word "demure" is associated with understated elegance, composure, and restraint. For DEMURE MODELS, it represents <strong class="text-white font-semibold">dignity, intentional self-presentation, and absolute professionalism</strong> — not a limitation on individuality, creativity, or personal expression.
+          </p>
+          <p class="text-zinc-400 text-xs leading-relaxed">
+            This philosophy applies across every category, age group, and body type. The agency's emphasis is on carrying oneself with confidence, respecting others on demanding sets, and delivering value to client campaigns without arrogance.
+          </p>
+        </div>
+
+        <!-- The 3 Pillars Breakdown -->
+        <div class="space-y-6 pt-4">
+          
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-orange-500 font-bold">01</span>
+              <h3 class="text-sm font-bold tracking-editorial uppercase text-white">PRESENCE</h3>
+            </div>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed pl-7">
+              The ability to command attention and communicate through appearance, expression, and unwavering poise before any camera or runway.
+            </p>
+          </div>
+
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-orange-500 font-bold">02</span>
+              <h3 class="text-sm font-bold tracking-editorial uppercase text-white">POISE</h3>
+            </div>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed pl-7">
+              The composure, discipline, and emotional intelligence required to execute with grace and adaptability across demanding production settings.
+            </p>
+          </div>
+
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-orange-500 font-bold">03</span>
+              <h3 class="text-sm font-bold tracking-editorial uppercase text-white">POWER</h3>
+            </div>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed pl-7">
+              The ability to leave a lasting impression, communicate a client's core narrative, and contribute meaningfully to commercial outcomes.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           SECTION 03: SERVICES & PRACTICE
+           ======================================================== -->
+      <section id="sec-services" class="editorial-section space-y-12 pt-8 border-t border-white/10">
+        
+        <div>
+          <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block mb-1">03 / Capabilities</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight uppercase text-white">Agency Practice</h2>
+          <p class="text-xs text-zinc-400 font-light mt-2 max-w-xl">
+            DEMURE models operates across four interconnected service disciplines connecting raw talent potential with global commercial execution.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-3">
+            <span class="text-[10px] font-mono text-orange-500 uppercase">Pillar I</span>
+            <h3 class="text-sm font-bold tracking-editorial uppercase text-white">Talent Discovery & Scouting</h3>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Identifying promising talent through continuous digital intake, scouting initiatives, and development programs across diverse backgrounds and body types.
+            </p>
+          </div>
+
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-3">
+            <span class="text-[10px] font-mono text-orange-500 uppercase">Pillar II</span>
+            <h3 class="text-sm font-bold tracking-editorial uppercase text-white">Development & Training</h3>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Providing structured learning to cultivate movement, posture, camera fluency, casting preparation, and professional on-set boundaries.
+            </p>
+          </div>
+
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-3">
+            <span class="text-[10px] font-mono text-orange-500 uppercase">Pillar III</span>
+            <h3 class="text-sm font-bold tracking-editorial uppercase text-white">Selective Representation</h3>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Selectively representing suitable talent under transparent written terms, maintaining professional comp cards, and facilitating consideration for castings.
+            </p>
+          </div>
+
+          <div class="p-6 bg-[#08080b] border border-white/5 space-y-3">
+            <span class="text-[10px] font-mono text-orange-500 uppercase">Pillar IV</span>
+            <h3 class="text-sm font-bold tracking-editorial uppercase text-white">Casting & Model Bookings</h3>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Partnering with brands, photographers, production companies, and advertising agencies to understand briefs, curate talent shortlists, and support bookings.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Categories List -->
+        <div class="pt-6 border-t border-white/5">
+          <div class="text-[10px] font-mono tracking-wide-editorial text-zinc-500 uppercase mb-3">Modelling Categories</div>
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-zinc-400 font-light">
+            <span>Fashion & Runway</span>
+            <span>•</span>
+            <span>Commercial & Advertising</span>
+            <span>•</span>
+            <span>Editorial & Magazine</span>
+            <span>•</span>
+            <span>Beauty & Skincare</span>
+            <span>•</span>
+            <span>Lifestyle & E-Commerce</span>
+            <span>•</span>
+            <span>Plus-Size Modelling</span>
+            <span>•</span>
+            <span>Kids' & Youth (Safeguarded)</span>
+            <span>•</span>
+            <span>Fitness & Sports</span>
+            <span>•</span>
+            <span>Film, TV & Music Video</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           SECTION 04: THE DEMURE BOOTCAMP
+           ======================================================== -->
+      <section id="sec-bootcamp" class="editorial-section space-y-8 pt-8 border-t border-white/10">
+        
+        <div>
+          <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block mb-1">04 / Development</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight uppercase text-white">The DEMURE Modelling Bootcamp</h2>
+          <p class="text-xs text-zinc-400 font-light mt-2 max-w-xl">
+            A proposed three-day hybrid accelerator designed to introduce participants to professional modelling, strengthen practical skills, and identify promising talent.
+          </p>
+        </div>
+
+        <!-- 3 Days Breakdown -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 bg-[#08080b] border border-white/5 space-y-2">
+            <span class="text-xs font-mono text-orange-500 font-bold">DAY 01</span>
+            <h4 class="text-xs font-bold text-white uppercase tracking-editorial">Movement & Poise</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Runway pacing, posture alignment, and body awareness in studio settings.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#08080b] border border-white/5 space-y-2">
+            <span class="text-xs font-mono text-orange-500 font-bold">DAY 02</span>
+            <h4 class="text-xs font-bold text-white uppercase tracking-editorial">Camera & Posing</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Posing techniques, micro-expressions, strobe lighting, and commercial versatility.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#08080b] border border-white/5 space-y-2">
+            <span class="text-xs font-mono text-orange-500 font-bold">DAY 03</span>
+            <h4 class="text-xs font-bold text-white uppercase tracking-editorial">Auditions & Review</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Simulated castings, contract literacy, boundaries on set, and agency assessment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Note & Action -->
+        <div class="p-4 bg-zinc-950 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="text-[11px] text-zinc-400 font-light">
+            <span class="text-white font-medium">Proposed Programme Note:</span> Dates, venue, curriculum, and fees will be announced upon final confirmation. Both in-person and online participation formats planned.
+          </div>
+          <button 
+            onclick="openBootcampModal()" 
+            class="btn-editorial-outline shrink-0 text-xs"
+          >
+            Register Waitlist
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           SECTION 05: PROFESSIONAL WELFARE & STANDARDS
+           ======================================================== -->
+      <section id="sec-welfare" class="editorial-section space-y-8 pt-8 border-t border-white/10">
+        
+        <div>
+          <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block mb-1">05 / Ethics</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight uppercase text-white">Model Welfare & Safeguards</h2>
+          <p class="text-xs text-zinc-400 font-light mt-2 max-w-xl">
+            DEMURE models adheres to documented professional standards grounded in dignity, accountability, and the protection of our talent.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="border-t border-white/10 pt-4 space-y-1.5">
+            <h4 class="text-xs font-bold uppercase tracking-editorial text-white">Child Safeguarding</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Applications, training, and bookings involving minors require verified parent or legal guardian involvement, documented safeguards, and strict working hour limits.
+            </p>
+          </div>
+
+          <div class="border-t border-white/10 pt-4 space-y-1.5">
+            <h4 class="text-xs font-bold uppercase tracking-editorial text-white">Transparent Written Terms</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Written agreements explain representation scope, commissions, payment arrangements, and image usage rights upfront. No hidden fees or guaranteed-earnings fallacies.
+            </p>
+          </div>
+
+          <div class="border-t border-white/10 pt-4 space-y-1.5">
+            <h4 class="text-xs font-bold uppercase tracking-editorial text-white">Model Safety & Boundaries</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Assignment details—wardrobe, concepts, shoot location, and duration—are disclosed in advance. Models retain the right to decline non-agreed changes without intimidation.
+            </p>
+          </div>
+
+          <div class="border-t border-white/10 pt-4 space-y-1.5">
+            <h4 class="text-xs font-bold uppercase tracking-editorial text-white">Image Rights & AI Protections</h4>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Photographs and footage are used solely within agreed commercial parameters with explicit permissions and protections against unauthorized synthetic reproduction.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           SECTION 06: CLIENT & TALENT DESK
+           ======================================================== -->
+      <section id="sec-desk" class="editorial-section space-y-12 pt-8 border-t border-white/10">
+        
+        <div>
+          <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block mb-1">06 / Agency Desk</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight uppercase text-white">Direct Inquiries</h2>
+          <p class="text-xs text-zinc-400 font-light mt-2 max-w-xl">
+            Whether booking talent for an upcoming production or applying to join the agency, submit your brief below.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-12">
+          
+          <!-- Form A: Client Booking Enquiry -->
+          <div class="p-8 bg-[#08080b] border border-white/10 space-y-6">
+            <div class="border-b border-white/10 pb-4">
+              <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block">Client Portal</span>
+              <h3 class="text-lg font-bold uppercase tracking-editorial text-white mt-1">Book a Model</h3>
+              <p class="text-xs text-zinc-400 font-light mt-1">Submit your project parameters to receive casting shortlists and availability within 4 hours.</p>
+            </div>
+
+            <form id="client-booking-form" class="space-y-4">
+              <div>
+                <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Company / Production Name *</label>
+                <input type="text" required placeholder="Brand, Studio, or Creative Agency" class="w-full editorial-input p-3" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Email Address *</label>
+                  <input type="email" required placeholder="contact@company.com" class="w-full editorial-input p-3" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Telephone *</label>
+                  <input type="tel" required placeholder="+44 or international phone" class="w-full editorial-input p-3" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Requested Talent (Optional)</label>
+                  <input type="text" id="booking-model-name" placeholder="Leave blank for general casting" class="w-full editorial-input p-3" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Category *</label>
+                  <select required class="w-full editorial-input p-3 text-white">
+                    <option value="">Select Category...</option>
+                    <option value="Fashion & Runway">Fashion & Runway</option>
+                    <option value="Commercial & Advertising">Commercial & Advertising</option>
+                    <option value="Editorial & Magazine">Editorial & Magazine</option>
+                    <option value="Beauty & Skincare">Beauty & Skincare</option>
+                    <option value="Lifestyle & E-Commerce">Lifestyle & E-Commerce</option>
+                    <option value="Plus-Size Modelling">Plus-Size & Curve</option>
+                    <option value="Kids' & Child Modelling">Kids & Youth (Safeguarded)</option>
+                    <option value="Fitness & Sports">Fitness & Sports</option>
+                    <option value="Film, TV & Music Video">Film, TV & Music Video</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Shoot Location & Dates *</label>
+                  <input type="text" required placeholder="Location & estimated dates" class="w-full editorial-input p-3" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Media Usage Rights *</label>
+                  <input type="text" required placeholder="e.g. Digital 1 Year, Print, Global" class="w-full editorial-input p-3" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Project Brief *</label>
+                <textarea rows="3" required placeholder="Brief description of the creative concept, styling, and deliverables..." class="w-full editorial-input p-3"></textarea>
+              </div>
+
+              <button type="submit" class="w-full btn-editorial-primary text-xs">
+                Submit Client Brief
+              </button>
+            </form>
+          </div>
+
+          <!-- Form B: Talent Application -->
+          <div class="p-8 bg-[#08080b] border border-white/10 space-y-6">
+            <div class="border-b border-white/10 pb-4">
+              <span class="text-[10px] font-mono tracking-wide-editorial uppercase text-orange-500 block">Talent Pathway</span>
+              <h3 class="text-lg font-bold uppercase tracking-editorial text-white mt-1">Become a Model</h3>
+              <p class="text-xs text-zinc-400 font-light mt-1">Applications are open worldwide across all backgrounds, ages, and categories. Experience is not mandatory.</p>
+            </div>
+
+            <form id="talent-application-form" class="space-y-4">
+              <div>
+                <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Full Legal Name *</label>
+                <input type="text" required placeholder="Your full name" class="w-full editorial-input p-3" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Email Address *</label>
+                  <input type="email" required placeholder="you@example.com" class="w-full editorial-input p-3" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Phone Number *</label>
+                  <input type="tel" required placeholder="+44 or international" class="w-full editorial-input p-3" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Age *</label>
+                  <input type="number" id="applicant-age" required min="4" max="75" placeholder="e.g. 21" class="w-full editorial-input p-3" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">City & Country of Residence *</label>
+                  <input type="text" required placeholder="City & Country" class="w-full editorial-input p-3" />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Height (ft/in or cm) *</label>
+                  <input type="text" required placeholder="e.g. 5'11\" (180 cm)" class="w-full editorial-input p-3" />
+                </div>
+              </div>
+
+              <!-- Automated Guardian Consent Wrap for Minors -->
+              <div id="guardian-consent-wrap" class="hidden p-4 bg-zinc-950 border border-white/10 space-y-3">
+                <span class="text-[10px] font-mono text-orange-500 uppercase tracking-wide-editorial font-bold block">
+                  Parent / Legal Guardian Consent (Applicant Under 18)
+                </span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <input type="text" placeholder="Parent or Legal Guardian Name" class="w-full editorial-input p-2.5" />
+                  <input type="tel" placeholder="Guardian Phone Contact" class="w-full editorial-input p-2.5" />
+                </div>
+                <label class="flex items-center gap-2 text-xs text-zinc-400 cursor-pointer pt-1">
+                  <input type="checkbox" class="accent-orange-500" />
+                  <span>I confirm I am the parent/guardian and consent to DEMURE's safeguarding policy.</span>
+                </label>
+              </div>
+
+              <!-- Polaroids / Photos -->
+              <div>
+                <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">
+                  Natural Photographs (Headshot & Full Length) *
+                </label>
+                <div class="border border-white/15 hover:border-white/40 p-4 text-center cursor-pointer relative bg-zinc-950/60">
+                  <input type="file" id="polaroid-files" multiple accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
+                  <p class="text-xs text-zinc-300">Click to select natural, unedited photographs</p>
+                  <p class="text-[10px] text-zinc-500 mt-0.5">Natural lighting, clean background, minimal makeup</p>
+                </div>
+                <p id="polaroid-feedback" class="text-xs text-orange-400 mt-1 hidden"></p>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-mono uppercase tracking-wide-editorial text-zinc-400 mb-1">Instagram Handle / Portfolio URL (Optional)</label>
+                <input type="text" placeholder="@yourhandle or portfolio website link" class="w-full editorial-input p-3" />
+              </div>
+
+              <p class="text-[11px] text-zinc-500 italic">
+                *Application or assessment does not guarantee representation or client bookings.
+              </p>
+
+              <button type="submit" class="w-full btn-editorial-outline text-xs">
+                Submit Application for Review
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Editorial Footer Sign-off -->
+      <footer class="pt-16 pb-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-zinc-500 text-xs font-mono">
+        <div>
+          © 2026 DEMURE MODELS. PRESENCE. POISE. POWER.
+        </div>
+        <div class="tracking-wide-editorial uppercase text-right">
+          MAKE AN IMPRESSION.
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Comp Card Quick View Modal -->
+  <div id="comp-card-modal" class="editorial-modal-backdrop fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
+    <div class="editorial-modal-sheet relative w-full max-w-2xl bg-[#08080b] border border-white/10 p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeCompCard()" class="absolute top-5 right-5 text-zinc-400 hover:text-white transition-colors p-1" aria-label="Close comp card">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="comp-card-body">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootcamp Interest Modal -->
+  <div id="bootcamp-modal" class="editorial-modal-backdrop fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="editorial-modal-sheet relative w-full max-w-md bg-[#08080b] border border-white/10 p-6 sm:p-8 space-y-4">
+      <button onclick="closeBootcampModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white transition-colors p-1" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div>
+        <span class="text-[10px] font-mono text-orange-500 uppercase tracking-wide-editorial">Waitlist Registration</span>
+        <h3 class="text-xl font-bold tracking-tight uppercase text-white mt-1">DEMURE Bootcamp</h3>
+        <p class="text-xs text-zinc-400 mt-1 font-light">
+          Register interest for Cohort 01. You will be notified once venue, curriculum, and schedule details are confirmed.
+        </p>
+      </div>
+
+      <form id="bootcamp-waitlist-form" class="space-y-3 pt-2">
+        <input type="text" required placeholder="Full Name *" class="w-full editorial-input p-3" />
+        <input type="email" required placeholder="Email Address *" class="w-full editorial-input p-3" />
+        <input type="tel" required placeholder="Phone / WhatsApp *" class="w-full editorial-input p-3" />
+        <select class="w-full editorial-input p-3 text-white">
+          <option value="In-Person">In-Person Studio Immersion Track</option>
+          <option value="Online">Online / Virtual Participation Track</option>
+        </select>
+        <button type="submit" class="w-full btn-editorial-primary text-xs">
+          Confirm Priority Interest
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/talent-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
